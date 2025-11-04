@@ -142,11 +142,11 @@ const fastguides = ref([
       },
       {
         text: '挖矿模拟器 2',
-        link: '/software/games/bcms',
+        link: '#',
       },
       {
         text: '挖矿模拟器 SE',
-        link: '/software/games/bcms',
+        link: '#',
       },
       {
         text: '失控实验',
