@@ -108,7 +108,7 @@ const fastguides = ref([
       },
       {
         text: 'XINGJI Intelligence',
-        link: '/software',
+        link: '#',
       },
       {
         text: '浏览 XINGJI 的全部软件产品',
