@@ -129,7 +129,7 @@ const fastguides = ref([
       },
       {
         text: 'SimpleML',
-        link: 'https://github.com/xingji-studio/XINGJI-Intelligence',
+        link: 'https://github.com/xingji-studio/SimpleML',
       },
     ]),
   },
