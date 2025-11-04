@@ -104,14 +104,7 @@ const positions = ref([
   {
     title: '董事/CEO秘书',
     department: 'XINGJI Board Organization',
-    requirements: '会分析市场形势、趋势及如何定价、设计、包装并营销。',
-    headcount: 1,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '董事/CEO秘书',
-    department: 'XINGJI Board Organization',
-    requirements: '会分析市场形势、趋势及如何定价、设计、包装并营销。',
+    requirements: '你觉得要干什么呢',
     headcount: 1,
     tags: ['有奖金', '岗位稳定']
   },
@@ -128,13 +121,6 @@ const positions = ref([
     requirements: '有较强领导能力，会较为熟练运用基础的C\\C++、Python，熟悉硬件，学习能力强。',
     headcount: 2,
     tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '资金管理员',
-    department: 'Miao Xing United Saving Department',
-    requirements: '会记账、会规划经费用途即可。（暂时还不招人，等之后再招）',
-    headcount: 1,
-    tags: ['岗位稳定']
   },
   {
     title: '美术',

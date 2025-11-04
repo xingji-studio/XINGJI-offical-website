@@ -8,9 +8,9 @@ const menuItems = ref([
   { name: "操作系统", link: "/os/xj380" },
   { name: "星际云", link: "https://cloud.xingjisoft.com/" },
   { name: "软件及游戏", link: "/software" },
-  { name: "XDC2025", link: "/xdc2025" },
+  { name: "XDC2025", link: "https://www.bilibili.com/video/BV1y1HKzaEPJ/" },
   { name: "关于我们", link: "/about" },
-  { name: "加入我们", link: "/join" },
+  { name: "招纳贤士", link: "/join" },
   { name: "开源软件", link: "/open-source" },
 ]);
 

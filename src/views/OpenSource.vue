@@ -32,8 +32,8 @@ OpenXSKernel现已被OSDev收录。`,
   {
     name: 'OpenXJ380',
     description: `一个由XINGJI工作室开发的32位操作系统。
-注意：该程序由XJ380(Code Whisty)改造而来，不是XJ380最新版。
-OpenXJ380现已被OSDev收录。`,
+注意：该程序由XJ380(Code Whisty)改造而来，不是XJ380最新版。这个破烂与XJ380 Singularity八竿子打不着。
+OpenXJ380现已被OSDev收录，并于2025/11/3归档。`,
     links: [
       {
         text: '仓库链接',

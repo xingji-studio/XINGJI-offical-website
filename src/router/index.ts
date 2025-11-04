@@ -50,14 +50,6 @@ const routes = [
     component: () => import("../views/about/Join.vue"),
   },
   {
-    path: "/xdc2025",
-    name: "xdc2025",
-    meta: {
-      navName: "XDC2025",
-    },
-    component: () => import("../views/xdc/xdc2025.vue"),
-  },
-  {
     path: "/software/bridge-engine",
     name: "bridge-engine",
     meta: {

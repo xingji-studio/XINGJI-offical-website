@@ -43,16 +43,15 @@ const products = ref([
 ])
 
 const news_posts = ref([{
-  title: 'XDC2025 再次推迟举行',
+  title: 'XDC2025 顺利举行',
   image: '/xdc2025_black.png',
-  description: '。。。最后一次，10月3日',
-  more_text: '啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊',
-  link: '#'
+  description: '星际开发者大会2025（XDC2025）于北京时间2025年10月3日在线上顺利举行。',
+  more_text: '立刻观看 XDC2025',
+  link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/'
 }, {
-  title: 'XDC2025 推迟举行',
+  title: 'XDC2025 再度推迟举行',
   image: '/xdc2025_black.png',
-  description: '由于各项目开发进度落后于原计划、发布形式变更等原因，且为了留出足够时间用于打磨项目以给大家提供更完美稳定的产品（同时防止某些喷子\
-因为XDC与项目正式发布日期不同步而喷人），经过商议，我们决定将XDC2025推迟至8月27日于线上举行（这是废话）。各位的支持就是我们更新的\
+  description: '由于各项目开发进度落后于原计划、发布形式变更等原因，经过商议，我们决定将XDC2025推迟至10月3日于线上举行（这是废话）。各位的支持就是我们更新的\
 最大动力！希望大家能谅解！',
   more_text: '没有更多了',
   link: '#'
@@ -85,6 +84,101 @@ const partners = ref([
     logo: '/files/XINGJI Cloud.png',
     link: 'https://cloud.xingjisoft.com/'
   }
+])
+
+const fastguides = ref([
+  {
+    parentdex: '解决方案',
+    eindexs: ref([
+      {
+        text: 'XJ380 操作系统',
+        link: '/os/xj380',
+      },
+      {
+        text: '鹊桥引擎 (BridgeEngine)',
+        link: '/software/bridge-engine',
+      },
+      {
+        text: '星际云',
+        link: 'https://cloud.xingjisoft.com/',
+      },
+      {
+        text: 'XINGJI Space 系列软件',
+        link: '/software',
+      },
+      {
+        text: 'XINGJI Intelligence',
+        link: '/software',
+      },
+      {
+        text: '浏览 XINGJI 的全部软件产品',
+        link: '/software',
+      },
+    ]),
+  },
+  {
+    parentdex: '开源大道',
+    eindexs: ref([
+      {
+        text: 'OpenXSKernel',
+        link: 'https://github.com/xingji-studio/OpenXSKernel',
+      },
+      {
+        text: '鹊桥引擎 (BridgeEngine)',
+        link: 'https://github.com/xingji-studio/BridgeEngine',
+      },
+      {
+        text: 'SimpleML',
+        link: 'https://github.com/xingji-studio/XINGJI-Intelligence',
+      },
+    ]),
+  },
+  {
+    parentdex: '娱乐互动',
+    eindexs: ref([
+      {
+        text: '挖矿模拟器',
+        link: '/software/games/bcms',
+      },
+      {
+        text: '挖矿模拟器 2',
+        link: '/software/games/bcms',
+      },
+      {
+        text: '挖矿模拟器 SE',
+        link: '/software/games/bcms',
+      },
+      {
+        text: '失控实验',
+        link: '#',
+      },
+    ]),
+  },
+  {
+    parentdex: '开发人员',
+    eindexs: ref([
+      {
+        text: 'XDC2025',
+        link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/',
+      },
+      {
+        text: '适用于 XJ380 的应用程序开发',
+        link: '/os/xj380/download',
+      },
+      {
+        text: '招纳贤士',
+        link: '/join',
+      },
+      {
+        text: 'SpaceCode IDE',
+        link: '#',
+      },
+      {
+        text: 'XSC 星空杯',
+        link: '#',
+      },
+    ]),
+  },
 ])
 
 const news = ref({
@@ -121,7 +215,7 @@ const news = ref({
               {{ news.subtitle }}
             </p>
           </div>
-          <a :href="news.link" class="link-button text-white">已阅　　</a>
+          <a :href="news.link" class="link-button text-white">已阅</a>
         </div>
       </div>
     </div>
@@ -233,9 +327,26 @@ const news = ref({
       </div>
     </section>
 
+    <section class="px-4 relative text-left text-white bg-gray-800/50 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div v-for="fastguide in fastguides" class="relative rounded-2xl">
+              <p class="text-xl font-semibold text-gray-200 py-2">
+                {{fastguide.parentdex}}
+              </p>
+              <a v-for="eindex in fastguide.eindexs" :key="eindex.text" :href="eindex.link">
+                <p class="text-gray-400 py-1">
+                  {{eindex.text}}
+                </p>
+              </a>
+            </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="py-8 text-center text-white bg-gray-800/50 backdrop-blur-md">
-      <p class="text-xl font-semibold">
-        我们保证您所投入的每一分钱都会被我们用于有意义的事上！
+      <p>
+        版权所有© XINGJI Interactive Software 2017 - 2025 保留所有权利。
       </p>
     </footer>
   </div>
