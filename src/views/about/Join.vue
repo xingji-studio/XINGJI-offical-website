@@ -137,7 +137,7 @@ const benefits = ref([
     description: '每个XINGJI工作室成员都可以免费申请一台云服务器和邮箱！只要你干的出色，每个项目你都可以拿到奖金！甚至我们可以为你买一台电脑！只要你对该项目做出贡献，我们一定会在下期视频点名表扬！加入我们，享受所有初中生工作室里最好的福利！'
   },
   {
-    title: '及其人性的作息',
+    title: '极其人性的作息',
     description: 'GOOOOOOOO WORRRRRRRRRRRRKKKKKKK!!!!!!!!!!!!!!!!!!'
   },
   {
@@ -206,3 +206,4 @@ const benefits = ref([
     </div>
   </div>
 </template> 
+
