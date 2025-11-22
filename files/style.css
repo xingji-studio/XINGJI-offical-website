@@ -1,0 +1,568 @@
+body {
+  /*把 body 默认的 margin 设为 0*/
+  margin: 0;
+  background: url(../back.png) top -10rem left/100% no-repeat;
+  font-family:
+    system-ui,
+    Arial,
+    Helvetica,
+    sans-serif; /* 全局 font-family - Global font-family */
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  object-fit: contain;
+}
+
+/*
+导航栏
+Tips: 导航栏高度 -> 最大元素高度+2*padding -> 48px+20px*2=88px
+*/
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10086;
+}
+
+nav.floated-nav {
+  position: fixed;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  /* position: fixed; */
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #00a2e8bd;
+  z-index: 10086;
+  /*毛玻璃效果*/
+  backdrop-filter: blur(8px);
+  /*兼容Safari*/
+  -webkit-backdrop-filter: blur(8px);
+}
+
+nav ul li a {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  color: white;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  transition: all 250ms cubic-bezier(0.5, -0.1, 0.5, 1.1);
+  /* 为了让transition对background-color生效 */
+  background-color: #0000;
+}
+
+/*鼠标移动到选项上修改背景颜色 */
+nav ul a:hover {
+  background-color: #0084bdbd;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-weight: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+pre.desc {
+  white-space: pre-line;
+  word-wrap: break-word;
+  margin: 0;
+  font-family: inherit;
+  /* padding: 0 35%; */
+  text-align: left;
+}
+
+.friendly-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.friendly-links a {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  flex-direction: column;
+}
+
+.friendly-links a::after {
+  content: "";
+  width: 0;
+  height: 0;
+  background: #333e;
+  margin-top: 4px;
+  display: block;
+  transition: all 250ms cubic-bezier(0.5, -0.1, 0.5, 1.1);
+}
+
+.friendly-links a:hover::after {
+  width: 100%;
+  height: 0.75px;
+  margin-top: 3.25px;
+}
+
+.friendly-links a:focus::after {
+  width: 100%;
+  height: 1px;
+  margin-top: 3px;
+}
+
+.fullscreen-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*宣传图*/
+.poster {
+  width: 100%;
+  height: auto;
+}
+
+.poster-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/*产品展示容器*/
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-block: 4rem;
+}
+
+.product-container a {
+  display: block;
+  height: 10rem;
+  width: 10rem;
+  transition:
+    all 200ms cubic-bezier(0.5, -0.1, 0.5, 1.1),
+    margin-inline 150ms cubic-bezier(0.5, -0.1, 0.5, 1.1);
+  filter: blur(0.75px) opacity(0.75);
+  transform: scale3d(0.9, 0.9, 0.9) translate3d(0, 0, 0);
+  margin-inline: -0.5rem;
+  margin-block: 0.5rem;
+  border: #0000 0px solid;
+  box-sizing: border-box;
+  /* background: linear-gradient(0deg, #eee3, #eee7); */
+  backdrop-filter: blur(8px);
+  box-shadow: #0000 0px 0px 20px 0px;
+}
+
+.product-container a:hover {
+  filter: blur(0px) opacity(1);
+  transform: scale3d(1.1, 1.1, 1.1) translate3d(0, 0, 16px);
+  border: #0002 0.5px solid;
+  z-index: 2;
+  margin-inline: 8px;
+  margin-block: 0rem;
+}
+
+.product-container a:focus {
+  filter: blur(0px) opacity(1);
+  transform: scale3d(1.1, 1.1, 1.1) translate3d(0, 0, 16px);
+  border: #0003 1px solid;
+  z-index: 2;
+  margin-inline: 8px;
+  margin-block: 0rem;
+}
+
+.product-container a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*内容容器*/
+.content-container {
+  padding-inline: 7.5%;
+  padding-block: 1%;
+  /* padding-top: 88px; */
+  overflow: auto;
+}
+
+.software {
+  padding-inline: 0;
+}
+
+/*贴纸展示*/
+.badge-viewer {
+  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.badge-viewer img {
+  display: block;
+  max-width: 320px;
+  flex: 1;
+}
+
+/*产品展示*/
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.product p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.button {
+  background-color: #00a2e8;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #00000000;
+  color: white;
+  border: 2px solid #00a2e8;
+}
+
+.button1:hover {
+  background-color: #00a2e8;
+  color: white;
+}
+
+.button2 {
+  background-color: #00000000;
+  color: white;
+  border: 2px solid white;
+}
+
+.button2:hover {
+  background-color: white;
+  color: black;
+}
+
+/* 下拉按钮样式 */
+.dropbtn {
+  background-color: #00a2e8;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 容器 <div> - 需要定位下拉内容 */
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+  left: 5%;
+  top: 180px;
+}
+
+/* 容器 <div> - 需要定位下拉内容 */
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown3 {
+  position: relative;
+  text-align: center;
+}
+
+/* 下拉内容 (默认隐藏) */
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms cubic-bezier(0.5, -0.1, 0.5, 1.1);
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 360px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* 下拉菜单的链接 */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+
+/* 在鼠标移上去后显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+.dropdown:hover .dropbtn {
+  background-color: #00a2e8;
+}
+
+/*回家按钮*/
+.back-home-btn {
+  border: solid #000 2px;
+  background: #fff0;
+  color: #000;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  transition: all 200ms cubic-bezier(0.5, -0.1, 0.5, 1.1);
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 2px #0003);
+}
+
+.back-home-btn:hover {
+  border: solid #7777 2px;
+  background: #111;
+  color: #eee;
+  filter: drop-shadow(2px 2px 2px #0000);
+}
+
+.footer {
+  padding-bottom: 2rem;
+}
+
+.header {
+  padding-top: 2rem;
+}
+
+/* 项目容器 */
+
+.project-container {
+  padding-bottom: 1%;
+  overflow: auto;
+}
+
+/* 项目 */
+.project-container .project {
+  padding-top: 0.5rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  background: #0069967f;
+  backdrop-filter: blur(1rem);
+  /*兼容Safari*/
+  -webkit-backdrop-filter: blur(1rem);
+  transition: all 200ms cubic-bezier(0.5, -0.1, 0.5, 1.1);
+  color: #eee;
+}
+
+/* 项目简介 */
+.project .project-desc {
+  margin: 0;
+  white-space: pre-line;
+  font-family: Arial, Helvetica, system-ui, sans-serif;
+  padding-left: 1.25rem;
+}
+
+/* 项目名称 */
+.project .project-name {
+  margin: 0;
+  margin-bottom: 1rem;
+  white-space: pre-line;
+  font-family: Arial, Helvetica, system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  transition: all 100ms cubic-bezier(0.5, -0.1, 0.5, 1.1);
+  letter-spacing: 0.25rem;
+  color: #eaeaea;
+}
+
+.project:hover .project-name {
+  color: #eee;
+}
+
+/* 项目名称装饰 */
+.project .project-name::before {
+  content: "·";
+  margin-right: 0.75rem;
+}
+
+.project .project-name::after {
+  content: "·";
+  margin-left: 0.75rem;
+}
+
+.project .project-name::before,
+.project .project-name::after {
+  opacity: 0.95;
+  filter: blur(0.125rem);
+  transition: all 200ms cubic-bezier(0.5, -0.1, 0.5, 1.1);
+}
+
+.project:hover .project-name::before,
+.project:hover .project-name::after {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* 项目(卡片)链接按钮 */
+
+.card-button {
+  border: solid #ffffff 2px;
+  /* background: #009bdd; */
+  display: block;
+  width: fit-content;
+  background: #0000;
+  color: #ffffff;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 200ms cubic-bezier(0.5, -0.1, 0.5, 1.1);
+  text-shadow: #7777 0px 0px 2px;
+  background: #7771;
+  margin-right: 0.5rem;
+  user-select: none;
+}
+
+.card-button:hover {
+  border: solid #ffffff9f 2px;
+  color: #ffffff;
+  background: #00a2e89f;
+  text-shadow: #9997 0px 0px 2px;
+}
+
+.card-button:focus {
+  border: solid #ffffff7f 2px;
+  color: #ffffff;
+  background: #00a2e8af;
+  text-shadow: #eee7 0px 0px 2px;
+}
+
+.project .project-links {
+  padding-left: 1.25rem;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-items: center;
+}
+
+.contact-link {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.sectors {
+  display: flex;
+  margin-block: 2rem;
+}
+
+.sectors2 {
+  display: flex;
+  margin-block: 3rem;
+}
+
+.sector-card {
+  width: 256px;
+  background-color: #c5ecff9d;
+  padding-inline: 16px;
+  padding-block: 8px 16px;
+  backdrop-filter: blur(8px);
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sector-card p,
+.sector-card a {
+  margin-block: 0.5rem;
+}
+
+.sector-card > .require {
+  white-space: pre-line;
+  font-family: inherit;
+}
+
+.light.card-button {
+  border: solid #0000008f 2px;
+  color: #000a;
+  text-shadow: #000a 0px 0px 1px;
+}
+
+.light.card-button:hover {
+  border: solid #0000008f 2px;
+  color: #000a;
+  text-shadow: #000c 0px 0px 1px;
+}
+
+.light.card-button:focus {
+  border: solid #0000009f 2px;
+  color: #000c;
+  text-shadow: #000e 0px 0px 2px;
+}
+
+.sector-card > .foot > .features {
+  font-weight: bold;
+}
+
+.contact {
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+}

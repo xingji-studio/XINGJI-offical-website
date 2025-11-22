@@ -1,0 +1,104 @@
+{
+  "\u0000plugin-vue:export-helper": [],
+  "\u0000vite/modulepreload-polyfill.js": [],
+  "\u0000vite/preload-helper.js": [],
+  "../../../../../LOGO带底.png": [
+    "/assets/XJ380-CHPECDWD.js"
+  ],
+  "../../../../../about/right1.jpg": [
+    "/assets/About-DvUO849M.js"
+  ],
+  "../../../../../error/boot_error.png": [
+    "/assets/XJ380Error-BPmzrWcy.js"
+  ],
+  "../../../../../error/error.png": [
+    "/assets/XJ380Error-BPmzrWcy.js"
+  ],
+  "../../../../../files/XINGJI_blueback.png": [],
+  "../../../../../ultra版LOGO带底.png": [
+    "/assets/XJ380-CHPECDWD.js"
+  ],
+  "index.html": [],
+  "node_modules/.deno/@unhead+dom@1.11.20/node_modules/@unhead/dom/dist/index.mjs": [],
+  "node_modules/.deno/@unhead+shared@1.11.20/node_modules/@unhead/shared/dist/index.mjs": [],
+  "node_modules/.deno/@unhead+vue@1.11.18/node_modules/@unhead/vue/dist/shared/vue.-sixQ7xP.mjs": [],
+  "node_modules/.deno/@unhead+vue@1.11.18/node_modules/@unhead/vue/dist/shared/vue.ziyDaVMR.mjs": [],
+  "node_modules/.deno/@unhead+vue@1.11.20/node_modules/@unhead/vue/dist/shared/vue.ziyDaVMR.mjs": [],
+  "node_modules/.deno/@vue+reactivity@3.5.13/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [],
+  "node_modules/.deno/@vue+runtime-core@3.5.13/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [],
+  "node_modules/.deno/@vue+runtime-dom@3.5.13/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [],
+  "node_modules/.deno/@vue+shared@3.5.13/node_modules/@vue/shared/dist/shared.esm-bundler.js": [],
+  "node_modules/.deno/hookable@5.5.3/node_modules/hookable/dist/index.mjs": [],
+  "node_modules/.deno/unhead@1.11.18/node_modules/unhead/dist/index.mjs": [],
+  "node_modules/.deno/unhead@1.11.20/node_modules/unhead/dist/index.mjs": [],
+  "node_modules/.deno/vite-ssg@25.2.0/node_modules/vite-ssg/dist/index.mjs": [],
+  "node_modules/.deno/vite-ssg@25.2.0/node_modules/vite-ssg/dist/shared/vite-ssg.C6pK7rvr.mjs": [],
+  "node_modules/.deno/vite-ssg@25.2.0/node_modules/vite-ssg/dist/shared/vite-ssg.ETIvV-80.mjs": [],
+  "node_modules/.deno/vue-router@4.5.0/node_modules/vue-router/dist/vue-router.mjs": [],
+  "src/App.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/App.vue?vue&type=style&index=0&lang.css": [],
+  "src/components/Navigation.vue": [],
+  "src/components/Navigation.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/components/Navigation.vue?vue&type=style&index=0&scoped=e9175979&lang.css": [],
+  "src/components/software/GameLayout.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/GameLayout.vue_vue_type_script_setup_true_lang-LuJQCZGO.js"
+  ],
+  "src/main.ts": [],
+  "src/router/index.ts": [],
+  "src/style.css": [],
+  "src/views/Home.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/views/OpenSource.vue": [
+    "/assets/OpenSource-Do99YP6D.js"
+  ],
+  "src/views/OpenSource.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/OpenSource-Do99YP6D.js"
+  ],
+  "src/views/about/About.vue": [
+    "/assets/About-DvUO849M.js"
+  ],
+  "src/views/about/About.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/About-DvUO849M.js"
+  ],
+  "src/views/about/Join.vue": [
+    "/assets/Join-CR88Z5VY.js"
+  ],
+  "src/views/about/Join.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/Join-CR88Z5VY.js"
+  ],
+  "src/views/os/XJ380.vue": [
+    "/assets/XJ380-CHPECDWD.js"
+  ],
+  "src/views/os/XJ380.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/XJ380-CHPECDWD.js"
+  ],
+  "src/views/os/XJ380Download.vue": [
+    "/assets/XJ380Download-BqGK491D.js"
+  ],
+  "src/views/os/XJ380Download.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/XJ380Download-BqGK491D.js"
+  ],
+  "src/views/os/XJ380Error.vue": [
+    "/assets/XJ380Error-BPmzrWcy.js"
+  ],
+  "src/views/os/XJ380Error.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/XJ380Error-BPmzrWcy.js"
+  ],
+  "src/views/software/Software.vue": [
+    "/assets/Software-CL1IfM0h.js"
+  ],
+  "src/views/software/Software.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/Software-CL1IfM0h.js"
+  ],
+  "src/views/software/bridge-engine.vue": [
+    "/assets/bridge-engine-rUXlBqDT.js"
+  ],
+  "src/views/software/bridge-engine.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/bridge-engine-rUXlBqDT.js"
+  ],
+  "src/views/software/games/BCMS.vue": [
+    "/assets/BCMS-DxKszHnR.js"
+  ],
+  "src/views/software/games/BCMS.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/BCMS-DxKszHnR.js"
+  ]
+}
