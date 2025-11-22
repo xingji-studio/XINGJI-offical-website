@@ -36,4 +36,4 @@ jobs:
         remote_path: ${{ secrets.REMOTE_TARGET_PATH }}
         remote_host: ${{ secrets.REMOTE_SERVER_IP }}
         remote_user: ${{ secrets.REMOTE_SERVER_USER }}
-        remote_key: ${{ secrets.REMOTE_SERVER_PASSWORD }}
+        remote_key: ${{ secrets.REMOTE_KEY }}
