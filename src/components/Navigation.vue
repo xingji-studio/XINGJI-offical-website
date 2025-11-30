@@ -52,9 +52,10 @@ defineProps({
 
 <template>
   <nav class="fixed min-w-full z-50 backdrop-blur-md bg-gray-900/50">
-    <ul class="flex h-16 items-center justify-between">
-      <li class="nav-left h-16">
-        <ul class="flex items-center justify-start h-full">
+    <ul class="flex h-16 items-center w-full">
+      <li class="flex flex-row h-16 w-full justify-between pr-4">
+        <section class="flex items-center justify-start h-full">
+          <ul class="flex items-center justify-start h-full">
           <li class="h-full whitespace-nowrap">
             <router-link to="/" class="flex items-center justify-center outline-none pl-4 pr-4 h-full w-max">
               <img src="/files/XINGJI_blueback.png" alt="XINGJI" class="h-8 mr-1" />
@@ -81,36 +82,43 @@ defineProps({
             </li>
           </template>
           
-          <!-- 登录/登出按钮 - 放在循环外部，确保只显示一次 -->
-          <li v-if="!auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
-            <button @click="handleLogin" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
-              <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-                登录
-              </span>
-            </button>
-          </li>
-          <li v-if="!auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
-            <button @click="handleRegister" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
-              <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-                注册
-              </span>
-            </button>
-          </li>
-          <li v-else class="hidden lg:block whitespace-nowrap h-full">
-            <div class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
-              <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-                {{ auth.currentUser?.username }}
-              </span>
-            </div>
-          </li>
-          <li v-else class="hidden lg:block whitespace-nowrap h-full">
-            <button @click="handleLogout" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
-              <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-                登出
-              </span>
-            </button>
-          </li>
+          
         </ul>
+        </section>
+        <section class="flex items-center justify-start h-full">
+          <ul class="flex items-center justify-start h-full">
+            <!-- 登录/登出按钮 - 放在循环外部，确保只显示一次 -->
+            <li v-if="!auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
+              <button @click="handleLogin" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm  font-medium hover:bg-gray-400/10 transition-all duration-200 item">
+                <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+                  登录
+                </span>
+              </button>
+            </li>
+            <li v-if="!auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
+              <button @click="handleRegister" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group   text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
+                <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+                  注册
+                </span>
+              </button>
+            </li>
+            <li v-else class="hidden lg:block whitespace-nowrap h-full">
+              <div class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium  hover:bg-gray-400/10 transition-all duration-200 item">
+                <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+                  {{ auth.currentUser?.username }}
+                </span>
+              </div>
+            </li>
+            <li v-else class="hidden lg:block whitespace-nowrap h-full">
+              <button @click="handleLogout" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm   font-medium hover:bg-gray-400/10 transition-all duration-200 item">
+                <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+                  登出
+                </span>
+              </button>
+            </li>
+          </ul>
+
+        </section>
       </li>
       <!-- For moblie: Menu Button -->
       <li class="lg:hidden nav-right w-16 h-16">

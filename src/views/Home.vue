@@ -186,7 +186,7 @@ const news = ref({
   subtitle: 'XINGJI 工作室 8 周年庆祝活动',
   link: '#',
   image: {
-    src: '/primage.webp', // 看看行不行！
+    src: '/primage.png', // 看看行不行！
     alt: '宣传图',
   },
 });
@@ -229,7 +229,7 @@ const news = ref({
             <div
               class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur">
             </div>
-            <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 group h-full flex flex-col">
+            <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 group h-full flex flex-col justify-between">
               <div>
                 <div class="w-full h-48 rounded mb-4 bg-gray-50 overflow-hidden">
                   <img :src="product.image" :alt="product.title"
@@ -253,26 +253,34 @@ const news = ref({
       </div>
     </section>
 
+    <!-- News Posts Section -->
     <section class="py-12 px-4 relative">
       <div class="max-w-7xl mx-auto">
         <h2 class="text-4xl font-bold text-white mb-6 px-6">近期新闻</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div v-for="post in news_posts" class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
-            <div class="w-full h-48 rounded mb-4 bg-gray-50 overflow-hidden">
-              <img :src="post.image" alt="" class="w-full h-full object-contain transition-all duration-300">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div v-for="post in news_posts" :key="post.title" class="group relative">
+            <div
+              class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur">
             </div>
-            <h3 class="text-xl font-bold text-white mb-4">{{ post.title }}</h3>
-            <p class="text-gray-400 mb-4">
-              {{ post.description }}
-            </p>
-            <a :href="post.link"
-              class="inline-flex items-center text-blue-400 fill-blue-400 hover:text-blue-300 hover:fill-blue-300 transition-all duration-200 leading-4">
-              <span>{{ post.more_text }}</span>
-              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                <path
-                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-              </svg>
-            </a>
+            <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 group h-full flex flex-col justify-between">
+              <div>
+                <div class="w-full h-48 rounded mb-4 bg-gray-50 overflow-hidden">
+                  <img :src="post.image" :alt="post.title"
+                    class="w-full h-full object-contain transition-all duration-300">
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">{{ post.title }}</h3>
+                <p class="text-gray-400 mb-4">{{ post.description }}</p>
+              </div>
+
+              <a :href="post.link"
+                class="inline-flex items-center text-blue-400 fill-blue-400 hover:text-blue-300 hover:fill-blue-300 transition-all duration-200 leading-4">
+                <span>{{ post.more_text }}</span>
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                  <path
+                    d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
