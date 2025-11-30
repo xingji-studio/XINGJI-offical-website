@@ -2,11 +2,11 @@ name: Deploy Vite App to Server
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
   workflow_dispatch:
 
 env:
-  NODE_VERSION: '22' 
+  NODE_VERSION: "22"
 
 jobs:
   build-and-deploy:
