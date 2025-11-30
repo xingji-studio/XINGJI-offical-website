@@ -45,7 +45,7 @@ const handleSubmit = async () => {
 <template>
   <div class="min-h-screen flex items-center justify-center bg-gray-900 p-4 pt-20">
     <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-xl overflow-hidden">
-      <div class="bg-blue-600 py-8 px-6">
+      <div class="bg-[#1da1f2] py-8 px-6">
         <h2 class="text-3xl font-bold text-white text-center">注册</h2>
         <p class="text-blue-100 text-center mt-2">创建您的账号</p>
       </div>
@@ -138,7 +138,7 @@ const handleSubmit = async () => {
           <button
             type="submit"
             :disabled="auth.loading || !isPasswordMatch"
-            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 disabled:bg-blue-500 disabled:cursor-not-allowed"
+            class="w-full bg-[#1da1f2] hover:bg-[#1da1f2] text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 disabled:bg-blue-500 disabled:cursor-not-allowed"
           >
             <span v-if="auth.loading">注册中...</span>
             <span v-else>注册</span>
