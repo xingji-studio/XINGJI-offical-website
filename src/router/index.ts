@@ -51,6 +51,30 @@ const routes = [
     name: "bridge-engine",
     component: () => import("../views/software/bridge-engine.vue"),
   },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("../views/auth/LoginPage.vue"),
+    meta: {
+      navName: "登录"
+    }
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: () => import("../views/auth/RegisterPage.vue"),
+    meta: {
+      navName: "注册"
+    }
+  },
+  {
+    path: "/test",
+    name: "test",
+    component: () => import("../views/Test.vue"),
+    meta: {
+      navName: "测试页面"
+    }
+  },
 ];
 
 // const router = createRouter({

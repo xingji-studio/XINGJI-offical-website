@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, watch, computed } from "vue";
+import { useRouter } from "vue-router";
+import { authStore } from "../stores/auth";
 
 const isOpen = ref(false);
+const auth = authStore;
+const router = useRouter();
 
 const menuItems = ref([
   { name: "首页", link: "/" },
@@ -13,6 +17,21 @@ const menuItems = ref([
   { name: "招纳贤士", link: "/join" },
   { name: "开源软件", link: "/open-source" },
 ]);
+
+// 处理登录
+const handleLogin = () => {
+  router.push("/login");
+};
+
+// 处理注册
+const handleRegister = () => {
+  router.push("/register");
+};
+
+// 处理登出
+const handleLogout = () => {
+  auth.logout();
+};
 
 watch(isOpen, (newVal, _oldVal) => {
   if (newVal) {
@@ -44,6 +63,7 @@ defineProps({
               </span>
             </router-link>
           </li>
+          <!-- 菜单项 -->
           <template v-for="item in menuItems" :key="item.name">
             <li class="hidden lg:block whitespace-nowrap h-full">
               <router-link v-if="!item.link.startsWith('http')" :to="item.link"
@@ -60,6 +80,36 @@ defineProps({
               </a>
             </li>
           </template>
+          
+          <!-- 登录/登出按钮 - 放在循环外部，确保只显示一次 -->
+          <li v-if="!auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
+            <button @click="handleLogin" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
+              <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+                登录
+              </span>
+            </button>
+          </li>
+          <li v-if="!auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
+            <button @click="handleRegister" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
+              <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+                注册
+              </span>
+            </button>
+          </li>
+          <li v-else class="hidden lg:block whitespace-nowrap h-full">
+            <div class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
+              <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+                {{ auth.currentUser?.username }}
+              </span>
+            </div>
+          </li>
+          <li v-else class="hidden lg:block whitespace-nowrap h-full">
+            <button @click="handleLogout" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
+              <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+                登出
+              </span>
+            </button>
+          </li>
         </ul>
       </li>
       <!-- For moblie: Menu Button -->
@@ -80,6 +130,7 @@ defineProps({
     :class="{ 'invisible opacity-0 -left-full': !isOpen, 'left-0': isOpen }">
     <!-- For moblie: Vertical menu -->
     <ul>
+      <!-- 移动端菜单项 -->
       <template v-for="item in menuItems" :key="item.name">
         <router-link v-if="!item.link.startsWith('http')" :to="item.link" @click="isOpen = false"
           class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
@@ -98,6 +149,40 @@ defineProps({
           </span>
         </a>
       </template>
+      
+      <!-- 移动端登录/登出按钮 - 放在循环外部，确保只显示一次 -->
+      <button v-if="!auth.isAuthenticated" @click="handleLogin; isOpen = false"
+        class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
+        :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
+        :style="{ '--delay': `${(menuItems.length + 1) * 50 + 250}ms` }">
+        <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+          登录
+        </span>
+      </button>
+      <button v-if="!auth.isAuthenticated" @click="handleRegister; isOpen = false"
+        class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
+        :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
+        :style="{ '--delay': `${(menuItems.length + 2) * 50 + 250}ms` }">
+        <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+          注册
+        </span>
+      </button>
+      <div v-else @click="isOpen = false"
+        class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
+        :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
+        :style="{ '--delay': `${(menuItems.length + 1) * 50 + 250}ms` }">
+        <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+          {{ auth.currentUser?.username }}
+        </span>
+      </div>
+      <button v-else @click="handleLogout; isOpen = false"
+        class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
+        :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
+        :style="{ '--delay': `${(menuItems.length + 2) * 50 + 250}ms` }">
+        <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
+          登出
+        </span>
+      </button>
     </ul>
   </nav>
 </template>
