@@ -43,116 +43,118 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-gray-900 p-4 pt-20">
-    <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-xl overflow-hidden">
-      <div class="bg-[#1da1f2] py-8 px-6">
-        <h2 class="text-3xl font-bold text-white text-center">注册</h2>
-        <p class="text-blue-100 text-center mt-2">创建您的账号</p>
-      </div>
-      
-      <div class="py-8 px-6">
-        <!-- 错误信息显示 -->
-        <div v-if="auth.error" class="bg-red-500/20 text-red-400 p-3 rounded-md mb-4 text-sm">
-          {{ auth.error }}
+  <div class="bg-cover bg-center w-full" style="background-image: url('/login_bg.jpg');">
+    <div class="min-h-screen flex items-center justify-center p-4 pt-20">
+      <div class="w-full max-w-md bg-gray-800 opacity-90 rounded-lg shadow-xl overflow-hidden">
+        <div class="bg-[#1da1f2] py-8 px-6">
+          <h2 class="text-3xl font-bold text-white text-center">注册</h2>
+          <p class="text-blue-100 text-center mt-2">创建一个 XINGJI 账号并开启您的星际之旅！</p>
         </div>
         
-        <!-- 注册表单 -->
-        <form @submit.prevent="handleSubmit">
-          <!-- 用户名输入 -->
-          <div class="mb-4">
-            <label for="username" class="block text-gray-300 text-sm font-medium mb-1">用户名</label>
-            <input
-              type="text"
-              id="username"
-              v-model="username"
-              required
-              class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="请输入用户名"
-            />
+        <div class="py-8 px-6">
+          <!-- 错误信息显示 -->
+          <div v-if="auth.error" class="bg-red-500/20 text-red-400 p-3 rounded-md mb-4 text-sm">
+            {{ auth.error }}
           </div>
           
-          <!-- 邮箱输入 -->
-          <div class="mb-4">
-            <label for="email" class="block text-gray-300 text-sm font-medium mb-1">邮箱</label>
-            <input
-              type="email"
-              id="email"
-              v-model="email"
-              required
-              class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="请输入邮箱"
-            />
-          </div>
-          
-          <!-- 密码输入 -->
-          <div class="mb-4">
-            <label for="password" class="block text-gray-300 text-sm font-medium mb-1">密码</label>
-            <div class="relative">
+          <!-- 注册表单 -->
+          <form @submit.prevent="handleSubmit">
+            <!-- 用户名输入 -->
+            <div class="mb-4">
+              <label for="username" class="block text-gray-300 text-sm font-medium mb-1">用户名</label>
               <input
-                :type="showPassword ? 'text' : 'password'"
-                id="password"
-                v-model="password"
+                type="text"
+                id="username"
+                v-model="username"
                 required
-                minlength="6"
                 class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="请输入密码（至少6位）"
+                placeholder="请输入用户名"
               />
-              <button
-                type="button"
-                @click="showPassword = !showPassword"
-                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
-              >
-                {{ showPassword ? '隐藏' : '显示' }}
-              </button>
             </div>
-          </div>
-          
-          <!-- 确认密码输入 -->
-          <div class="mb-6">
-            <label for="confirmPassword" class="block text-gray-300 text-sm font-medium mb-1">确认密码</label>
-            <div class="relative">
+            
+            <!-- 邮箱输入 -->
+            <div class="mb-4">
+              <label for="email" class="block text-gray-300 text-sm font-medium mb-1">邮箱</label>
               <input
-                :type="showConfirmPassword ? 'text' : 'password'"
-                id="confirmPassword"
-                v-model="confirmPassword"
+                type="email"
+                id="email"
+                v-model="email"
                 required
-                minlength="6"
                 class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="请再次输入密码"
+                placeholder="请输入邮箱"
               />
-              <button
-                type="button"
-                @click="showConfirmPassword = !showConfirmPassword"
-                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
-              >
-                {{ showConfirmPassword ? '隐藏' : '显示' }}
-              </button>
             </div>
-            <!-- 密码不匹配提示 -->
-            <div v-if="confirmPassword && !isPasswordMatch" class="text-red-400 text-xs mt-1">
-              两次输入的密码不一致
+            
+            <!-- 密码输入 -->
+            <div class="mb-4">
+              <label for="password" class="block text-gray-300 text-sm font-medium mb-1">密码</label>
+              <div class="relative">
+                <input
+                  :type="showPassword ? 'text' : 'password'"
+                  id="password"
+                  v-model="password"
+                  required
+                  minlength="6"
+                  class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="请输入密码（至少6位）"
+                />
+                <button
+                  type="button"
+                  @click="showPassword = !showPassword"
+                  class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                >
+                  {{ showPassword ? '隐藏' : '显示' }}
+                </button>
+              </div>
             </div>
-          </div>
+            
+            <!-- 确认密码输入 -->
+            <div class="mb-6">
+              <label for="confirmPassword" class="block text-gray-300 text-sm font-medium mb-1">确认密码</label>
+              <div class="relative">
+                <input
+                  :type="showConfirmPassword ? 'text' : 'password'"
+                  id="confirmPassword"
+                  v-model="confirmPassword"
+                  required
+                  minlength="6"
+                  class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="请再次输入密码"
+                />
+                <button
+                  type="button"
+                  @click="showConfirmPassword = !showConfirmPassword"
+                  class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                >
+                  {{ showConfirmPassword ? '隐藏' : '显示' }}
+                </button>
+              </div>
+              <!-- 密码不匹配提示 -->
+              <div v-if="confirmPassword && !isPasswordMatch" class="text-red-400 text-xs mt-1">
+                两次输入的密码不一致
+              </div>
+            </div>
+            
+            <!-- 注册按钮 -->
+            <button
+              type="submit"
+              :disabled="auth.loading || !isPasswordMatch"
+              class="w-full bg-[#1da1f2] hover:bg-[#1da1f2] text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 disabled:bg-blue-500 disabled:cursor-not-allowed"
+            >
+              <span v-if="auth.loading">注册中...</span>
+              <span v-else>注册</span>
+            </button>
+          </form>
           
-          <!-- 注册按钮 -->
-          <button
-            type="submit"
-            :disabled="auth.loading || !isPasswordMatch"
-            class="w-full bg-[#1da1f2] hover:bg-[#1da1f2] text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 disabled:bg-blue-500 disabled:cursor-not-allowed"
-          >
-            <span v-if="auth.loading">注册中...</span>
-            <span v-else>注册</span>
-          </button>
-        </form>
-        
-        <!-- 登录链接 -->
-        <div class="text-center mt-6">
-          <p class="text-gray-400 text-sm">
-            已有账号？
-            <router-link :to="redirect ? `/login?redirect=${encodeURIComponent(redirect)}` : '/login'" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">
-              立即登录
-            </router-link>
-          </p>
+          <!-- 登录链接 -->
+          <div class="text-center mt-6">
+            <p class="text-gray-400 text-sm">
+              已有账号？
+              <router-link :to="redirect ? `/login?redirect=${encodeURIComponent(redirect)}` : '/login'" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                立即登录
+              </router-link>
+            </p>
+          </div>
         </div>
       </div>
     </div>

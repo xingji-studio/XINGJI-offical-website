@@ -103,11 +103,11 @@ defineProps({
               </button>
             </li>
             <li v-else class="hidden lg:block whitespace-nowrap h-full">
-              <div class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium  hover:bg-gray-400/10 transition-all duration-200 item">
+              <button @click="handleLogout" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm   font-medium hover:bg-gray-400/10 transition-all duration-200 item">
                 <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
                   {{ auth.currentUser?.username }}
                 </span>
-              </div>
+              </button>
             </li>
             <li v-else class="hidden lg:block whitespace-nowrap h-full">
               <button @click="handleLogout" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm   font-medium hover:bg-gray-400/10 transition-all duration-200 item">
