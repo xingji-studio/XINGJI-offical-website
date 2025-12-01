@@ -62,9 +62,9 @@ const routes = [
     component: () => import("../views/auth/RegisterPage.vue"),
   },
   {
-    path: "/test",
-    name: "test",
-    component: () => import("../views/Test.vue"),
+    path: "/dash",
+    name: "user-dash",
+    component: () => import("../dash/dash_index.vue"),
   },
 ];
 
