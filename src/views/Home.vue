@@ -10,7 +10,7 @@ useHead({
       content: 'XINGJI工作室在2017年创立。由于我们都是学生，也就不需要支付大量工资费用，产品价格也大大降低。 \
 在价格降低的同时，品质也不输大厂。我们保证我们的产品即便是免费的，也校验过每一项功能。即便我们没有校验出所有的问题，也会第一时间受理并修复任何人的报告。\
 我们的技术也堪比大厂，例如我们发明的XRMU锁存器速度高达640Gbps！双通道更是高达1.2Tbps！遥摇领先DDR5！\
-完全自主研发，内核使用XJ-Kernel 2.0，经过三次更新，UEFI引导方式，安全、可靠，并且完全免费（仅限于普通系列）',
+完全自主研发，内核使用XSK2.1，经过三次更新，UEFI引导方式，安全、可靠，并且完全免费（仅限于普通系列）',
     },
   ],
 })
@@ -18,15 +18,15 @@ useHead({
 const products = ref([
   {
     title: '操作系统',
-    description: 'XJ380操作系统，完全自主研发，内核使用XJ-Kernel 2.0，UEFI引导方式，安全、可靠',
+    description: 'XJ380操作系统，完全自主研发，内核使用XSK2.1，UEFI引导方式，安全、可靠',
     image: '/files/os.png',
     link: '/os/xj380'
   },
   {
     title: '星际云',
-    description: '高速、稳定、安全的云服务平台',
+    description: '这玩意儿死了，但是我没找着合适的东西替代他放在主页，那就先等等吧',
     image: '/files/cloud.png',
-    link: 'https://cloud.xingjisoft.com/'
+    link: '#'
   },
   {
     title: '软件产品',
@@ -42,26 +42,29 @@ const products = ref([
   }
 ])
 
-const news_posts = ref([{
-  title: 'XDC2025 顺利举行',
-  image: '/xdc2025_black.png',
-  description: '星际开发者大会2025（XDC2025）于北京时间2025年10月3日在线上顺利举行。',
-  more_text: '立刻观看 XDC2025',
-  link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/'
-}, {
-  title: 'XDC2025 再度推迟举行',
-  image: '/xdc2025_black.png',
-  description: '由于各项目开发进度落后于原计划、发布形式变更等原因，经过商议，我们决定将XDC2025推迟至10月3日于线上举行（这是废话）。各位的支持就是我们更新的\
-最大动力！希望大家能谅解！',
-  more_text: '没有更多了',
-  link: '#'
-}, {
-  title: 'XJ380 API手册现已公布',
-  image: '/LOGO带底.png',
-  description: '适用于XJ380操作系统的XJ380 API手册现已公布。开发工具将于稍后发布。请注意：该手册为测试版，可能与稍后发布的正式版有所出入。',
-  more_text: '立刻开始“星际”之旅',
-  link: '/os/xj380/download'
-}]);
+const news_posts = ref([
+  {
+    title: 'XINGJI 工作室宣布关停星际云',
+    image: '/files/XBO.png',
+    description: '由于星际云长期亏损加上其管理不善，XINGJI 工作室董事会组织（XBO）于2025年11月30日正式宣布关停星际云。',
+    more_text: '没有更多了',
+    link: '#'
+  }, 
+  {
+    title: 'XDC2025 顺利举行',
+    image: '/xdc2025_black.png',
+    description: '星际开发者大会2025（XDC2025）于北京时间2025年10月3日在线上顺利举行。',
+    more_text: '立刻观看 XDC2025',
+    link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/'
+  }, 
+  {
+    title: 'XJ380 API手册现已公布',
+    image: '/LOGO带底.png',
+    description: '适用于XJ380操作系统的XJ380 API手册现已公布。开发工具将于稍后发布。欢迎各位开发者为XJ380的生态注入一份自己的力量！',
+    more_text: '立刻开始“星际”之旅',
+    link: '/os/xj380/download'
+  }
+]);
 
 const partners = ref([
   {
@@ -97,10 +100,6 @@ const fastguides = ref([
       {
         text: '鹊桥引擎 (BridgeEngine)',
         link: '/software/bridge-engine',
-      },
-      {
-        text: '星际云',
-        link: 'https://cloud.xingjisoft.com/',
       },
       {
         text: 'XINGJI Space 系列软件',
@@ -312,7 +311,7 @@ const news = ref({
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
             <h3 class="text-xl font-bold text-white mb-4">XJ380操作系统</h3>
             <p class="text-gray-400">
-              完全自主研发，内核使用XJ-Kernel 2.1，经过三次更新，UEFI引导方式，安全、可靠，并且完全免费（仅限于普通系列）
+              完全自主研发，内核使用XSK2.1，经过三次更新，UEFI引导方式，安全、可靠，并且完全免费（仅限于普通系列）
             </p>
           </div>
         </div>

@@ -10,7 +10,6 @@ const router = useRouter();
 const menuItems = ref([
   { name: "首页", link: "/" },
   { name: "操作系统", link: "/os/xj380" },
-  { name: "星际云", link: "https://cloud.xingjisoft.com/" },
   { name: "软件及游戏", link: "/software" },
   { name: "XDC2025", link: "https://www.bilibili.com/video/BV1y1HKzaEPJ/" },
   { name: "关于我们", link: "/about" },
@@ -31,6 +30,11 @@ const handleRegister = () => {
 // 处理登出
 const handleLogout = () => {
   auth.logout();
+};
+
+// 账户主页
+const handleJmpDash = () => {
+  router.push("/dash");
 };
 
 watch(isOpen, (newVal, _oldVal) => {
@@ -102,14 +106,14 @@ defineProps({
                 </span>
               </button>
             </li>
-            <li v-else class="hidden lg:block whitespace-nowrap h-full">
-              <button @click="handleLogout" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm   font-medium hover:bg-gray-400/10 transition-all duration-200 item">
+            <li v-if="auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
+              <button @click="handleJmpDash" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm   font-medium hover:bg-gray-400/10 transition-all duration-200 item">
                 <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
                   {{ auth.currentUser?.username }}
                 </span>
               </button>
             </li>
-            <li v-else class="hidden lg:block whitespace-nowrap h-full">
+            <li v-if="auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
               <button @click="handleLogout" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm   font-medium hover:bg-gray-400/10 transition-all duration-200 item">
                 <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
                   登出
@@ -159,7 +163,7 @@ defineProps({
       </template>
       
       <!-- 移动端登录/登出按钮 - 放在循环外部，确保只显示一次 -->
-      <button v-if="!auth.isAuthenticated" @click="handleLogin; isOpen = false"
+      <button v-if="!auth.isAuthenticated" @click="handleLogin(); isOpen = false"
         class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
         :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
         :style="{ '--delay': `${(menuItems.length + 1) * 50 + 250}ms` }">
@@ -167,7 +171,7 @@ defineProps({
           登录
         </span>
       </button>
-      <button v-if="!auth.isAuthenticated" @click="handleRegister; isOpen = false"
+      <button v-if="!auth.isAuthenticated" @click="handleRegister(); isOpen = false"
         class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
         :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
         :style="{ '--delay': `${(menuItems.length + 2) * 50 + 250}ms` }">
@@ -175,7 +179,7 @@ defineProps({
           注册
         </span>
       </button>
-      <div v-else @click="isOpen = false"
+      <div v-if="auth.isAuthenticated" @click="handleJmpDash(); isOpen = false"
         class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
         :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
         :style="{ '--delay': `${(menuItems.length + 1) * 50 + 250}ms` }">
@@ -183,7 +187,7 @@ defineProps({
           {{ auth.currentUser?.username }}
         </span>
       </div>
-      <button v-else @click="handleLogout; isOpen = false"
+      <button v-if="auth.isAuthenticated" @click="handleLogout(); isOpen = false"
         class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
         :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
         :style="{ '--delay': `${(menuItems.length + 2) * 50 + 250}ms` }">
