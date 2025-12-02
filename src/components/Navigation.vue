@@ -30,6 +30,7 @@ const handleRegister = () => {
 // 处理登出
 const handleLogout = () => {
   auth.logout();
+  router.push("/");
 };
 
 // 账户主页
