@@ -27,11 +27,6 @@ const routes = [
     component: () => import("../views/software/Software.vue"),
   },
   {
-    path: "/software/games/bcms",
-    name: "bcms",
-    component: () => import("../views/software/games/BCMS.vue"),
-  },
-  {
     path: "/open-source",
     name: "open-source",
     component: () => import("../views/OpenSource.vue"),
@@ -65,6 +60,16 @@ const routes = [
     path: "/dash",
     name: "user-dash",
     component: () => import("../dash/dash_index.vue"),
+  },
+  {
+    path: "/software/games/bcms",
+    name: "bcms",
+    component: () => import("../views/software/games/BCMS.vue"),
+  },
+  {
+    path: "/software/games/bcms-mobile",
+    name: "bcms",
+    component: () => import("../views/software/games/BCMS-Mobile.vue"),
   },
 ];
 
