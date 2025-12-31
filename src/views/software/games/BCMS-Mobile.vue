@@ -15,8 +15,8 @@ useHead({
 
 <template>
   <GameLayout 
-    title="挖矿模拟器"
-    subtitle="XINGJI工作室远古之作（也许算黑历史？）">
+    title="挖矿模拟器Mobile"
+    subtitle="XINGJI工作室远古之作的全新移植版">
     <div class="space-y-8">
       <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
         <h2 class="text-2xl font-bold text-white mb-4">内容说明</h2>

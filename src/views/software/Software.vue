@@ -31,6 +31,7 @@ const categories = ref([
     description: 'XINGJI工作室 开发了一系列娱乐游戏，以满足用户的娱乐需求。',
     items: [
       { name: '挖矿模拟器', link: '/software/games/bcms' },
+      { name: '挖矿模拟器Mobile', link: '/software/games/bcms-mobile' },
       { name: '挖矿模拟器2', link: '#' }
     ]
   },
