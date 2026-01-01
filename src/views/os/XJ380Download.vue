@@ -28,7 +28,7 @@ const devTools = ref([
   // { name: 'XJ380 应用程序编译套件（XACT for Windows）', url: '#' },
   // { name: 'XJ380 应用程序编译套件（XACT for Linux）', url: '#' },
   // { name: 'XJ380 应用程序编译套件（XACT for XJ380）', url: '#' },
-  { name: 'XJ380 API 标准文档（C/C++）', url: '/os/XJ380_API_Spec_CPP_1_0.pdf' },
+  { name: 'XJ380 API 标准文档（C/C++）', url: '/os/XJ380_API_Spec_CPP_1_1.pdf' },
   // { name: 'XJ380 API 标准文档（SimplePL）', url: '#' }
 ])
 
@@ -104,7 +104,6 @@ const requirements2 = ref([
         <h2 class="text-2xl font-bold text-white mb-6">开发者工具及文档</h2>
         <p class="text-gray-400 mb-8">
           请注意：目前XJ380仅公开C/C++版的API标准文档。编译套件将于稍后推出。
-          同时API头文件我们规划存放在 工程目录/include 下，请您注意使用相对路径。
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <a v-for="tool in devTools" 
