@@ -31,9 +31,9 @@ const account_tabs = ref([
 ])
 
 onMounted(() => {
-  // if (!auth.isAuthenticated) {
-  //   router.push('/login?redirect=/dash');
-  // }
+  if (!auth.isAuthenticated) {
+    router.push('/login?redirect=/dash');
+  }
 });
 </script>
 <template>

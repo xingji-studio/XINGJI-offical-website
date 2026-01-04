@@ -71,6 +71,11 @@ const routes = [
     name: "bcms",
     component: () => import("../views/software/games/BCMS-Mobile.vue"),
   },
+  {
+    path: "/licenses",
+    name: "licenses",
+    component: () => import("../licenses/Licenses.vue"),
+  },
 ];
 
 // const router = createRouter({
