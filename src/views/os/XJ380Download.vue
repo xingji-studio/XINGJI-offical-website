@@ -25,16 +25,15 @@ const versions = ref([
 ])
 
 const devTools = ref([
-  // { name: 'XJ380 应用程序编译套件（XACT for Windows）', url: '#' },
-  // { name: 'XJ380 应用程序编译套件（XACT for Linux）', url: '#' },
-  // { name: 'XJ380 应用程序编译套件（XACT for XJ380）', url: '#' },
+  { name: 'XJ380 应用程序编译套件（XACT for Windows）', url: '/os/XJ380_XACT_2026v1_windows.zip' },
+  { name: 'XJ380 应用程序编译套件（XACT for Linux）', url: '/os/XJ380_XACT_2026v1_linux.zip' },
   { name: 'XJ380 API 标准文档（C/C++）', url: '/os/XJ380_API_Spec_CPP_1_1.pdf' },
   { name: 'XJ380 API 静态链接库及头文件（C/C++）', url: '/os/XJ380_CPP_API_Depend_1_1.zip' }
 ])
 
 const requirements = ref([
   { name: '处理器', spec: 'x64 架构的 64 位处理器，基准频率 1 GHz 或更高' },
-  { name: 'RAM', spec: '256 MB' },
+  { name: 'RAM', spec: '1 GB' },
   { name: '硬盘', spec: '至少 256 MB 或更大' },
   { name: '显示器', spec: '800 x 600 或更高' }
 ])
@@ -103,7 +102,7 @@ const requirements2 = ref([
       <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 mb-8">
         <h2 class="text-2xl font-bold text-white mb-6">开发者工具及文档</h2>
         <p class="text-gray-400 mb-8">
-          请注意：目前XJ380仅公开C/C++版的API标准文档。编译套件将于稍后推出。
+          请注意：XXCC 依赖于 Clang 18.1.8 或更高版本。
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <a v-for="tool in devTools" 
