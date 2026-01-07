@@ -44,6 +44,13 @@ const products = ref([
 
 const news_posts = ref([
   {
+    title: 'XJ380 API编译套件现已公布',
+    image: '/LOGO带底.png',
+    description: '适用于XJ380操作系统的XJ380 API编译套件现已公布。欢迎各位开发者为XJ380的生态注入一份自己的力量！',
+    more_text: '立刻开始“星际”之旅',
+    link: '/os/xj380/download'
+  }, 
+  {
     title: 'XINGJI 工作室宣布关停星际云',
     image: '/files/XBO.png',
     description: '由于星际云长期亏损加上其管理不善，XINGJI 工作室董事会组织（XBO）于2025年11月30日正式宣布关停星际云。',
@@ -56,13 +63,6 @@ const news_posts = ref([
     description: '星际开发者大会2025（XDC2025）于北京时间2025年10月3日在线上顺利举行。',
     more_text: '立刻观看 XDC2025',
     link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/'
-  }, 
-  {
-    title: 'XJ380 API手册现已公布',
-    image: '/LOGO带底.png',
-    description: '适用于XJ380操作系统的XJ380 API手册现已公布。开发工具将于稍后发布。欢迎各位开发者为XJ380的生态注入一份自己的力量！',
-    more_text: '立刻开始“星际”之旅',
-    link: '/os/xj380/download'
   }
 ]);
 
@@ -181,9 +181,9 @@ const fastguides = ref([
 ])
 
 const news = ref({
-  title: '星际工作室8周年',
-  subtitle: 'XINGJI 工作室 8 周年庆祝活动',
-  link: '#',
+  title: '编译套件公布',
+  subtitle: 'XINGJI XJ380 Operating System',
+  link: '/os/xj380/download',
   image: {
     src: '/primage.png', // 看看行不行！
     alt: '宣传图',
@@ -214,7 +214,7 @@ const news = ref({
               {{ news.subtitle }}
             </p>
           </div>
-          <a :href="news.link" class="link-button text-white">已阅</a>
+          <a :href="news.link" class="link-button text-white">立刻下载</a>
         </div>
       </div>
     </div>
