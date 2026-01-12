@@ -1,0 +1,101 @@
+XINGJI 工作室用户许可协议
+XJ380 操作系统
+最新版本：2026年1月 第1版
+=================
+感谢您选择 XINGJI 工作室产品！
+
+为了保护您的相关权益，并给予您一个更好的体验效果，您需要了解并同意以下相关协议。
+
+本协议将会介绍您在使用 XJ380 时的权利和义务以及前提条件。您应完整阅读本协议以及其他附加协议和条款，这些协议和条款将共同组成使用您的协议。您可以在 XINGJI 工作室官方网站（xingjisoft.com/licenses）查询到本协议以及其他协议的副本。
+
+接受本协议或使用该软件，则代表您同意这些所有条款。并且代表您保证按照本协议在软件的使用过程中传输的特定信息。如果您不接受并遵守这些条款，您不得使用该软件及其功能。
+
+一、概述。
+
+    1. 适用性。
+        本协议适用于您设备上预安装的、您从零售处购买的以及您安装的 XJ380 软件、您用于接收软件的介质、软件附带的任何字体、图像或声音文件，还有软件任何的由 XINGJI 工作室或其子工作室发布的更新、升级、补充程序或服务，除非他们附带有其他条款。本协议还适用于任何由 XINGJI 工作室发行的 XJ380应用程序，如文件管理器等，这些软件将作为 XJ380 随附的应用程序。
+
+    2. 附加条款
+        根据您的使用方式与配置方式不同，您对某些功能、服务和其他应用程序的使用可能还需要遵守一些其他的 XINGJI 工作室条款或第三方条款，例如额外的应用程序或 XINGJI 工作室提供的在线服务等。
+
+二、安装和使用权利。
+
+    1. 许可。
+        软件只授予使用许可，而非出售。根据本协议，我们授予您在您的设备上安装并运行该软件的一个实例的权利。一次仅供一人使用，但前提是您遵守本协议。使用 XINGJI 工作室推送的更新或升级非正版软件不会使您原先的版本在升级/更新后成为正版，并且再次情况下，您没有使用本软件的许可。
+
+    2. 限制。
+        XINGJI 工作室保留本协议中未明确授予的所有权利，且未向您授予任何其他权利。您和其他人士或实体不得且没有包括但不限于以下权利：
+            (1) 发布、复制（除允许的备份复制外）、出租或出借软件。
+            (2) 转让（除非本协议允许）软件。
+            (3) 绕过本软件中的任何技术限制。
+            (4) 对软件进行反向工程、反汇编或反向编译，或试图进行以上行为。
+            (5) 在未经授权的情况下访问任何服务、数据、账户或网络。
+
+    3. 备份副本。
+        您可以出于备份目的制作该软件的一个副本，也可按照该协议所述使用副本转让该软件。
+
+三、转让。
+
+    1. 如果您购买了预安装在设备上的软件（并且如果您升级了预安装在设备上的软件），则只能将该软件的使用许可直接转让给具有许可设备的其他用户。转让必须包括该软件。在根据规定进行任何形式的转让之前，第三方必须同意在转让和使用该软件时遵守本协议。
+
+    2. 您可以将本软件转让给您的其他设备或其他人所拥有的设备，前提是新用户同意遵守本协议。每当您将该软件转让至一个新的设备时，都必须将该软件从先前的设备上删除。您不得为了在设备间共享许可而转让该软件。
+
+四、隐私。
+
+    1. 我们保证不会在未经您授权的情况下自行收集您的任何个人信息，除非且仅限于您当地法律规定需要进行收集的情况。
+
+    2. 您不得传输或存储任何违反当地法律的信息或文件。
+
+五、授权软件和激活。
+
+    1. 只有在您经过了适当许可并且已经使用产品密钥或其他授权方式正确激活了软件的情况下，才授权您使用该软件。当您使用该软件连接到互联网时，该软件可能将自动与 XINGJI Interactive Software 联系，以进行激活并将其与某一特定设备相关联。您也可以通过互联网手动激活该软件。在任一情况下，将发生特定信息的传输，并且可能收取额外的（如互联网）服务费用。在激活（或可能由设备的组件更改触发的重新激活）过程中，该软件可能确定软件的安装实例是否伪造、是否经过不当许可或是否包含未经授权的更改。如果激活失败，该软件将尝试通过将任何被篡改的 XINGJI 工作室软件替换为正版 XINGJI 工作室软件来进行自身修复。您还可能收到提醒，要求您获取软件的适当许可。激活成功并不能确认该软件为正版或经适当许可。您不得绕过或规避激活。
+
+六、更新。
+
+    1. 该软件可能将定期检查系统和应用程序更新，并为您下载和安装这些更新。您只能获取 XINGJI 工作室或授权来源提供的更新，XINGJI 工作室可能需要更新您的系统来为您提供这些更新。接受本协议，即表示您同意在无需任何额外通知的情况下接收这些类型的自动更新。
+
+七、声明及警告。
+
+    1. 在当地法律允许的范围内，制造商和 XINGJI 工作室排除所有默示保证和条件，软件品质和性能的全部风险均由您自行承担。一经证实软件存在缺陷，您应承担所有服务或维修的全部费用。如果当地法律对此提供了保证、保障或条件（即使本协议未提供），则相关条款自首位用户购买此软件起三十天内有效。如果 XINGJI 工作室违反此类保证、保障或条件，唯一的补救措施应为（由 XINGJI 工作室自行选择）：
+
+        (1) 免费修复或更换新的软件。
+
+        (2) 退还您向 XINGJI 工作室为该软件所支付的费用。
+
+    2. 光敏性癫痫发作警告：当暴露在特定光影图案或闪光光亮下时，有极小部分人群会引发癫痫。这种情形可能是由于某些未查出的癫痫症状引起，即使该人员并没有患癫痫病史也有可能造成此类病症。如果您的家人或任何家庭成员曾有过类似症状，请在使用本软件前咨询您的医生或医师。如果您在使用本软件过程中出现任何症状，包括头晕、目眩、眼部或肌肉抽搐、失去意识、失去方向感、抽搐、或出现任何自己无法控制的动作，请立即停止使用本软件并在继续使用前咨询您的医生或医师。
+
+    3. 网络、数据和互联网使用。通过该软件访问的某些软件功能和服务可能要求您的设备访问互联网。您的访问和使用（包括费用）可能受您的手机或互联网提供商协议条款的约束。某些软件功能可以帮助您更有效地访问互联网，但软件的使用计算可能会与您的服务提供商的度量有所不同。您始终有责任了解和遵守自己的计划和协议的条款，并且对因使用或访问网络（包括公共/开放的网络）引起的任何问题负责。只有在获得相关权限时，您才可以使用该软件来连接网络，并共享关于这些网络的访问信息。
+
+八、开源软件使用许可证。
+
+    The MIT License (MIT)
+
+        Copyright(C) 2026 Software Developer(s)
+
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+    Apache License
+
+        Copyright(C) 2026 Software Developer(s)
+
+        Licensed under the Apache License, Version 2.0 (the "License");
+
+        you may not use this file except in compliance with the License.
+
+        You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing, software
+
+        distributed under the License is distributed on an "AS IS" BASIS,
+
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+        See the License for the specific language governing permissions and
+
+        limitations under the License.

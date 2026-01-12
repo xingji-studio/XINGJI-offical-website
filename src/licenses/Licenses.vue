@@ -17,6 +17,10 @@ const licenses_tabs = ref([
     title: 'XJ380OS 交流群群聊规定',
     link: '/licenses/XJ380OS_Group_Chat_Licenses.txt'
   },
+  {
+    title: 'XJ380 用户许可协议',
+    link: '/licenses/XJ380_EULA.txt'
+  },
 ])
 
 </script>
