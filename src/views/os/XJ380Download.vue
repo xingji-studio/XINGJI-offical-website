@@ -25,10 +25,10 @@ const versions = ref([
 ])
 
 const devTools = ref([
-  { name: 'XJ380 应用程序编译套件（XACT for Windows）', url: 'https://xjfs.cn-nb1.rains3.com/XJ380_XACT_2026v3_windows.zip' },
-  { name: 'XJ380 应用程序编译套件（XACT for Linux）', url: 'https://xjfs.cn-nb1.rains3.com/XJ380_XACT_2026v3_linux.zip' },
-  { name: 'XJ380 API 标准文档（C/C++）', url: 'https://xjfs.cn-nb1.rains3.com/XJ380_API_Spec_CPP_1_2.pdf' },
-  { name: 'XJ380 API 静态链接库及头文件（C/C++）', url: 'https://xjfs.cn-nb1.rains3.com/XJ380_CPP_API_Depend_1_2.zip' }
+  { name: 'XJ380 应用程序编译套件（XACT for Windows）', url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v3_windows.zip' },
+  { name: 'XJ380 应用程序编译套件（XACT for Linux）', url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v3_linux.zip' },
+  { name: 'XJ380 API 标准文档（C/C++）', url: 'https://xjf.cn-nb1.rains3.com/XJ380_API_Spec_CPP_1_2.pdf' },
+  { name: 'XJ380 API 静态链接库及头文件（C/C++）', url: 'https://xjf.cn-nb1.rains3.com/XJ380_CPP_API_Depend_1_2.zip' }
 ])
 
 const requirements = ref([
@@ -126,4 +126,5 @@ const requirements2 = ref([
       </div>
     </div>
   </div>
+
 </template> 
