@@ -47,7 +47,16 @@ const memInfo = ref([
     ]
   }, 
   {
-    name: '@Redox2913',
+    name: '@小严awa',
+    title: '副董事长、BridgeEngine总工程师',
+    image: '/about/members/rainy101112.jpg',
+    achievements: [
+      'XINGJI工作室副董事长、Rainy工作室创始人',
+      'BridgeEngine总工程师、XJ380开发者'
+    ]
+  }, 
+  {
+    name: '@VOID2913',
     title: 'XJ380副总工程师',
     image: '/about/members/void.jpg',
     achievements: [
@@ -71,16 +80,6 @@ const memInfo = ref([
     achievements: [
       'XJ380副总工程师',
       'PlantOS开发者'
-    ]
-  }, 
-  {
-    name: '@小严awa',
-    title: 'BridgeEngine总工程师',
-    image: '/about/members/rainy101112.jpg',
-    achievements: [
-      'BridgeEngine总工程师、XJ380开发者',
-      'Rainy工作室创始人',
-      'Uinxed-Kernel开发者'
     ]
   }, 
   {
