@@ -39,41 +39,6 @@ const positions = ref([
     tags: ['岗位稳定', '急招']
   },
   {
-    title: '网页工程师',
-    department: 'XINGJI Website Develop Department',
-    requirements: '会较为熟练运用基础的Vue+Vite、CSS等，学习能力强。有网页开发经验者（尤其是做过滚动驱动动画的）优先。',
-    headcount: 3,
-    tags: ['有奖金', '岗位稳定', '急招']
-  },
-  {
-    title: '封面设计',
-    department: 'XINGJI Propaganda Department',
-    requirements: '知道如何设计封面、标题可以获得最大流量。',
-    headcount: 2,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '视频结构规划（导演）',
-    department: 'XINGJI Propaganda Department',
-    requirements: '知道如何规划视频结构及特效可以最大留存关注并激励其互动',
-    headcount: 2,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '视频制作（剪辑）',
-    department: 'XINGJI Propaganda Department',
-    requirements: '会较为熟练运用Pr、Ae (达芬奇等也可以) 等专业剪辑工具的基础功能，学习能力强。',
-    headcount: 5,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '宣传部副部长',
-    department: 'XINGJI Propaganda Department',
-    requirements: '拥有宣传部其他岗位的能力（可以稍微弱一些但肯定不能不懂），擅长管理与激励成员。',
-    headcount: 1,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
     title: '人力资源部部长/副部长',
     department: 'XINGJI Nigger Resources Department',
     requirements: '会说话会挖人，能精准选取需要或预备需要的人才。',
@@ -92,34 +57,6 @@ const positions = ref([
     department: 'XINGJI Marketing Department',
     requirements: '会分析市场形势、趋势及如何定价、设计、包装并营销。',
     headcount: 3,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '纪检部部长/副部长',
-    department: 'XINGJI Discipline Inspection Department',
-    requirements: '预防、阻止和上报可疑人员、泄密人员和私自挪用公款人员。',
-    headcount: 3,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '董事/CEO秘书',
-    department: 'XINGJI Board Organization',
-    requirements: '你觉得要干什么呢',
-    headcount: 1,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: 'XINGJI Games 工作室室长',
-    department: 'XINGJI Games',
-    requirements: '有较强领导能力，会较为熟练运用基础的C\\C++，学习能力强。',
-    headcount: 2,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '星际云工作室室长/副室长',
-    department: 'XINGJI Cloud',
-    requirements: '有较强领导能力，会较为熟练运用基础的C\\C++、Python，熟悉硬件，学习能力强。',
-    headcount: 2,
     tags: ['有奖金', '岗位稳定']
   },
   {
