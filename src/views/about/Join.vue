@@ -66,6 +66,13 @@ const positions = ref([
     headcount: 5,
     tags: ['有奖金', '岗位稳定']
   },
+  {
+    title: '剪辑',
+    department: 'XINGJI Publicity Department',
+    requirements: '有Pr、Ae等软件的操作基础。',
+    headcount: 1,
+    tags: ['有奖金', '岗位稳定']
+  },
 ])
 
 const benefits = ref([
