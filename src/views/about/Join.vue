@@ -32,6 +32,14 @@ const positions = ref([
     tags: ['有奖金', '岗位稳定', '急招']
   },
   {
+    title: "AI工程师",
+    department: "XINGJI AI Department",
+    requirements: "熟练掌握Python，了解大模型底层原理，会使用PyTorch/TensorFlow等深度学习框架。",
+    headcount: 5,
+    tags: ["有奖金", "岗位稳定", "急招"]
+    
+  }
+  {
     title: '美工',
     department: 'XINGJI XJ380 Develop Department',
     requirements: '会设计UI。',
@@ -150,4 +158,5 @@ const benefits = ref([
     </div>
   </div>
 </template> 
+
 
