@@ -1,0 +1,140 @@
+{
+  "\u0000plugin-vue:export-helper": [],
+  "\u0000vite/modulepreload-polyfill.js": [],
+  "\u0000vite/preload-helper.js": [],
+  "../../../../../LOGO带底.png": [
+    "/assets/XJ380-lm3c9aqf.js"
+  ],
+  "../../../../../about/right1.jpg": [
+    "/assets/About-B8DZm0fj.js"
+  ],
+  "../../../../../error/boot_error.png": [
+    "/assets/XJ380Error-DXnJH6cu.js"
+  ],
+  "../../../../../error/error.png": [
+    "/assets/XJ380Error-DXnJH6cu.js"
+  ],
+  "../../../../../files/XINGJI_blueback.png": [],
+  "../../../../../ultra版LOGO带底.png": [
+    "/assets/XJ380-lm3c9aqf.js"
+  ],
+  "index.html": [],
+  "node_modules/@unhead/dom/dist/index.mjs": [],
+  "node_modules/@unhead/shared/dist/index.mjs": [],
+  "node_modules/@unhead/vue/dist/shared/vue.-sixQ7xP.mjs": [],
+  "node_modules/@unhead/vue/dist/shared/vue.ziyDaVMR.mjs": [],
+  "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [],
+  "node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [],
+  "node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [],
+  "node_modules/@vue/shared/dist/shared.esm-bundler.js": [],
+  "node_modules/hookable/dist/index.mjs": [],
+  "node_modules/unhead/dist/index.mjs": [],
+  "node_modules/vite-ssg/dist/index.mjs": [],
+  "node_modules/vite-ssg/dist/shared/vite-ssg.C6pK7rvr.mjs": [],
+  "node_modules/vite-ssg/dist/shared/vite-ssg.ETIvV-80.mjs": [],
+  "node_modules/vue-router/dist/vue-router.mjs": [],
+  "src/App.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/App.vue?vue&type=style&index=0&lang.css": [],
+  "src/components/Navigation.vue": [],
+  "src/components/Navigation.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/components/Navigation.vue?vue&type=style&index=0&scoped=4e555cff&lang.css": [],
+  "src/components/auth/Login.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/LoginPage-D4uJOuAy.js"
+  ],
+  "src/components/auth/Register.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/RegisterPage-UX_dI5gy.js"
+  ],
+  "src/components/software/GameLayout.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/GameLayout.vue_vue_type_script_setup_true_lang-C28HiV68.js"
+  ],
+  "src/dash/dash_index.vue": [
+    "/assets/dash_index-BaGFDgkC.js"
+  ],
+  "src/dash/dash_index.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/dash_index-BaGFDgkC.js"
+  ],
+  "src/licenses/Licenses.vue": [
+    "/assets/Licenses-BU6GFavZ.js"
+  ],
+  "src/licenses/Licenses.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/Licenses-BU6GFavZ.js"
+  ],
+  "src/main.ts": [],
+  "src/router/index.ts": [],
+  "src/stores/auth.ts": [],
+  "src/style.css": [],
+  "src/utils/api.ts": [],
+  "src/views/Home.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/views/OpenSource.vue": [
+    "/assets/OpenSource-Dt8e1vsO.js"
+  ],
+  "src/views/OpenSource.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/OpenSource-Dt8e1vsO.js"
+  ],
+  "src/views/about/About.vue": [
+    "/assets/About-B8DZm0fj.js"
+  ],
+  "src/views/about/About.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/About-B8DZm0fj.js"
+  ],
+  "src/views/about/Join.vue": [
+    "/assets/Join-qZyi-FLI.js"
+  ],
+  "src/views/about/Join.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/Join-qZyi-FLI.js"
+  ],
+  "src/views/auth/LoginPage.vue": [
+    "/assets/LoginPage-D4uJOuAy.js"
+  ],
+  "src/views/auth/LoginPage.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/LoginPage-D4uJOuAy.js"
+  ],
+  "src/views/auth/RegisterPage.vue": [
+    "/assets/RegisterPage-UX_dI5gy.js"
+  ],
+  "src/views/auth/RegisterPage.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/RegisterPage-UX_dI5gy.js"
+  ],
+  "src/views/os/XJ380.vue": [
+    "/assets/XJ380-lm3c9aqf.js"
+  ],
+  "src/views/os/XJ380.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/XJ380-lm3c9aqf.js"
+  ],
+  "src/views/os/XJ380Download.vue": [
+    "/assets/XJ380Download-uG2JW5hl.js"
+  ],
+  "src/views/os/XJ380Download.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/XJ380Download-uG2JW5hl.js"
+  ],
+  "src/views/os/XJ380Error.vue": [
+    "/assets/XJ380Error-DXnJH6cu.js"
+  ],
+  "src/views/os/XJ380Error.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/XJ380Error-DXnJH6cu.js"
+  ],
+  "src/views/software/Software.vue": [
+    "/assets/Software-Dp5C8I1p.js"
+  ],
+  "src/views/software/Software.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/Software-Dp5C8I1p.js"
+  ],
+  "src/views/software/bridge-engine.vue": [
+    "/assets/bridge-engine-Dzx1Cjqp.js"
+  ],
+  "src/views/software/bridge-engine.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/bridge-engine-Dzx1Cjqp.js"
+  ],
+  "src/views/software/games/BCMS-Mobile.vue": [
+    "/assets/BCMS-Mobile-BrWGyWs0.js"
+  ],
+  "src/views/software/games/BCMS-Mobile.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/BCMS-Mobile-BrWGyWs0.js"
+  ],
+  "src/views/software/games/BCMS.vue": [
+    "/assets/BCMS-DTcC9xrJ.js"
+  ],
+  "src/views/software/games/BCMS.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/BCMS-DTcC9xrJ.js"
+  ]
+}
