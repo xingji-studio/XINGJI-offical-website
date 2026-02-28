@@ -38,7 +38,7 @@ const positions = ref([
     headcount: 5,
     tags: ["有奖金", "岗位稳定", "急招"]
     
-  }
+  },
   {
     title: '美工',
     department: 'XINGJI XJ380 Develop Department',
@@ -158,5 +158,6 @@ const benefits = ref([
     </div>
   </div>
 </template> 
+
 
 
