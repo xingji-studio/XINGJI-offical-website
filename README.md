@@ -6,12 +6,6 @@ XINGJI工作室官方网站，使用 Vue 3 + TypeScript + Tailwind CSS + Vite-SS
 
 - Node.js >= 20
 
-## 非常重要！
-
-新版XINGJI官网需要搭配上[XJ-Auth](https://github.com/xingji-studio/xj-auth)套件使用！请务必先安装并配置好XJ-Auth，再继续以下步骤。
-
-如果你不想使用登录功能，可以自行删去相关的代码。
-
 ## 项目设置
 
 1. 克隆项目
@@ -27,14 +21,7 @@ cd XINGJI-offical-website
 npm install
 ```
 
-3. 写`.env`
-
-```
-# API Configuration
-VITE_API_BASE_URL=https://api.example.com
-```
-
-4. 启动开发服务器
+3. 启动开发服务器
 
 ```bash
 npm dev
@@ -42,7 +29,7 @@ npm dev
 
 现在可以在浏览器中访问 http://localhost:5173 查看网站。
 
-5. 构建生产版本
+4. 构建生产版本
 
 ```bash
 npm build

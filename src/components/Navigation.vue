@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { ref, watch, computed } from "vue";
-import { useRouter } from "vue-router";
-import { authStore } from "../stores/auth";
+import { ref, watch } from "vue";
 
 const isOpen = ref(false);
-const auth = authStore;
-const router = useRouter();
 
 const menuItems = ref([
   { name: "首页", link: "/" },
@@ -15,8 +11,10 @@ const menuItems = ref([
   { name: "关于我们", link: "/about" },
   { name: "招纳贤士", link: "/join" },
   { name: "开源软件", link: "/open-source" },
+  { name: "用户中心", link: "https://uc.xingjisoft.com"}
 ]);
 
+/*
 // 处理登录
 const handleLogin = () => {
   router.push("/login");
@@ -37,6 +35,7 @@ const handleLogout = () => {
 const handleJmpDash = () => {
   router.push("/dash");
 };
+*/
 
 watch(isOpen, (newVal, _oldVal) => {
   if (newVal) {
@@ -90,9 +89,10 @@ defineProps({
           
         </ul>
         </section>
+        <!--
         <section class="flex items-center justify-start h-full">
           <ul class="flex items-center justify-start h-full">
-            <!-- 登录/登出按钮 - 放在循环外部，确保只显示一次 -->
+            <!-- 登录/登出按钮 - 放在循环外部，确保只显示一次 
             <li v-if="!auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
               <button @click="handleLogin" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm  font-medium hover:bg-gray-400/10 transition-all duration-200 item">
                 <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
@@ -124,6 +124,7 @@ defineProps({
           </ul>
 
         </section>
+        -->
       </li>
       <!-- For moblie: Menu Button -->
       <li class="lg:hidden nav-right w-16 h-16">
@@ -163,7 +164,8 @@ defineProps({
         </a>
       </template>
       
-      <!-- 移动端登录/登出按钮 - 放在循环外部，确保只显示一次 -->
+
+      <!-- 移动端登录/登出按钮 - 放在循环外部，确保只显示一次 
       <button v-if="!auth.isAuthenticated" @click="handleLogin(); isOpen = false"
         class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
         :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
@@ -196,6 +198,7 @@ defineProps({
           登出
         </span>
       </button>
+    -->
     </ul>
   </nav>
 </template>

@@ -46,6 +46,7 @@ const routes = [
     name: "bridge-engine",
     component: () => import("../views/software/bridge-engine.vue"),
   },
+  /*
   {
     path: "/login",
     name: "login",
@@ -61,6 +62,7 @@ const routes = [
     name: "user-dash",
     component: () => import("../dash/dash_index.vue"),
   },
+  */
   {
     path: "/software/games/bcms",
     name: "bcms",
