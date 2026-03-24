@@ -18,14 +18,14 @@ useHead({
 const products = ref([
   {
     title: '操作系统',
-    description: 'XJ380操作系统，完全自主研发，内核使用XSK2.1，UEFI引导方式，安全、可靠',
+    description: 'XJ380操作系统，完全自主研发，采用 UEFI 引导方式，安全、可靠',
     image: '/files/os.png',
     link: '/os/xj380'
   },
   {
-    title: '星际云',
-    description: '这玩意儿死了，但是我没找着合适的东西替代他放在主页，那就先等等吧',
-    image: '/files/cloud.png',
+    title: '人工智能',
+    description: 'XINGJI 大模型助力日常生活 AI 化',
+    image: '/files/ai.png',
     link: '#'
   },
   {
@@ -83,9 +83,9 @@ const partners = ref([
     link: 'https://pcc.xingjisoft.com/'
   },
   {
-    name: '星际云',
-    logo: '/files/XINGJI Cloud.png',
-    link: 'https://cloud.xingjisoft.com/'
+    name: 'HGSpace',
+    logo: '/files/HGSpace.png',
+    link: '#'
   }
 ])
 
