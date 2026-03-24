@@ -85,7 +85,7 @@ const partners = ref([
   {
     name: 'HGSpace',
     logo: '/files/HGSpace.png',
-    link: '#'
+    link: 'https://github.com/HGSpace-Studio'
   }
 ])
 
