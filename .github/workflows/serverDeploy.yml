@@ -1,4 +1,4 @@
-name: Deploy Vite App to Server
+name: Deploy to server
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  NODE_VERSION: "22"
+  NODE_VERSION: "24"
 
 jobs:
   build-and-deploy:
