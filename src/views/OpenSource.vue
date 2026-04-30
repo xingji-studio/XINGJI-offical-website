@@ -30,18 +30,12 @@ OpenXSKernel现已被OSDev收录。`,
     ]
   },
   {
-    name: 'OpenXJ380',
-    description: `一个由XINGJI工作室开发的32位操作系统。
-注意：该程序由XJ380(Code Whisty)改造而来，不是XJ380最新版。这个破烂与XJ380 Singularity八竿子打不着。
-OpenXJ380现已被OSDev收录，并于2025/11/3归档。`,
+    name: '挖矿模拟器',
+    description: `史，别看`,
     links: [
       {
         text: '仓库链接',
-        url: 'https://github.com/xingji-studio/OpenXJ380'
-      },
-      {
-        text: 'OSDev链接',
-        url: 'https://wiki.osdev.org/Projects#O'
+        url: 'https://github.com/xingji-studio/BitCoinMiningSimulator'
       }
     ]
   }
