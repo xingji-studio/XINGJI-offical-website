@@ -10,6 +10,9 @@ export default defineConfig(({ mode }) => {
   
   return {
     plugins: [vue()],
+    ssgOptions: {
+      dirStyle: "nested",
+    },
     resolve: {
       alias: {
         "@": fileURLToPath(new URL("./src", import.meta.url))

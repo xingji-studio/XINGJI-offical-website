@@ -28,7 +28,7 @@ const handleDownload = () => {
           class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]">
         </div>
         <div
-          class="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-pink-500/30 backdrop-blur-3xl">
+          class="absolute inset-0 bg-gradient-to-br from-cyan-500/25 via-sky-500/25 to-blue-600/25 backdrop-blur-3xl">
         </div>
       </div>
 
@@ -40,7 +40,7 @@ const handleDownload = () => {
           更快、更小、更安全
         </p>
         <button @click="handleDownload"
-          class="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-blue-500/25">
+          class="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25">
           下载XJ380操作系统
         </button>
       </div>

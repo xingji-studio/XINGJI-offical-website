@@ -48,7 +48,7 @@ OpenXSKernel现已被OSDev收录。`,
     <section class="relative py-20">
       <div class="absolute inset-0 overflow-hidden">
         <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-pink-500/30 backdrop-blur-3xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/25 via-sky-500/25 to-blue-600/25 backdrop-blur-3xl"></div>
       </div>
       
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -69,7 +69,7 @@ OpenXSKernel现已被OSDev收录。`,
           <div v-for="project in projects" 
                :key="project.name"
                class="group relative">
-            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur"></div>
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur"></div>
             <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 hover:transform hover:scale-[1.02] transition-all duration-300">
               <h2 class="text-2xl font-bold text-white mb-4">{{ project.name }}</h2>
               <p class="text-gray-400 mb-6 whitespace-pre-line">{{ project.description }}</p>

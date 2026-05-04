@@ -14,10 +14,17 @@ useHead({
 
 const categories = ref([
   {
-    title: '实用工具',
-    description: 'XINGJI工作室 预计开发一系列实用工具，帮助用户解决日常工作中的各种问题。',
+    title: '开发人员',
+    description: 'XINGJI工作室 为个人和企业开发者提供高质量、多样、跨平台的解决方案，',
     items: [
       { name: 'BridgeEngine', link: '/software/bridge-engine' },
+      { name: 'StardustUI', link: '/software/stardust-ui' },
+    ]
+  },
+  {
+    title: '实用工具',
+    description: 'XINGJI工作室 预计开发一系列实用工具，帮助用户解决日常工作中的各种问题。（省流：全是饼）',
+    items: [
       { name: 'SpaceTerminal', link: '#' },
       { name: 'SpaceCode2026', link: '#' },
       { name: 'SpacePaint2026', link: '#' },
@@ -32,14 +39,13 @@ const categories = ref([
     items: [
       { name: '挖矿模拟器', link: '/software/games/bcms' },
       { name: '挖矿模拟器Mobile', link: '/software/games/bcms-mobile' },
-      { name: '挖矿模拟器2', link: '#' }
     ]
   },
   {
     title: '操作系统',
     description: 'XINGJI工作室 开发的一些操作系统，以满足用户的自定义操作系统需求。',
     items: [
-      { name: 'XJ380操作系统', link: '/os/xj380' }
+      { name: 'XJ380操作系统', link: '/os/xj380' },
     ]
   }
 ])
@@ -51,7 +57,7 @@ const categories = ref([
     <section class="relative py-20">
       <div class="absolute inset-0 overflow-hidden">
         <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-pink-500/30 backdrop-blur-3xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/25 via-sky-500/25 to-blue-600/25 backdrop-blur-3xl"></div>
       </div>
       
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -71,7 +77,7 @@ const categories = ref([
           <div v-for="category in categories" 
                :key="category.title"
                class="group relative">
-            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur"></div>
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur"></div>
             <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
               <h2 class="text-2xl font-bold text-white mb-4">{{ category.title }}</h2>
               <p class="text-gray-400 mb-6 whitespace-pre-line">{{ category.description }}</p>

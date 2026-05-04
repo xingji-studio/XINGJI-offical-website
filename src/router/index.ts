@@ -47,13 +47,18 @@ const routes = [
     component: () => import("../views/software/bridge-engine.vue"),
   },
   {
+    path: "/software/stardust-ui",
+    name: "stardust-ui",
+    component: () => import("../views/software/stardust-ui.vue"),
+  },
+  {
     path: "/software/games/bcms",
     name: "bcms",
     component: () => import("../views/software/games/BCMS.vue"),
   },
   {
     path: "/software/games/bcms-mobile",
-    name: "bcms",
+    name: "bcms-mobile",
     component: () => import("../views/software/games/BCMS-Mobile.vue"),
   },
   {
