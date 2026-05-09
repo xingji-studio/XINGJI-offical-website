@@ -25,10 +25,26 @@ const versions = ref([
 ])
 
 const devTools = ref([
-  { name: 'XJ380 应用程序编译套件（XACT for Windows）', url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v3_windows.zip' },
-  { name: 'XJ380 应用程序编译套件（XACT for Linux）', url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v3_linux.zip' },
-  { name: 'XJ380 API 标准文档（C/C++）', url: 'https://xjf.cn-nb1.rains3.com/XJ380_API_Spec_CPP_1_2.pdf' },
-  { name: 'XJ380 API 静态链接库及头文件（C/C++）', url: 'https://xjf.cn-nb1.rains3.com/XJ380_CPP_API_Depend_1_2.zip' }
+  {
+    name: 'XJ380 应用程序编译套件（XACT for Windows）',
+    url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v3_windows.zip',
+    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/32884846'
+  },
+  {
+    name: 'XJ380 应用程序编译套件（XACT for Linux）',
+    url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v3_linux.zip',
+    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/33611319'
+  },
+  {
+    name: 'XJ380 API 标准文档（C/C++）',
+    url: 'https://xjf.cn-nb1.rains3.com/XJ380_API_Spec_CPP_1_2.pdf',
+    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/29326775'
+  },
+  {
+    name: 'XJ380 API 静态链接库及头文件（C/C++）',
+    url: 'https://xjf.cn-nb1.rains3.com/XJ380_CPP_API_Depend_1_2.zip',
+    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/29326774'
+  }
 ])
 
 const requirements = ref([
@@ -104,16 +120,28 @@ const requirements2 = ref([
         <p class="text-gray-400 mb-8">
           请注意：XXCC 依赖于 Clang 18.1.8 或更高版本。
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a v-for="tool in devTools" 
-             :key="tool.name"
-             :href="tool.url"
-             class="inline-flex items-center px-6 py-3 rounded-xl bg-gray-700/30 text-gray-300 hover:bg-gray-700/50 transition-colors duration-200">
-            {{ tool.name }}
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-          </a>
+        <div class="grid grid-cols-1 gap-4">
+          <div v-for="tool in devTools"
+               :key="tool.name"
+               class="p-4 rounded-xl bg-gray-700/30">
+            <div class="text-gray-300 mb-3 font-medium">{{ tool.name }}</div>
+            <div class="flex flex-wrap gap-3">
+              <a :href="tool.url"
+                 class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors duration-200 text-sm">
+                主链接下载
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+              <a :href="tool.backupUrl"
+                 class="inline-flex items-center px-4 py-2 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition-colors duration-200 text-sm">
+                备用链接下载
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
