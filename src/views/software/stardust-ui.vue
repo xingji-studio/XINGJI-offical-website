@@ -3,7 +3,7 @@ import GameLayout from '../../components/software/GameLayout.vue'
 import { useHead } from '@vueuse/head'
 
 useHead({
-  title: '鹊桥引擎 | XINGJI Studio',
+  title: '星尘UI | XINGJI Studio',
   meta: [
     {
       name: 'description',
