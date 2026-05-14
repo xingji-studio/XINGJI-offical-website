@@ -29,31 +29,26 @@ const devTools = ref([
     name: 'XJ380 应用程序编译套件（XACT for XJ380）',
     url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v4_xj380.zip',
     backupUrl: '#',
-    origin_url: 'XJ380_XACT_2026v4_xj380.zip',
   },
   {
     name: 'XJ380 应用程序编译套件（XACT for Windows）',
     url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v4_windows.zip',
     backupUrl: '#',
-    origin_url: 'XJ380_XACT_2026v4_windows.zip',
   },
   {
     name: 'XJ380 应用程序编译套件（XACT for Linux）',
     url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v4_linux.zip',
     backupUrl: '#',
-    origin_url: 'XJ380_XACT_2026v4_linux.zip',
   },
   {
     name: 'XJ380 API 标准文档（C/C++）',
     url: 'https://xjf.cn-nb1.rains3.com/XJ380_API_Spec_CPP_1_3.pdf',
     backupUrl: '#',
-    origin_url: 'XJ380_API_Spec_CPP_1_3.pdf',
   },
   {
     name: 'XJ380 API 静态链接库及头文件（C/C++）',
     url: 'https://xjf.cn-nb1.rains3.com/XJ380_CPP_API_Depend_1_3.zip',
     backupUrl: '#',
-    origin_url: 'XJ380_CPP_API_Depend_1_3.zip',
   }
 ])
 
@@ -146,13 +141,6 @@ const requirements2 = ref([
               <a :href="tool.backupUrl"
                  class="inline-flex items-center px-4 py-2 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition-colors duration-200 text-sm">
                 备用链接下载
-                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-              </a>
-              <a :href="tool.origin_url" :download="tool.origin_url"
-                 class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-500/20 text-gray-400 hover:bg-gray-500/30 transition-colors duration-200 text-sm">
-                官网链接下载（稳定但慢，优先用前俩）
                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
