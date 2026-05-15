@@ -28,31 +28,31 @@ const devTools = ref([
   {
     name: 'XJ380 应用程序编译套件（XACT for XJ380）',
     url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v4_xj380.zip',
-    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34177494;',
+    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34177494',
     githubUrl: 'https://github.com/xingji-studio/XXCC-suite/releases/download/2026v4/XJ380_XACT_2026v4_xj380.zip',
   },
   {
     name: 'XJ380 应用程序编译套件（XACT for Windows）',
     url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v4_windows.zip',
-    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34237249;',
+    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34237249',
     githubUrl: 'https://github.com/xingji-studio/XXCC-suite/releases/download/2026v4/XJ380_XACT_2026v4_windows.zip',
   },
   {
     name: 'XJ380 应用程序编译套件（XACT for Linux）',
     url: 'https://xjf.cn-nb1.rains3.com/XJ380_XACT_2026v4_linux.zip',
-    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34237248;',
+    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34237248',
     githubUrl: 'https://github.com/xingji-studio/XXCC-suite/releases/download/2026v4/XJ380_XACT_2026v4_linux.zip',
   },
   {
     name: 'XJ380 API 标准文档（C/C++）',
     url: 'https://xjf.cn-nb1.rains3.com/XJ380_API_Spec_CPP_1_3.pdf',
-    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34237242;',
+    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34237242',
     githubUrl: 'https://github.com/xingji-studio/XXCC-suite/releases/download/2026v4/XJ380_API_Spec_CPP_1_3.pdf',
   },
   {
     name: 'XJ380 API 静态链接库及头文件（C/C++）',
     url: 'https://xjf.cn-nb1.rains3.com/XJ380_CPP_API_Depend_1_3.zip',
-    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34237241;',
+    backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34237241',
     githubUrl: 'https://github.com/xingji-studio/XXCC-suite/releases/download/2026v4/XJ380_CPP_API_Depend_1_3.zip',
   }
 ])
