@@ -73,9 +73,9 @@ const partners = ref([
     link: 'http://pbhmjfsk.e.cn.vc/zh'
   },
   {
-    name: '537工作室',
-    logo: '/files/537logo.png',
-    link: 'https://537studio.com/'
+    name: '福瑞同萌',
+    logo: '/files/furries.png',
+    link: 'https://furries.com.cn/'
   },
   {
     name: 'PCC工作室',
