@@ -21,7 +21,7 @@ const positions = ref([
     title: 'C/C++ 图形化工程师',
     department: 'XINGJI Interactive Software',
     requirements: '会较为熟练运用基础的C\\C++，学习能力强。有SDL开发经验或计算机图形学经验者优先。',
-    headcount: 10,
+    headcount: 3,
     tags: ['有奖金', '岗位稳定', '急招']
   },
   {
@@ -35,7 +35,7 @@ const positions = ref([
     title: "AI工程师",
     department: "XINGJI AI Department",
     requirements: "熟练掌握Python，了解大模型底层原理，会使用PyTorch/TensorFlow等深度学习框架。",
-    headcount: 5,
+    headcount: 0.5,
     tags: ["有奖金", "岗位稳定", "急招"]
     
   },
@@ -47,38 +47,17 @@ const positions = ref([
     tags: ['岗位稳定', '急招']
   },
   {
-    title: '人力资源部部长/副部长',
-    department: 'XINGJI Nigger Resources Department',
-    requirements: '会说话会挖人，能精准选取需要或预备需要的人才。',
-    headcount: 2,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '市场部部长/副部长',
-    department: 'XINGJI Marketing Department',
-    requirements: '拥有市场部其他岗位的能力，擅长管理与激励成员。',
-    headcount: 2,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '市场营销/规划',
-    department: 'XINGJI Marketing Department',
-    requirements: '会分析市场形势、趋势及如何定价、设计、包装并营销。',
+    title: '编剧',
+    department: 'XINGJI Animation Department',
+    requirements: '-',
     headcount: 3,
     tags: ['有奖金', '岗位稳定']
   },
   {
-    title: '美术',
-    department: 'XINGJI Games',
-    requirements: '会画画。',
-    headcount: 5,
-    tags: ['有奖金', '岗位稳定']
-  },
-  {
-    title: '剪辑',
-    department: 'XINGJI Publicity Department',
-    requirements: '有Pr、Ae等软件的操作基础。',
-    headcount: 1,
+    title: '提示词工程师',
+    department: 'XINGJI Animation Department',
+    requirements: '-',
+    headcount: 3,
     tags: ['有奖金', '岗位稳定']
   },
 ])
