@@ -181,9 +181,9 @@ const fastguides = ref([
 ])
 
 const news = ref({
-  title: '编译套件公布',
-  subtitle: 'XINGJI XJ380 Operating System',
-  link: '/os/xj380/download',
+  title: '黑名单现已推出',
+  subtitle: 'Archive of Extreme Anti-Furry Behavior',
+  link: '/software/aeab',
   image: {
     src: '/primage.png', // 看看行不行！
     alt: '宣传图',
@@ -214,7 +214,7 @@ const news = ref({
               {{ news.subtitle }}
             </p>
           </div>
-          <a :href="news.link" class="link-button text-white">立刻下载</a>
+          <a :href="news.link" class="link-button text-white">立刻使用</a>
         </div>
       </div>
     </div>
