@@ -11,7 +11,7 @@ const menuItems = ref([
   { name: "关于我们", link: "/about" },
   { name: "招纳贤士", link: "/join" },
   { name: "开源软件", link: "/open-source" },
-  { name: "用户中心", link: "https://uc.xingjisoft.com"}
+  { name: "开发文档", link: "https://docs.xingjisoft.com/"}
 ]);
 
 /*
