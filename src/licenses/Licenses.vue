@@ -15,11 +15,15 @@ useHead({
 const licenses_tabs = ref([
   {
     title: 'XJ380OS 交流群群聊规定',
-    link: '/licenses/XJ380OS_Group_Chat_Licenses.txt'
+    link: 'https://docs.xingjisoft.com/licenses/XJ380OS_Group_Chat_Licenses.txt'
   },
   {
     title: 'XJ380 用户许可协议',
-    link: '/licenses/XJ380_EULA.txt'
+    link: 'https://docs.xingjisoft.com/licenses/XJ380_EULA.html'
+  },
+  {
+    title: '极端反福瑞行为档案库许可协议',
+    link: 'https://docs.xingjisoft.com/licenses/AEAB_EULA.html'
   },
 ])
 
