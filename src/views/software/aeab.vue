@@ -31,7 +31,7 @@ useHead({
         <p class="text-gray-400">已以Apache 2.0协议开源。</p>
       </div>
 
-      <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
+      <!-- <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
         <h2 class="text-2xl font-bold text-white mb-4">下载</h2>
         <p class="text-gray-400 mb-4">最新版本：1.0.0</p>
         <div class="flex flex-col space-y-4">
@@ -71,7 +71,7 @@ useHead({
             </svg>
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </GameLayout>
 </template> 
