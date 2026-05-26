@@ -15,20 +15,20 @@ useHead({
 
 <template>
   <GameLayout 
-    title="极端反福瑞行为档案库（AEAB）"
+    title="极端福瑞/反福瑞行为档案库（AEAB）"
     subtitle="看清恶意，守护所爱">
     <div class="space-y-8">
       <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
         <h2 class="text-2xl font-bold text-white mb-4">产品介绍</h2>
         <p class="text-gray-400">
-          您是否经历过被极端反福瑞骚扰的经历？他们自己造谣，大肆炒作，高喊着要打倒自己树立的、根本不存在的、所谓的“敌人”，已经对
-          圈内人的安全构成巨大威胁。为此，我们隆重推出极端反福瑞黑名单 —— 永远免费，只为守护兽圈安全。
+          您是否经历过被极端福瑞/反福瑞骚扰的经历？他们自己造谣，大肆炒作，高喊着要打倒自己树立的、根本不存在的、所谓的“敌人”，已经对
+          圈内圈外人的安全构成巨大威胁。为此，我们隆重推出极端福瑞/反福瑞黑名单 —— 永远免费，只为守护兽圈安全。
         </p>
       </div>
 
       <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
-        <h2 class="text-2xl font-bold text-white mb-4">开源协议</h2>
-        <p class="text-gray-400">已以Apache 2.0协议开源。</p>
+        <h2 class="text-2xl font-bold text-white mb-4">注意事项</h2>
+        <p class="text-gray-400">查询功能只对福瑞同萌成员开放。加入福瑞同萌方法请前往QQ群获取。</p>
       </div>
 
       <!-- <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">

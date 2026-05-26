@@ -23,9 +23,9 @@ const categories = ref([
   },
   {
     title: '实用工具',
-    description: 'XINGJI工作室 开发了一系列实用工具，帮助用户解决日常工作中的各种问题。（省流：全是饼）',
+    description: 'XINGJI工作室 开发了一系列实用工具，帮助用户解决日常工作中的各种问题。',
     items: [
-      { name: '极端反福瑞行为档案库', link: '/software/aeab' },
+      { name: '极端福瑞/反福瑞行为档案库', link: '/software/aeab' },
       { name: 'SpaceTerminal', link: '/software/space-terminal' },
     ]
   },
