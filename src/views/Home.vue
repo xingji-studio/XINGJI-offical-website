@@ -214,7 +214,8 @@ const news = ref({
               {{ news.subtitle }}
             </p>
           </div>
-          <a :href="news.link" class="link-button text-white">立刻使用</a>
+          <a :href="news.link" class="link-button text-white">立刻下载
+          </a>
         </div>
       </div>
     </div>
