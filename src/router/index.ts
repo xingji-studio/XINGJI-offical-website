@@ -52,11 +52,6 @@ const routes = [
     component: () => import("../views/software/stardust-ui.vue"),
   },
   {
-    path: "/software/aeab",
-    name: "aeab",
-    component: () => import("../views/software/aeab.vue"),
-  },
-  {
     path: "/software/space-terminal",
     name: "space-terminal",
     component: () => import("../views/software/space-terminal.vue"),

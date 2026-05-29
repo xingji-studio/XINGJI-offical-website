@@ -181,9 +181,9 @@ const fastguides = ref([
 ])
 
 const news = ref({
-  title: '黑名单现已推出',
-  subtitle: 'Archive of Extreme Anti-Furry Behavior',
-  link: '/software/aeab',
+  title: '编译套件公布',
+  subtitle: 'XINGJI XJ380 Operating System',
+  link: '/os/xj380/download',
   image: {
     src: '/primage.png', // 看看行不行！
     alt: '宣传图',
