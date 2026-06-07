@@ -59,15 +59,15 @@ const devTools = ref([
 
 const requirements = ref([
   { name: '处理器', spec: 'x64 架构的 64 位处理器，基准频率 1 GHz 或更高' },
-  { name: 'RAM', spec: '1 GB' },
-  { name: '硬盘', spec: '至少 256 MB 或更大' },
+  { name: 'RAM', spec: '512 MB' },
+  { name: '硬盘', spec: '至少 5 GB 或更大' },
   { name: '显示器', spec: '800 x 600 或更高' }
 ])
 
 const requirements2 = ref([
   { name: '处理器', spec: 'x64 架构的 64 位处理器，基准频率 2 GHz 或更高' },
-  { name: 'RAM', spec: '4 GB' },
-  { name: '硬盘', spec: '至少 10 GB 或更大' },
+  { name: 'RAM', spec: '8 GB' },
+  { name: '硬盘', spec: '至少 128 GB 或更大' },
   { name: '显示器', spec: '1920 x 1080 或更高' }
 ])
 </script>
