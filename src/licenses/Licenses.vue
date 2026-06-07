@@ -21,10 +21,6 @@ const licenses_tabs = ref([
     title: 'XJ380 用户许可协议',
     link: 'https://docs.xingjisoft.com/licenses/XJ380_EULA.html'
   },
-  {
-    title: '极端反福瑞行为档案库许可协议',
-    link: 'https://docs.xingjisoft.com/licenses/AEAB_EULA.html'
-  },
 ])
 
 </script>
