@@ -39,7 +39,7 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           REMOTE_TARGET: ${{ secrets.REMOTE_TARGET }}
         run: |
-          rsync -avz --no-g --no-o --delete \
+          rsync -avz --delete \
             -e "ssh -p ${REMOTE_PORT:-22} -i ~/.ssh/deploy_key" \
             ./dist/ \
             ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_TARGET}/
