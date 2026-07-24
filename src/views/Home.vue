@@ -354,7 +354,7 @@ const news = ref({
 
     <footer class="py-8 text-center text-white bg-gray-800/50 backdrop-blur-md">
       <p>
-        版权所有© XINGJI Interactive Software 2017 - 2025 保留所有权利。
+        版权所有© XINGJI Interactive Software 2017 - 2026 保留所有权利。
       </p>
     </footer>
   </div>
