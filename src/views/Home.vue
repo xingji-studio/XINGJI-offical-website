@@ -215,7 +215,7 @@ const news = ref({
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
             <h3 class="text-xl font-bold text-white mb-4">技术创新</h3>
             <p class="text-gray-400">
-              我们的技术也堪比大厂，例如我们发明的XRMU锁存器速度高达640Gbps！双通道更是高达1.2Tbps！遥摇领先DDR5！
+              我们有诸多部门和诸多项目，技术难度丝毫不输世界大厂。
             </p>
           </div>
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
