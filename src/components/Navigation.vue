@@ -9,7 +9,7 @@ const menuItems = ref([
   { name: "软件及游戏", link: "/software" },
   { name: "XDC2025", link: "https://www.bilibili.com/video/BV1y1HKzaEPJ/" },
   { name: "关于我们", link: "/about" },
-  { name: "招纳贤士", link: "/join" },
+  { name: "招贤纳士", link: "/join" },
   { name: "开源软件", link: "/open-source" },
   { name: "开发文档", link: "https://docs.xingjisoft.com/"}
 ]);
