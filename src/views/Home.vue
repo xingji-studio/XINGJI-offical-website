@@ -203,13 +203,13 @@ const news = ref({
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
             <h3 class="text-xl font-bold text-white mb-4">学生团队，低成本优势</h3>
             <p class="text-gray-400">
-              XINGJI工作室在2017年创立。由于我们都是学生，也就不需要支付大量工资费用，产品价格也大大降低。
+              。。。。。。
             </p>
           </div>
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
             <h3 class="text-xl font-bold text-white mb-4">品质保证</h3>
             <p class="text-gray-400">
-              在价格降低的同时，品质也不输大厂。我们保证我们的产品即便是免费的，也校验过每一项功能。即便我们没有校验出所有的问题，也会第一时间受理并修复任何人的报告。
+              。。。。。。。
             </p>
           </div>
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
