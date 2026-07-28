@@ -215,7 +215,7 @@ const news = ref({
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
             <h3 class="text-xl font-bold text-white mb-4">技术创新</h3>
             <p class="text-gray-400">
-              我们有诸多部门和诸多项目，技术难度丝毫不输世界大厂。
+              有病吧写啥都要骂，互联网没救了
             </p>
           </div>
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
