@@ -6,8 +6,7 @@ const fastguides = [
       { text: 'XJ380 操作系统', link: '/os/xj380' },
       { text: '鹊桥引擎 (BridgeEngine)', link: '/software/bridge-engine' },
       { text: 'XINGJI Space 系列软件', link: '/software' },
-      { text: 'XINGJI Intelligence', link: '#' },
-      { text: '浏览 XINGJI 的全部软件产品', link: '/software' },
+      { text: '浏览 XINGJI 的全部软件作品', link: '/software' },
     ],
   },
   {
@@ -22,9 +21,6 @@ const fastguides = [
     parentdex: '娱乐互动',
     eindexs: [
       { text: '挖矿模拟器', link: '/software/games/bcms' },
-      { text: '挖矿模拟器 2', link: '#' },
-      { text: '挖矿模拟器 SE', link: '#' },
-      { text: '失控实验', link: '#' },
     ],
   },
   {
@@ -32,9 +28,7 @@ const fastguides = [
     eindexs: [
       { text: 'XDC2025', link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/' },
       { text: '适用于 XJ380 的应用程序开发', link: '/os/xj380/download' },
-      { text: '招纳贤士', link: '/join' },
-      { text: 'SpaceCode IDE', link: '#' },
-      { text: 'XSC 星空杯', link: '#' },
+      { text: '成员招募', link: '/join' },
     ],
   },
 ]

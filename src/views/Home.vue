@@ -60,7 +60,7 @@ const news_posts = ref([
   {
     title: 'XDC2025 顺利举行',
     image: '/xdc2025_black.png',
-    description: '星际开发者大会2025（XDC2025）于北京时间2025年10月3日在线上顺利举行。',
+    description: '星际开发者大会2025（XDC2025）于北京时间 2025 年 10 月 3 日在线上顺利举行。',
     more_text: '立刻观看 XDC2025',
     link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/'
   }
@@ -90,7 +90,7 @@ const partners = ref([
 ])
 
 const news = ref({
-  title: '编译套件公布',
+  title: '开发者套件公布',
   subtitle: 'XINGJI XJ380 Operating System',
   link: '/os/xj380/download',
   image: {
@@ -132,7 +132,7 @@ const news = ref({
     <!-- Products Section -->
     <section class="py-12 px-4 relative">
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl font-bold text-white mb-6 px-6">我们的产品及服务</h2>
+        <h2 class="text-4xl font-bold text-white mb-6 px-6">我们的作品及服务</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div v-for="product in products" :key="product.title" class="group relative">
             <div
@@ -198,30 +198,31 @@ const news = ref({
     <!-- Advantages Section -->
     <section class="py-12 px-4 relative">
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl font-bold text-white mb-6 px-6">我们有什么优势？</h2>
+        <h2 class="text-4xl font-bold text-white mb-6 px-6">我们有什么亮点？</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
-            <h3 class="text-xl font-bold text-white mb-4">学生团队，低成本优势</h3>
+            <h3 class="text-xl font-bold text-white mb-4">学生团队，共同进步</h3>
             <p class="text-gray-400">
-              。。。。。。
+              团队中的每个成员为共同的目标贡献自己的力量，在协作的过程中不断提升自我的能力和素质。
             </p>
           </div>
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
-            <h3 class="text-xl font-bold text-white mb-4">品质保证</h3>
+            <h3 class="text-xl font-bold text-white mb-4">涉猎广泛</h3>
             <p class="text-gray-400">
-              。。。。。。。
+              我们的各个作品项目涉及多个领域，全方位扩展我们的探索范围。
             </p>
           </div>
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
-            <h3 class="text-xl font-bold text-white mb-4">技术创新</h3>
+            <h3 class="text-xl font-bold text-white mb-4">先进技术</h3>
             <p class="text-gray-400">
-              有病吧写啥都要骂，互联网没救了
+              我们的作品使用当今前沿的技术，跟随世界技术潮流，积极拥抱新知识、新方案、新模式。
             </p>
           </div>
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6">
             <h3 class="text-xl font-bold text-white mb-4">XJ380操作系统</h3>
             <p class="text-gray-400">
-              完全自主研发，内核使用XSK2.1，经过三次更新，UEFI引导方式，安全、可靠，并且完全免费（仅限于普通系列）
+              自主研发，使用 XSK2.1 内核。历经三次版本迭代。UEFI 引导方式，安全、可靠。*免费体验，无需额外付费。<br>
+              （注：“免费体验” 指 XJ380 普通版本。ULTRA版本，即抢先体验版本，需要您提供合理范围内的赞助方可获取。ULTRA版本通常要比普通版本新 1~2 个版本。我们提倡合理消费，您的赞助款我们将全部投入项目开发）
             </p>
           </div>
         </div>
@@ -231,7 +232,7 @@ const news = ref({
     <!-- Partners Section -->
     <section class="py-12 px-4 relative">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-white mb-6">我们的合作伙伴</h2>
+        <h2 class="text-4xl font-bold text-white mb-6">我们的伙伴</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <a v-for="partner in partners" :key="partner.name" :href="partner.link"
             class="group relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 hover:transform hover:scale-[1.02] transition-all duration-300">

@@ -58,17 +58,17 @@ const devTools = ref([
 ])
 
 const requirements = ref([
-  { name: '处理器', spec: 'x64 架构的 64 位处理器，基准频率 1 GHz 或更高' },
-  { name: 'RAM', spec: '512 MB' },
-  { name: '硬盘', spec: '至少 5 GB 或更大' },
-  { name: '显示器', spec: '800 x 600 或更高' }
+  { name: '处理器', spec: 'x86_64 架构的处理器，基准频率 1 GHz 或更高' },
+  { name: '内存', spec: '512 MiB' },
+  { name: '硬盘', spec: '5 GiB 或更多' },
+  { name: '显示器', spec: '720P 或更高' }
 ])
 
 const requirements2 = ref([
-  { name: '处理器', spec: 'x64 架构的 64 位处理器，基准频率 2 GHz 或更高' },
-  { name: 'RAM', spec: '8 GB' },
-  { name: '硬盘', spec: '至少 128 GB 或更大' },
-  { name: '显示器', spec: '1920 x 1080 或更高' }
+  { name: '处理器', spec: 'x86_64 架构的处理器，基准频率 2 GHz 或更高' },
+  { name: '内存', spec: '4 GiB' },
+  { name: '硬盘', spec: '32 GiB 或更多' },
+  { name: '显示器', spec: '1080P 或更高' }
 ])
 </script>
 
@@ -77,12 +77,12 @@ const requirements2 = ref([
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <h1 class="text-4xl font-bold text-white mb-8">下载XJ380</h1>
       <p class="text-gray-400 mb-8">
-        请务必确认设备\虚拟机满足最低配置要求，否则可能会无法使用甚至损坏您的设备。
+        请务必确认设备\虚拟机满足最低配置要求，否则可能会无法正常使用 XJ380 操作系统，最坏情况可能会造成数据丢失等后果。
       </p>
 
       <!-- Download Section -->
       <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 mb-8">
-        <h2 class="text-2xl font-bold text-white mb-6">下载XJ380操作系统</h2>
+        <h2 class="text-2xl font-bold text-white mb-6">下载 XJ380 操作系统</h2>
         <div v-for="version in versions" :key="version.version" class="space-y-4">
           <h3 class="text-xl font-semibold text-white">Version {{ version.version }}</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -166,7 +166,7 @@ const requirements2 = ref([
       <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
         <h2 class="text-2xl font-bold text-white mb-4">适用平台</h2>
         <p class="text-gray-400">
-          使用 x64 架构且支持 UEFI 的所有平台。
+          使用 x86_64 架构且支持 UEFI 的所有平台。
         </p>
       </div>
     </div>

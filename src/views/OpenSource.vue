@@ -7,7 +7,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'XINGJI工作室开发的开源软件 | 世界因开源而美好，我们因开源而奉献。',
+      content: '开源软件 | 世界因开源而美好，我们因开源而奉献。',
     },
   ],
 })
@@ -15,8 +15,8 @@ useHead({
 const projects = ref([
   {
     name: 'OpenXSKernel',
-    description: `一个由XINGJI工作室开发的 UEFI 64位操作系统引导程序。
-注意：该程序由XSK2.0改造而来，与XJ380所使用的XSK2.0有细微的差别。
+    description: `一个 UEFI 64 位引导程序。
+注意：该程序由XSK2.0改造而来，与 XJ380 目前的 XSK2.1 有一定区别。
 OpenXSKernel现已被OSDev收录。`,
     links: [
       {
@@ -24,14 +24,14 @@ OpenXSKernel现已被OSDev收录。`,
         url: 'https://github.com/xingji-studio/OpenXSKernel'
       },
       {
-        text: 'OSDev链接',
+        text: 'OSDev 链接',
         url: 'https://wiki.osdev.org/Projects#O'
       }
     ]
   },
   {
     name: '挖矿模拟器',
-    description: `史，别看`,
+    description: `一个用 C++ 写的没啥用的小游戏`,
     links: [
       {
         text: '仓库链接',

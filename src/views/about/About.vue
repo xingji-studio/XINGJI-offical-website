@@ -7,10 +7,10 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: '在2017年的一个冬天，XINGJI工作室（此时未更名为工作室）在人大附中朝阳学校（212校区）成立。 \
-最开始工作室由2017级9班的三位同学组建（右图右3右4），最开始从事任何杂活，并大量吸收成员， \
-巅峰时拥有高达17名成员（班里一共39人），包括右图全部同学都加入过XINGJI工作室。并且在2020 \
-年更名为XINGJI工作室。在2020年，全班模仿我们的其他小团体如雨后春笋般涌出，例如右图右2。',
+      content: '在 2017 年的一个冬天， XINGJI 团队（此时未更名为工作室）在人大附中朝阳学校（212校区）成立。
+              最开始工作室由同级三位同学组建（右图右3右4），从事各种杂活，逐渐吸引了大量成员加入，
+              鼎盛时期拥有高达 17 名同班成员，右图中所有同学都加入过 XINGJI 。在2020
+              年更名为 XINGJI 工作室。同年，学生群体中模仿我们的其他小团体如雨后春笋般涌出，例如右图右2。',
     },
   ],
 })
@@ -22,9 +22,8 @@ const memInfo = ref([
     image: '/about/rdfzsg.jpg',
     achievements: [
       'XINGJI工作室创始人、董事长兼CEO',
-      '朝阳区信息学素养前30名，校级选拔满分通过',
       '人大附中朝阳学校学生会宣传部部长',
-      'XJ380操作系统发明者'
+      'XJ380操作系统项目发起人'
     ]
   }, 
   {
@@ -33,7 +32,6 @@ const memInfo = ref([
     image: '/about/elbfp.jpg',
     achievements: [
       'XINGJI工作室副董事长',
-      '人大附中朝阳学校2024-2025学年度期末考试数学科全校第二',
       '反正很牛逼就对了'
     ]
   }, 
@@ -51,8 +49,8 @@ const memInfo = ref([
     title: '副董事长、BridgeEngine总工程师',
     image: '/about/members/rainy101112.jpg',
     achievements: [
-      'XINGJI工作室副董事长、Rainy工作室创始人',
-      'BridgeEngine总工程师、XJ380开发者'
+      'XINGJI工作室副董事长，ViudiraTech核心成员',
+      'BridgeEngine总工程师、XJ380开发者、Uinxed内核项目开发者'
     ]
   }, 
   {
@@ -98,7 +96,7 @@ const memInfo = ref([
     image: '/about/members/xslime.jpg',
     achievements: [
       'XJ380开发组核心成员、网页开发组前端工程师',
-      'Uinxed-Kernel开发者',
+      'Uinxed内核项目开发者',
       '好像什么都会点'
     ]
   }, 
@@ -119,8 +117,8 @@ const memInfo = ref([
 <template>
   <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <h1 class="text-4xl font-bold text-white mb-4 text-center">关于我们 ABOUT US</h1>
-      <h2 class="text-1xl text-white mb-10 text-center">历史省流 / 核心成员 / 我们的历史</h2>
+      <h1 class="text-4xl font-bold text-white mb-4 text-center">关于我们</h1>
+      <h2 class="text-1xl text-white mb-10 text-center">往日概览 / 核心成员 / 我们的过往</h2>
 
       <!-- History Introduction with Image -->
       <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 mb-12">
@@ -128,20 +126,20 @@ const memInfo = ref([
           <div class="lg:w-2/3">
             <h1 class="text-4xl font-blod text-white mb-4 text-left">辉煌之路（省流）</h1>
             <p class="text-gray-400 leading-relaxed">
-              在2017年的一个冬天，XINGJI工作室（此时未更名为工作室）在人大附中朝阳学校（212校区）成立。
-              最开始工作室由2017级9班的三位同学组建（右图右3右4），最开始从事任何杂活，并大量吸收成员，
-              巅峰时拥有高达17名成员（班里一共39人），包括右图全部同学都加入过XINGJI工作室。并且在2020
-              年更名为XINGJI工作室。在2020年，全班模仿我们的其他小团体如雨后春笋般涌出，例如右图右2。
+              在 2017 年的一个冬天， XINGJI 团队（此时未更名为工作室）在人大附中朝阳学校（212校区）成立。
+              最开始工作室由同级三位同学组建（右图右3右4），从事各种杂活，逐渐吸引了大量成员加入，
+              鼎盛时期拥有高达 17 名同班成员，右图中所有同学都加入过 XINGJI 。在2020
+              年更名为 XINGJI 工作室。同年，学生群体中模仿我们的其他小团体如雨后春笋般涌出，例如右图右2。
             </p>
             <br>
             <p class="text-gray-400 leading-relaxed">
-              再说一遍这不是我们校服这是我们在小学拍的毕业照！！！
+              注：本照片为在小学时拍摄的毕业照。
             </p>
           </div>
           <div class="lg:w-1/3">
             <img 
               src="/about/right1.jpg" 
-              alt="XINGJI工作室早期成员" 
+              alt="XINGJI 早期成员"
               class="w-full h-auto rounded-xl shadow-lg"
             />
           </div>

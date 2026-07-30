@@ -7,77 +7,69 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: '成员福利：每个XINGJI工作室成员都可以免费申请一台云服务器！只要你干的出色，每个项目你都可以拿到奖金！甚至我们可以为你买一台电脑！\
-只要你对该项目做出贡献，我们一定会在下期视频点名表扬！加入我们，享受所有初中生工作室里最好的福利！\n\
-及其人性的作息：从不强迫你干活！如果你有所耳闻XJ380的开发速度，你就知道有多宽松了。（但似乎最近要严抓了？）\n\
-全国顶尖的初中生工作室：XINGJI工作室创立于2017年，历史悠久。目前创始人在读初中，工作室也已取得卓越成就。加入我们，你也可以！\n\
-丰富的资源：XINGJI工作室拥有丰富的资源，包括但不限于：C/C++、汇编、图形化、游戏开发、美术、服务器等。',
+      content: '加入我们，一起为我们共同的目标贡献力量，同时享受我们提供的海量资源。',
     },
   ],
 })
 
 const positions = ref([
   {
-    title: 'C/C++ 图形化工程师',
+    title: 'C/C++ 图形软件开发者',
     department: 'XINGJI Interactive Software',
     requirements: '会较为熟练运用基础的C\\C++，学习能力强。有SDL开发经验或计算机图形学经验者优先。',
     headcount: 3,
-    tags: ['有奖金', '岗位稳定', '急招']
+    tags: ['微偿', '稳定', '急招']
   },
   {
-    title: 'XJ380 C/C++ 工程师',
+    title: 'XJ380 C/C++ 开发者',
     department: 'XINGJI XJ380 Develop Department',
-    requirements: '会较为熟练运用基础的C\\C++，学习能力强。有操作系统开发经验者优先。',
+    requirements: '了解一定的操作系统底层原理，有 C/C++ 开发经验。',
     headcount: 5,
-    tags: ['有奖金', '岗位稳定', '急招']
+    tags: ['微偿', '稳定', '急招']
   },
   {
-    title: "AI工程师",
+    title: "AI 开发者",
     department: "XINGJI AI Department",
     requirements: "熟练掌握Python，了解大模型底层原理，会使用PyTorch/TensorFlow等深度学习框架。",
-    headcount: 0.5,
-    tags: ["有奖金", "岗位稳定", "急招"]
+    headcount: 1,
+    tags: ["微偿", "稳定", "急招"]
     
   },
   {
     title: '美工',
     department: 'XINGJI XJ380 Develop Department',
-    requirements: '会设计UI。',
+    requirements: '有 UI 设计经验，会使用专业设计工具。',
     headcount: 2,
-    tags: ['岗位稳定', '急招']
+    tags: ['微偿', '稳定', '急招']
   },
   {
     title: '编剧',
     department: 'XINGJI Animation Department',
-    requirements: '-',
+    requirements: '有一定文学功底，了解一定的动画制作相关知识。',
     headcount: 3,
-    tags: ['有奖金', '岗位稳定']
+    tags: ['微偿', '稳定']
   },
   {
     title: '提示词工程师',
     department: 'XINGJI Animation Department',
-    requirements: '-',
+    requirements: '会使用 AI 工具，能够编写提示词，对动画分镜拥有一定了解。',
     headcount: 3,
-    tags: ['有奖金', '岗位稳定']
+    tags: ['微偿', '稳定']
   },
 ])
 
 const benefits = ref([
   {
-    title: '成员福利',
-    description: '（嗯对我们没钱了）免费tokens，虽然理论上不能用在工作室之外的项目，但偷偷用一点也没啥大关系（（（'
+    title: '资源赋能',
+    description: '海量免费大模型 Token ，提供全方位的 AI 支持。项目期间产生的所有必要开支均由工作室承担，若项目产出优质成果，核心成员还将获得额外的心意酬谢！'
   },
   {
-    title: '极其人性的作息',
-    description: 'GOOOOOOOO WORRRRRRRRRRRRKKKKKKK!!!!!!!!!!!!!!!!!!'
+    title: '协作节奏',
+    description: '每个成员可根据自己的课业和生活节奏，灵活安排协作时间。我们只设置少量关键里程碑（如发布日期），在节点前自由冲刺，节点后安心休息。'
   },
   {
-    title: '全国顶尖的初中生工作室',
-    description: 'XINGJI工作室创立于2017年，历史悠久。目前创始人在读初中，工作室也已取得卓越成就。加入我们，你也可以！'
-  },
-  {
-    title: '丰富的资源',
-    description: 'XINGJI工作室已与全国 4 家其他工作室达成合作！来这里，你可以体验到最丰富的资源！'
+    title: '优秀的学生工作室',
+    description: 'XINGJI工作室创立于2017年，到今天已经走了很远。工作室包括创始人在内的成员大部分为在读学生。过去的成就，未来的目标，都由我们共同呈现！'
   }
 ])
 </script>
@@ -108,11 +100,11 @@ const benefits = ref([
             </div>
             <p class="text-gray-400 mb-4">{{ position.requirements }}</p>
             <div class="flex justify-between items-center">
-              <p class="text-gray-400">招聘人数：{{ position.headcount }}</p>
+              <p class="text-gray-400">招募人数：{{ position.headcount }}</p>
               <a href="https://shorturl.at/J1VE9?uid=1559689519"
                 target="_blank"
                 class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors duration-200">
-                立即联系我们
+                联系我们
                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>

@@ -16,20 +16,19 @@ useHead({
 <template>
   <GameLayout 
     title="星尘UI（StardustUI）"
-    subtitle="更加现代、方便、高级、跨平台的UI框架">
+    subtitle="更加现代、方便、高效、跨平台的UI框架">
     <div class="space-y-8">
       <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
         <h2 class="text-2xl font-bold text-white mb-4">产品介绍</h2>
         <p class="text-gray-400">
-          您是否还在因为只会写黑框框而苦恼？您是否还在因为Win32API过于繁杂而崩溃？您是否还在因为不同平台需要写不同代码而烦闷？
-          我们隆重推出星尘UI。星尘UI拥有美观的用户界面和极强的兼容性，除Windows、Linux等主流操作系统外，还兼容XJ380、CLeonOS等小众操作系统，
-          真正做到一份代码、到处运行的壮举。
+          星尘UI（StardustUI）是我们开发的一个现代化的跨平台 UI 库，支持Windows、Linux等主流操作系统（macOS暂未稳定支持），同时也支持XJ380、LeonOS等自制操作系统。通过星尘UI，你可以快速地编写出
+          你心目中的GUI程序！
         </p>
       </div>
 
       <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
         <h2 class="text-2xl font-bold text-white mb-4">开源协议</h2>
-        <p class="text-gray-400">已以MIT协议开源。</p>
+        <p class="text-gray-400">使用MIT许可证。</p>
       </div>
 
       <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">

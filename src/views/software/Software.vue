@@ -15,7 +15,7 @@ useHead({
 const categories = ref([
   {
     title: '开发人员',
-    description: 'XINGJI工作室 为个人和企业开发者提供高质量、多样、跨平台的解决方案，',
+    description: 'XINGJI工作室 为开发者提供高质量、多样、跨平台的解决方案，',
     items: [
       { name: 'BridgeEngine', link: '/software/bridge-engine' },
       { name: 'StardustUI', link: '/software/stardust-ui' },
@@ -60,7 +60,7 @@ const categories = ref([
           XINGJI Interactive Software
         </h1>
         <p class="text-xl md:text-2xl text-gray-300 mb-8">
-          我们只编写最优秀的软件。
+          我们励志做出优秀的软件。
         </p>
       </div>
     </section>

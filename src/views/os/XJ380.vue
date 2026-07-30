@@ -34,14 +34,14 @@ const handleDownload = () => {
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-          XJ380操作系统 —— 极少数的64位操作系统
+          XJ380 操作系统 — 64位操作系统
         </h1>
         <p class="text-xl md:text-2xl text-gray-300 mb-8">
-          更快、更小、更安全
+          低资源占用、高性能、生态兼容
         </p>
         <button @click="handleDownload"
           class="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25">
-          下载XJ380操作系统
+          下载 XJ380 操作系统
         </button>
       </div>
     </section>
@@ -61,26 +61,25 @@ const handleDownload = () => {
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
             <h3 class="text-2xl font-bold text-white mb-4">XJ380有什么特别？</h3>
             <p class="text-gray-400">
-              XJ380采用XSK2.1内核，先进安全稳定。64位架构，发挥设备的最大潜力。方便的GUI，灵活的命令行，无论你喜欢图形化还是命令行都可以获得最好的体验。
+              XJ380 采用完全由我们自主开发的 XSK2.1 内核，技术先进。64位架构，符合主流设备需求。支持 GUI 原生操作，拥有友好的界面。
             </p>
           </div>
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
             <h3 class="text-2xl font-bold text-white mb-4">XJ380与前两个测试版有什么区别？</h3>
             <p class="text-gray-400">
-              XJ380(Code Singularity)采用UEFI进行引导而不是MBR；使用了64位架构而不是32位；启动方式从软盘转为了任何支持FAT32的媒介；文件系统从FAT12变成了FAT32及XAFS。
+              XJ380 最新版本采用 UEFI 进行引导，抛弃了以往使用的 Legacy Boot ；适用于x86_64架构，保障通用性；拥有FAT系列文件系统支持。
             </p>
           </div>
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
             <h3 class="text-2xl font-bold text-white mb-4">XJ380有怎样的生态？</h3>
             <p class="text-gray-400">
-              XJ380为第三方软件提供了非常方便的API接口，仅需几分钟就可快速上手。我们已与多个工作室和个人开发者达成合作。
+              XJ380 提供了 XAPI 作为标准用户程序接口，同时支持 POSIX ，既拥有多方面兼容的同时又有我们自己的独创，为第三方软件开发者提供便利。
             </p>
           </div>
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
             <h3 class="text-2xl font-bold text-white mb-4">XJ380的交互怎么样？</h3>
             <p class="text-gray-400">
-              XJ380采用GUI和命令行终端进行控制，权限完全放开，只要你有管理员密码（由自己设定）即可上天入地（例如干掉引导）。XJ380采用32位色配合XINGJI GlassUI以实现玻璃一般
-              的美丽效果。桌面壁纸可通过设置进行更换，支持多种编码格式。方向键命令回档，节省时间。
+              XJ380 支持图形化桌面及命令行，为拥有不同需求的用户提供多样化的操作环境。桌面已实现 GlassUI ，尽可能地提供美妙的视觉体验。
             </p>
           </div>
         </div>
@@ -91,9 +90,9 @@ const handleDownload = () => {
     <section class="py-10 px-4">
       <div class="max-w-7xl mx-auto">
         <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
-          <h3 class="text-2xl font-bold text-white mb-4">XJ380的各个版本有什么区别？又如何获取？</h3>
+          <h3 class="text-2xl font-bold text-white mb-4"> XJ380 的各个版本有什么区别？又如何获取？</h3>
           <p class="text-gray-400">
-            注：ULTRA版≈抢先体验，更新新内容一段时间后会慢慢转移至普通版。另外 B站@人朝的小郭同学 会不定时送一点激活码啥的，欢迎三联关注:)
+            注：ULTRA版为抢先体验版本，普通版为ULTRA版的内容下放。关注B站@人朝的小郭同学可获取 XJ380 相关的福利资讯！
           </p>
         </div>
       </div>
