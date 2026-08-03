@@ -14,6 +14,16 @@ useHead({
 
 const projects = ref([
   {
+    name: 'OpenXJ380',
+    description: `XJ380 的开源版本，移除了GUI环境。（但你可以在历史记录中找到相关源代码）`,
+    links: [
+      {
+        text: '仓库链接',
+        url: 'https://github.com/xingji-studio/OpenXJ380'
+      }
+    ]
+  },
+  {
     name: 'OpenXSKernel',
     description: `一个 UEFI 64 位引导程序。
 注意：该程序由XSK2.0改造而来，与 XJ380 目前的 XSK2.1 有一定区别。

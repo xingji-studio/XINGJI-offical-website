@@ -90,9 +90,9 @@ const partners = ref([
 ])
 
 const news = ref({
-  title: '开发者套件公布',
+  title: 'XJ380 现在开源',
   subtitle: 'XINGJI XJ380 Operating System',
-  link: '/os/xj380/download',
+  link: 'https://github.com/xingji-studio/OpenXJ380',
   image: {
     src: '/primage.png', // 看看行不行！
     alt: '宣传图',
@@ -123,7 +123,7 @@ const news = ref({
               {{ news.subtitle }}
             </p>
           </div>
-          <a :href="news.link" class="link-button text-white">立刻下载
+          <a :href="news.link" class="link-button text-white">立刻前往仓库
           </a>
         </div>
       </div>
