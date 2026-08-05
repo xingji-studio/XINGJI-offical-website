@@ -12,7 +12,7 @@ const fastguides = [
   {
     parentdex: '开源大道',
     eindexs: [
-      { text: 'SimpleML', link: 'https://github.com/xingji-studio/SimpleML' },
+      { text: 'OpenXJ380', link: 'https://github.com/xingji-studio/OpenXJ380' },
       { text: 'OpenXSKernel', link: 'https://github.com/xingji-studio/OpenXSKernel' },
       { text: '鹊桥引擎 (BridgeEngine)', link: 'https://github.com/xingji-studio/BridgeEngine' },
       { text: 'SimpleML', link: 'https://github.com/xingji-studio/SimpleML' },
