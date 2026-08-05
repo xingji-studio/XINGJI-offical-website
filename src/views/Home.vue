@@ -29,20 +29,27 @@ const products = ref([
     link: '#'
   },
   {
-    title: '软件产品',
+    title: '软件作品',
     description: '高质量的软件解决方案',
     image: '/files/software.png',
     link: '/software'
   },
   {
-    title: '游戏',
-    description: '低价高质的游戏产品',
-    image: '/files/games.png',
-    link: '/software'
+    title: '网络服务',
+    description: '互联网的组成，组织的门面',
+    image: '/files/web.png',
+    link: '#'
   }
 ])
 
 const news_posts = ref([
+  {
+    title: 'XJ380 开源',
+    image: '/LOGO带底.png',
+    description: '耗时四年，XJ380 正式开源。',
+    more_text: '立刻查看',
+    link: '/open-source'
+  }, 
   {
     title: 'XJ380 API编译套件现已公布',
     image: '/LOGO带底.png',
@@ -57,13 +64,6 @@ const news_posts = ref([
     more_text: '没有更多了',
     link: '#'
   }, 
-  {
-    title: 'XDC2025 顺利举行',
-    image: '/xdc2025_black.png',
-    description: '星际开发者大会2025（XDC2025）于北京时间 2025 年 10 月 3 日在线上顺利举行。',
-    more_text: '立刻观看 XDC2025',
-    link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/'
-  }
 ]);
 
 const partners = ref([
@@ -140,7 +140,7 @@ const news = ref({
             </div>
             <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 group h-full flex flex-col justify-between">
               <div>
-                <div class="w-full h-48 rounded mb-4 bg-gray-50 overflow-hidden">
+                <div class="w-full h-48 rounded mb-4 bg-white overflow-hidden">
                   <img :src="product.image" :alt="product.title"
                     class="w-full h-full object-contain transition-all duration-300">
                 </div>
