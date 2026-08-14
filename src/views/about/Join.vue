@@ -41,21 +41,7 @@ const positions = ref([
     requirements: '有 UI 设计经验，会使用专业设计工具。',
     headcount: 2,
     tags: ['微偿', '稳定', '急招']
-  },
-  {
-    title: '编剧',
-    department: 'XINGJI Animation Department',
-    requirements: '有一定文学功底，了解一定的动画制作相关知识。',
-    headcount: 3,
-    tags: ['微偿', '稳定']
-  },
-  {
-    title: '提示词工程师',
-    department: 'XINGJI Animation Department',
-    requirements: '会使用 AI 工具，能够编写提示词，对动画分镜拥有一定了解。',
-    headcount: 3,
-    tags: ['微偿', '稳定']
-  },
+  }
 ])
 
 const benefits = ref([
