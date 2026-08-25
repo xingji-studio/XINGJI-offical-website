@@ -44,6 +44,13 @@ const products = ref([
 
 const news_posts = ref([
   {
+    title: 'XINGJI 工作室公布本年度经济报告',
+    image: '/files/XBO.png',
+    description: '今年工作室收入和亏损均创新高，亏损相比去年增长14297.54%。',
+    more_text: '没有更多了',
+    link: '/resources/XINGJI_Interactive_Software_2026_经济情况年报.pdf'
+  }, 
+  {
     title: 'XJ380 开源',
     image: '/LOGO带底.png',
     description: '耗时四年，XJ380 正式开源。',
@@ -56,13 +63,6 @@ const news_posts = ref([
     description: '适用于XJ380操作系统的XJ380 API编译套件现已公布。欢迎各位开发者为XJ380的生态注入一份自己的力量！',
     more_text: '立刻开始“星际”之旅',
     link: '/os/xj380/download'
-  }, 
-  {
-    title: 'XINGJI 工作室宣布关停星际云',
-    image: '/files/XBO.png',
-    description: '由于星际云长期亏损加上其管理不善，XINGJI 工作室董事会组织（XBO）于2025年11月30日正式宣布关停星际云。',
-    more_text: '没有更多了',
-    link: '#'
   }, 
 ]);
 
