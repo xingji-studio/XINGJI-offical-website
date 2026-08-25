@@ -47,7 +47,7 @@ const news_posts = ref([
     title: 'XINGJI 工作室公布本年度经济报告',
     image: '/files/XBO.png',
     description: '今年工作室收入和亏损均创新高，亏损相比去年增长14297.54%。',
-    more_text: '没有更多了',
+    more_text: '立刻查看',
     link: '/resources/XINGJI_Interactive_Software_2026_经济情况年报.pdf'
   }, 
   {
