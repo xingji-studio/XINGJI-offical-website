@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useHead } from '@vueuse/head'
+import PageHero from '../../components/PageHero.vue'
 
 useHead({
   title: 'Software | XINGJI Studio',
   meta: [
     {
       name: 'description',
-      content: 'Defautl description',
+      content: '探索 XINGJI 工作室的软件作品：图形引擎、界面框架、实用工具、游戏与操作系统。',
     },
   ],
 })
@@ -47,56 +48,23 @@ const categories = ref([
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-16">
-    <!-- Hero Section -->
-    <section class="relative py-20">
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/25 via-sky-500/25 to-blue-600/25 backdrop-blur-3xl"></div>
-      </div>
-      
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-          XINGJI Interactive Software
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-300 mb-8">
-          我们励志做出优秀的软件。
-        </p>
-      </div>
-    </section>
-
-    <!-- Categories Section -->
-    <section class="py-20 px-4 relative">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 gap-8">
-          <div v-for="category in categories" 
-               :key="category.title"
-               class="group relative">
-            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur"></div>
-            <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
-              <h2 class="text-2xl font-bold text-white mb-4">{{ category.title }}</h2>
-              <p class="text-gray-400 mb-6 whitespace-pre-line">{{ category.description }}</p>
-              <div class="flex flex-wrap gap-4">
-                <router-link v-for="item in category.items"
-                  :key="item.name"
-                  :to="item.link"
-                  class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors duration-200">
-                  {{ item.name }}
-                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </router-link>
-              </div>
-            </div>
-          </div>
+  <div class="site-page">
+    <PageHero title="软件作品" subtitle="XINGJI Interactive Software" description="我们励志做出优秀的软件。" eyebrow="OUR SOFTWARE" />
+    <section id="software-catalog" class="site-container site-section" aria-label="软件分类">
+      <div v-for="(category, index) in categories" :key="category.title" class="site-category">
+        <div>
+          <p class="site-eyebrow">0{{ index + 1 }} / EXPLORE</p>
+          <h2>{{ category.title }}</h2>
+          <p class="site-copy">{{ category.description }}</p>
+        </div>
+        <div class="site-resources">
+          <router-link v-for="item in category.items" :key="item.name" :to="item.link" class="site-resource">
+            <span>{{ item.name }}</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+          </router-link>
         </div>
       </div>
     </section>
-
-    <footer class="py-8 text-center text-white bg-gray-800/50 backdrop-blur-md">
-      <p class="text-xl font-semibold">
-        敬请期待更多软件产品...
-      </p>
-    </footer>
+    <div class="site-endnote"><p class="site-container">敬请期待更多软件产品…</p></div>
   </div>
-</template> 
+</template>

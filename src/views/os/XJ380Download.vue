@@ -1,18 +1,20 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useHead } from '@vueuse/head'
+import PageHero from '../../components/PageHero.vue'
 
 useHead({
   title: 'Download XJ380 | XINGJI Studio',
   meta: [
     {
       name: 'description',
-      content: 'Defautl description',
+      content: '获取 XJ380 开发者工具、API 文档及编译套件，查看系统版本和配置要求。',
     },
   ],
 })
 
-const versions = ref([
+type SystemDownload = { name: string; type: string; url: string }
+const versions = ref<{ version: string; downloads?: SystemDownload[] }[]>([
   {
     version: '1.0.0 - 即将上线 Comming Soon',
     // downloads: [
@@ -73,103 +75,64 @@ const requirements2 = ref([
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <h1 class="text-4xl font-bold text-white mb-8">下载XJ380</h1>
-      <p class="text-gray-400 mb-8">
-        请务必确认设备\虚拟机满足最低配置要求，否则可能会无法正常使用 XJ380 操作系统，最坏情况可能会造成数据丢失等后果。
-      </p>
-
-      <!-- Download Section -->
-      <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 mb-8">
-        <h2 class="text-2xl font-bold text-white mb-6">下载 XJ380 操作系统</h2>
-        <div v-for="version in versions" :key="version.version" class="space-y-4">
-          <h3 class="text-xl font-semibold text-white">Version {{ version.version }}</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <a v-for="download in version.downloads" 
-               :key="download.name"
-               :href="download.url"
-               class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors duration-200">
-              {{ download.name }}（{{ download.type }}）
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </a>
+  <div class="site-page">
+    <PageHero title="下载 XJ380" subtitle="开启你的「星际」之旅。" description="系统版本、配置要求、开发者工具与文档，一处获取。" image="/os/xj380_screenshot.png" eyebrow="XJ380 / DOWNLOADS" compact>
+      <template #actions>
+        <a href="#developer-tools" class="site-button site-button--primary">获取开发者工具</a>
+        <a href="#system-requirements" class="site-button">查看配置要求</a>
+      </template>
+    </PageHero>
+    <section class="site-container site-section" aria-labelledby="system-downloads-title">
+      <div class="site-note site-note--spaced">请务必确认设备 / 虚拟机满足最低配置要求，否则可能会无法正常使用 XJ380 操作系统，最坏情况可能会造成数据丢失等后果。</div>
+      <div class="site-panel">
+        <p class="site-eyebrow">OPERATING SYSTEM</p>
+        <h2 id="system-downloads-title">下载 XJ380 操作系统</h2>
+        <div v-for="version in versions" :key="version.version">
+          <p class="site-copy">Version {{ version.version }}</p>
+          <div v-if="version.downloads?.length" class="site-actions">
+            <a v-for="download in version.downloads" :key="download.name" :href="download.url" class="site-button site-button--small">{{ download.name }}（{{ download.type }}）</a>
           </div>
         </div>
+        <div class="site-actions"><router-link to="/os/xj380" class="site-link">了解 XJ380 <span aria-hidden="true">→</span></router-link></div>
       </div>
-
-      <!-- System Requirements -->
-      <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 mb-8">
-        <h2 class="text-2xl font-bold text-white mb-6">最低配置要求</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div v-for="req in requirements" 
-               :key="req.name"
-               class="flex items-start space-x-4 p-4 rounded-xl bg-gray-700/30">
-            <div class="font-semibold text-white min-w-[80px]">{{ req.name }}</div>
-            <div class="text-gray-400">{{ req.spec }}</div>
+    </section>
+    <section id="system-requirements" class="site-container site-section" aria-labelledby="requirements-title">
+      <div class="site-section__heading">
+        <div><p class="site-eyebrow">BEFORE YOU START</p><h2 id="requirements-title">系统配置要求</h2></div>
+      </div>
+      <div class="site-grid">
+        <article class="site-panel">
+          <h3>最低配置要求</h3>
+          <dl class="site-specs"><div v-for="req in requirements" :key="req.name"><dt>{{ req.name }}</dt><dd>{{ req.spec }}</dd></div></dl>
+        </article>
+        <article class="site-panel">
+          <h3>推荐配置要求</h3>
+          <dl class="site-specs"><div v-for="req in requirements2" :key="req.name"><dt>{{ req.name }}</dt><dd>{{ req.spec }}</dd></div></dl>
+        </article>
+      </div>
+    </section>
+    <section id="developer-tools" class="site-container site-section" aria-labelledby="tools-title">
+      <div class="site-section__heading">
+        <div><p class="site-eyebrow">BUILD FOR XJ380</p><h2 id="tools-title">开发者工具及文档</h2></div>
+      </div>
+      <p class="site-note site-note--spaced">请注意：XXCC 依赖于 Clang 18.1.8 或更高版本。</p>
+      <div class="site-panel">
+        <article v-for="tool in devTools" :key="tool.name" class="site-download-row">
+          <h3>{{ tool.name }}</h3>
+          <div class="site-actions">
+            <a :href="tool.url" class="site-button site-button--small">主链接下载 <span aria-hidden="true">↓</span></a>
+            <a :href="tool.backupUrl" class="site-button site-button--small">备用链接下载 <span aria-hidden="true">↓</span></a>
+            <a :href="tool.githubUrl" class="site-button site-button--small">GitHub 下载 <span aria-hidden="true">↗</span></a>
           </div>
-        </div>
+        </article>
       </div>
-
-      <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 mb-8">
-        <h2 class="text-2xl font-bold text-white mb-6">推荐配置要求</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div v-for="req in requirements2" 
-               :key="req.name"
-               class="flex items-start space-x-4 p-4 rounded-xl bg-gray-700/30">
-            <div class="font-semibold text-white min-w-[80px]">{{ req.name }}</div>
-            <div class="text-gray-400">{{ req.spec }}</div>
-          </div>
-        </div>
+    </section>
+    <section class="site-container site-section" aria-labelledby="platform-title">
+      <div class="site-panel">
+        <h2 id="platform-title">适用平台</h2>
+        <p class="site-copy">使用 x86_64 架构且支持 UEFI 的所有平台。</p>
+        <div class="site-actions"><router-link to="/os/xj380/error" class="site-link">查看故障代码与帮助 <span aria-hidden="true">→</span></router-link></div>
       </div>
-
-      <!-- Developer Tools -->
-      <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 mb-8">
-        <h2 class="text-2xl font-bold text-white mb-6">开发者工具及文档</h2>
-        <p class="text-gray-400 mb-8">
-          请注意：XXCC 依赖于 Clang 18.1.8 或更高版本。
-        </p>
-        <div class="grid grid-cols-1 gap-4">
-          <div v-for="tool in devTools"
-               :key="tool.name"
-               class="p-4 rounded-xl bg-gray-700/30">
-            <div class="text-gray-300 mb-3 font-medium">{{ tool.name }}</div>
-            <div class="flex flex-wrap gap-3">
-              <a :href="tool.url"
-                 class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors duration-200 text-sm">
-                主链接下载
-                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-              </a>
-              <a :href="tool.backupUrl"
-                 class="inline-flex items-center px-4 py-2 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition-colors duration-200 text-sm">
-                备用链接下载
-                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-              </a>
-              <a :href="tool.githubUrl"
-                 class="inline-flex items-center px-4 py-2 rounded-lg bg-orange-800/20 text-orange-400 hover:bg-orange-500/30 transition-colors duration-200 text-sm">
-                Github 下载
-                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Platform Support -->
-      <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
-        <h2 class="text-2xl font-bold text-white mb-4">适用平台</h2>
-        <p class="text-gray-400">
-          使用 x86_64 架构且支持 UEFI 的所有平台。
-        </p>
-      </div>
-    </div>
+    </section>
   </div>
-
-</template> 
+</template>

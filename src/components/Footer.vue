@@ -36,26 +36,32 @@ const fastguides = [
 </script>
 
 <template>
-  <footer class="text-left text-white bg-gray-800/50 backdrop-blur-md">
-    <section class="px-4 relative">
-      <div class="max-w-7xl mx-auto px-4 py-12">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div v-for="fastguide in fastguides" :key="fastguide.parentdex" class="relative rounded-2xl">
-            <p class="text-xl font-semibold text-gray-200 py-2">
-              {{ fastguide.parentdex }}
-            </p>
-            <a v-for="eindex in fastguide.eindexs" :key="eindex.text" :href="eindex.link">
-              <p class="text-gray-400 py-1">
-                {{ eindex.text }}
-              </p>
-            </a>
-          </div>
-        </div>
+  <footer class="site-footer">
+    <div class="site-container site-footer__content">
+      <div class="site-footer__brand">
+        <router-link to="/">
+          <img src="/files/XINGJI_tb.png" alt="" width="600" height="406" />
+          <span>XINGJI <small>INTERACTIVE SOFTWARE</small></span>
+        </router-link>
+        <p>为兴趣而聚，为爱发电。</p>
       </div>
-    </section>
-
-    <div class="py-8 text-center">
-      <p>版权所有© XINGJI Interactive Software 2017 - 2026 保留所有权利。</p>
+      <div class="site-footer__guides">
+        <nav v-for="guide in fastguides" :key="guide.parentdex" :aria-label="guide.parentdex">
+          <h2>{{ guide.parentdex }}</h2>
+          <ul>
+            <li v-for="item in guide.eindexs" :key="item.text">
+              <a v-if="item.link.startsWith('http')" :href="item.link" target="_blank" rel="noopener noreferrer">{{ item.text }}</a>
+              <router-link v-else :to="item.link">{{ item.text }}</router-link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>版权所有 © XINGJI Interactive Software 2017 - 2026 保留所有权利。</p>
+        <router-link to="/licenses">用户许可协议</router-link>
+      </div>
     </div>
   </footer>
 </template>
+
+<style scoped src="../styles/footer.css"></style>

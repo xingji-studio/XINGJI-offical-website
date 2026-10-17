@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useHead } from '@vueuse/head'
+import PageHero from '../../components/PageHero.vue'
 
 useHead({
   title: 'Join Us | XINGJI Studio',
@@ -33,7 +34,7 @@ const positions = ref([
     requirements: "熟练掌握Python，了解大模型底层原理，会使用PyTorch/TensorFlow等深度学习框架。",
     headcount: 1,
     tags: ["微偿", "稳定", "急招"]
-    
+
   },
   {
     title: '美工',
@@ -51,7 +52,7 @@ const benefits = ref([
   },
   {
     title: '协作节奏',
-    description: '每个成员可根据自己的课业和生活节奏，灵活安排协作时间。我们只设置少量关键里程碑（如发布日期），在节点前自由冲刺，节点后安心休息。'
+    description: '每个成员可根据自己的课业和生活节奏，灵活安排协作时间。我们只设置少量关键里程碑（如发布日期），想写就写，不想写就玩！'
   },
   {
     title: '优秀的学生工作室',
@@ -61,60 +62,35 @@ const benefits = ref([
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <h1 class="text-4xl font-bold text-white mb-12 text-center">XINGJI工作室，欢迎您的加入！</h1> <!-- 这里mb原来是12 -->
-      <!-- Job Positions -->
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-        <div v-for="position in positions" 
-          :key="position.title"
-          class="group relative">
-          <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <h2 class="text-2xl font-bold text-white">{{ position.title }}</h2>
-                <p class="text-gray-400">{{ position.department }}</p>
-              </div>
-              <div class="flex gap-2">
-                <span v-for="tag in position.tags"
-                  :key="tag"
-                  class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">
-                  {{ tag }}
-                </span>
-              </div>
-            </div>
-            <p class="text-gray-400 mb-4">{{ position.requirements }}</p>
-            <div class="flex justify-between items-center">
-              <p class="text-gray-400">招募人数：{{ position.headcount }}</p>
-              <a href="https://shorturl.at/J1VE9?uid=1559689519"
-                target="_blank"
-                class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors duration-200">
-                联系我们
-                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
+  <div class="site-page">
+    <PageHero title="欢迎加入 XINGJI" subtitle="为兴趣而聚，为爱发电。" description="加入我们，一起为我们共同的目标贡献力量，同时享受我们提供的海量资源。" eyebrow="JOIN THE STUDIO" />
+    <section id="open-positions" class="site-container site-section" aria-labelledby="positions-title">
+      <div class="site-section__heading">
+        <div><p class="site-eyebrow">CREATE WITH US</p><h2 id="positions-title">一起创造下一件作品</h2></div>
       </div>
-
-      <!-- Benefits -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div v-for="benefit in benefits" 
-          :key="benefit.title"
-          class="group relative">
-          <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur"></div>
-          <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
-            <h2 class="text-2xl font-bold text-white mb-4">{{ benefit.title }}</h2>
-            <p class="text-gray-400">{{ benefit.description }}</p>
+      <div class="site-grid">
+        <article v-for="position in positions" :key="position.title" class="site-panel site-panel--stretch">
+          <div class="site-job__header">
+            <div><h3>{{ position.title }}</h3><p class="site-job__department">{{ position.department }}</p></div>
+            <div class="site-job__tags"><span v-for="tag in position.tags" :key="tag" class="site-badge">{{ tag }}</span></div>
           </div>
-        </div>
+          <p class="site-copy">{{ position.requirements }}</p>
+          <div class="site-job__footer">
+            <p class="site-muted">招募人数：{{ position.headcount }}</p>
+            <a href="https://shorturl.at/J1VE9?uid=1559689519" target="_blank" rel="noopener noreferrer" class="site-button site-button--small">联系我们 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
       </div>
-    </div>
+    </section>
+    <section id="member-benefits" class="site-container site-section" aria-labelledby="benefits-title">
+      <div class="site-section__heading">
+        <div><p class="site-eyebrow">GROW TOGETHER</p><h2 id="benefits-title">协作、支持与成长</h2></div>
+      </div>
+      <div class="site-grid site-grid--three">
+        <article v-for="benefit in benefits" :key="benefit.title" class="site-panel">
+          <h3>{{ benefit.title }}</h3><p class="site-copy">{{ benefit.description }}</p>
+        </article>
+      </div>
+    </section>
   </div>
-</template> 
-
-
-
+</template>

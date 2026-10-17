@@ -17,21 +17,12 @@ watch(
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col bg-gray-900">
-    <Navigation :nav-name=navName />
-    <main class="flex-1">
-      <router-view></router-view>
+  <div class="site-shell">
+    <a class="site-skip-link" href="#main-content">跳到正文</a>
+    <Navigation :nav-name="navName" />
+    <main id="main-content" class="site-main" tabindex="-1">
+      <router-view />
     </main>
     <Footer />
   </div>
 </template>
-
-<style>
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  @apply bg-gray-900;
-}
-</style>

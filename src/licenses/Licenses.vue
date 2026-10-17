@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useHead } from '@vueuse/head'
+import PageHero from '../components/PageHero.vue'
 
 useHead({
   title: 'Licenses | XINGJI Studio',
   meta: [
     {
-      name: 'Licenses',
+      name: 'description',
       content: 'XINGJI工作室许可协议 | Licenses',
     },
   ],
@@ -25,29 +26,21 @@ const licenses_tabs = ref([
 
 </script>
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-20">
-    <section class="py-12 px-4 relative">
-      <div class="max-w-7xl mx-auto">
-        <h1 class="text-4xl font-bold text-white mb-8">XINGJI 工作室用户许可协议</h1>
+  <div class="site-page">
+    <PageHero title="用户许可协议" subtitle="XINGJI 工作室" description="查看 XJ380 用户许可协议与交流群群聊规定。" eyebrow="LICENSES & GUIDELINES" compact />
+    <section class="site-container site-section" aria-labelledby="licenses-title">
+      <div class="site-section__heading">
+        <div><p class="site-eyebrow">DOCUMENTS</p><h2 id="licenses-title">协议与规定</h2></div>
       </div>
-    </section>
-
-    <!-- 这里需要使用GBK编码的文本文件 -->
-    <section class="px-4 relative">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
-          <a v-for="licenses_tab in licenses_tabs" 
-            :key="licenses_tab.title"
-            :href="licenses_tab.link"
-            class="group relative">
-            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur"></div>
-            <div class="relative bg-[#222e40] backdrop-blur-md rounded-2xl p-6 group h-full flex flex-col justify-between shadow-lg">
-              <div class="flex items-center space-x-4">
-                <h2 class="text-2xl font-bold text-white">{{ licenses_tab.title }}</h2> 
-              </div>
-            </div>
-          </a>
-        </div>
+      <div class="site-stack">
+        <a v-for="(document, index) in licenses_tabs" :key="document.title" :href="document.link" class="site-panel site-document">
+          <div>
+            <p class="site-eyebrow">0{{ index + 1 }} / XJ380</p>
+            <h3>{{ document.title }}</h3>
+            <span class="site-link">阅读文档</span>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" /></svg>
+        </a>
       </div>
     </section>
   </div>

@@ -7,37 +7,43 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Defautl description',
+      content: 'XINGJI SpaceTerminal，新一代命令行工具。',
     },
   ],
 })
 </script>
 
 <template>
-  <GameLayout 
+  <GameLayout
+    eyebrow="XINGJI SPACE"
     title="SpaceTerminal"
     subtitle="新一代命令行">
-    <div class="space-y-8">
-      <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
-        <h2 class="text-2xl font-bold text-white mb-4">产品介绍</h2>
-        <p class="text-gray-400">
+    <!-- 首屏按钮：在这里直接修改 href 和按钮文字 -->
+    <template #actions>
+      <!-- <a href="#product-downloads" class="site-button site-button--primary">查看下载信息</a>
+      <a href="/software" class="site-button">浏览全部作品</a> -->
+    </template>
+    <div class="site-detail-grid">
+      <section class="site-panel">
+        <h2>产品介绍</h2>
+        <p class="site-copy">
           史。
         </p>
-      </div>
+      </section>
 
-      <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
-        <h2 class="text-2xl font-bold text-white mb-4">下载</h2>
-        <p class="text-gray-400 mb-4">最新版本：暂无</p>
-        <div class="flex flex-col space-y-4">
+      <section class="site-panel" id="product-downloads">
+        <h2>下载</h2>
+        <p class="site-copy">最新版本：暂无</p>
+        <div class="site-actions">
           <a href="https://github.com/xingji-studio/StardustUI"
-             class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors duration-200 w-fit">
+             class="site-button site-button--small">
             待定。
             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
         </div>
-      </div>
+      </section>
     </div>
   </GameLayout>
-</template> 
+</template>

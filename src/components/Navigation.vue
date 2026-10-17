@@ -1,231 +1,65 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { ArrowUpRightIcon } from '@heroicons/vue/24/outline'
 
-const isOpen = ref(false);
+defineProps({ navName: { type: String, default: '星际工作室' } })
+const route = useRoute()
+const isOpen = ref(false)
+const menuButton = ref<HTMLButtonElement | null>(null)
+const menuItems = [
+  { name: '首页', link: '/' },
+  { name: '操作系统', link: '/os/xj380' },
+  { name: '软件相关', link: '/software' },
+  { name: 'XDC2025', link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/' },
+  { name: '关于我们', link: '/about' },
+  { name: '成员招募', link: '/join' },
+  { name: '开源软件', link: '/open-source' },
+  { name: '开发文档', link: 'https://docs.xingjisoft.com/' },
+]
 
-const menuItems = ref([
-  { name: "首页", link: "/" },
-  { name: "操作系统", link: "/os/xj380" },
-  { name: "软件相关", link: "/software" },
-  { name: "XDC2025", link: "https://www.bilibili.com/video/BV1y1HKzaEPJ/" },
-  { name: "关于我们", link: "/about" },
-  { name: "成员招募", link: "/join" },
-  { name: "开源软件", link: "/open-source" },
-  { name: "开发文档", link: "https://docs.xingjisoft.com/"}
-]);
+function closeMenu(restoreFocus = false) {
+  isOpen.value = false
+  if (restoreFocus) menuButton.value?.focus()
+}
 
-/*
-// 处理登录
-const handleLogin = () => {
-  router.push("/login");
-};
-
-// 处理注册
-const handleRegister = () => {
-  router.push("/register");
-};
-
-// 处理登出
-const handleLogout = () => {
-  auth.logout();
-  router.push("/");
-};
-
-// 账户主页
-const handleJmpDash = () => {
-  router.push("/dash");
-};
-*/
-
-watch(isOpen, (newVal, _oldVal) => {
-  if (newVal) {
-    document.body.classList.add("overflow-hidden", "lg:overflow-auto");
-  } else {
-    document.body.classList.remove("overflow-hidden", "lg:overflow-auto");
-  }
-});
-
-defineProps({
-  navName: {
-    type: String,
-    default: "星际工作室",
-  },
-});
-
+watch(() => route.fullPath, () => closeMenu())
 </script>
 
 <template>
-  <nav class="fixed min-w-full z-50 backdrop-blur-md bg-gray-900/50">
-    <ul class="flex h-16 items-center w-full">
-      <li class="flex flex-row h-16 w-full justify-between pr-4">
-        <section class="flex items-center justify-start h-full">
-          <ul class="flex items-center justify-start h-full">
-          <li class="h-full whitespace-nowrap">
-            <router-link to="/" class="flex items-center justify-center outline-none pl-4 pr-4 h-full w-max">
-              <img src="/files/XINGJI_blueback.png" alt="XINGJI" class="h-8 mr-1" />
-              <span class="ml-1 text-2xl font-bold text-white/90">
-                {{ navName }}
-              </span>
-            </router-link>
-          </li>
-          <!-- 菜单项 -->
-          <template v-for="item in menuItems" :key="item.name">
-            <li class="hidden lg:block whitespace-nowrap h-full">
-              <router-link v-if="!item.link.startsWith('http')" :to="item.link"
-                class="pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
-                <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-                  {{ item.name }}
-                </span>
-              </router-link>
-              <a v-else :href="item.link" target="_blank"
-                class="pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
-                <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-                  {{ item.name }}
-                </span>
-              </a>
-            </li>
-          </template>
-          
-          
-        </ul>
-        </section>
-        <!--
-        <section class="flex items-center justify-start h-full">
-          <ul class="flex items-center justify-start h-full">
-            <!-- 登录/登出按钮 - 放在循环外部，确保只显示一次 
-            <li v-if="!auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
-              <button @click="handleLogin" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm  font-medium hover:bg-gray-400/10 transition-all duration-200 item">
-                <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-                  登录
-                </span>
-              </button>
-            </li>
-            <li v-if="!auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
-              <button @click="handleRegister" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group   text-sm font-medium hover:bg-gray-400/10 transition-all duration-200 item">
-                <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-                  注册
-                </span>
-              </button>
-            </li>
-            <li v-if="auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
-              <button @click="handleJmpDash" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm   font-medium hover:bg-gray-400/10 transition-all duration-200 item">
-                <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-                  {{ auth.currentUser?.username }}
-                </span>
-              </button>
-            </li>
-            <li v-if="auth.isAuthenticated" class="hidden lg:block whitespace-nowrap h-full">
-              <button @click="handleLogout" class="ml-2 pl-4 pr-4 h-full w-max flex items-center justify-center group text-sm   font-medium hover:bg-gray-400/10 transition-all duration-200 item">
-                <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-                  登出
-                </span>
-              </button>
-            </li>
-          </ul>
-
-        </section>
-        -->
-      </li>
-      <!-- For moblie: Menu Button -->
-      <li class="lg:hidden nav-right w-16 h-16">
-        <button @click="isOpen = !isOpen" class="nav-menu-button" :class="{ active: isOpen }">
-          <span class="sr-only">打开菜单</span>
-          <div class="menu-icon">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </div>
-        </button>
-      </li>
-    </ul>
-  </nav>
-  <nav id="mobile-navbar"
-    class="fixed top-16 z-50 w-full h-[calc(100%-4rem)] lg:hidden backdrop-blur-md bg-gray-900/50 transition-all duration-500 overflow-auto dark"
-    :class="{ 'invisible opacity-0 -left-full': !isOpen, 'left-0': isOpen }">
-    <!-- For moblie: Vertical menu -->
-    <ul>
-      <!-- 移动端菜单项 -->
-      <template v-for="item in menuItems" :key="item.name">
-        <router-link v-if="!item.link.startsWith('http')" :to="item.link" @click="isOpen = false"
-          class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
-          :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
-          :style="{ '--delay': `${(menuItems.indexOf(item) + 1) * 50 + 250}ms` }">
-          <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-            {{ item.name }}
-          </span>
-        </router-link>
-        <a v-else :href="item.link" @click="isOpen = false" target="_blank"
-          class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
-          :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
-          :style="{ '--delay': `${(menuItems.indexOf(item) + 1) * 50 + 250}ms` }">
-          <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-            {{ item.name }}
-          </span>
-        </a>
-      </template>
-      
-
-      <!-- 移动端登录/登出按钮 - 放在循环外部，确保只显示一次 
-      <button v-if="!auth.isAuthenticated" @click="handleLogin(); isOpen = false"
-        class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
-        :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
-        :style="{ '--delay': `${(menuItems.length + 1) * 50 + 250}ms` }">
-        <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-          登录
+  <header class="site-nav" @keydown.esc="closeMenu(true)">
+    <nav class="site-nav__inner site-container" aria-label="主导航">
+      <router-link to="/" class="site-nav__brand" @click="closeMenu()">
+        <img src="/files/XINGJI_blueback.png" alt="XINGJI" width="1356" height="406" />
+        <span>{{ navName }}</span>
+      </router-link>
+      <ul class="site-nav__desktop">
+        <li v-for="item in menuItems" :key="item.link">
+          <a v-if="item.link.startsWith('http')" :href="item.link" target="_blank" rel="noopener noreferrer" class="site-nav__link">
+            {{ item.name }} <ArrowUpRightIcon aria-hidden="true" />
+          </a>
+          <router-link v-else :to="item.link" class="site-nav__link">{{ item.name }}</router-link>
+        </li>
+      </ul>
+      <button ref="menuButton" class="site-nav__toggle" :class="{ 'site-nav__toggle--active': isOpen }" type="button" :aria-expanded="isOpen" aria-controls="site-mobile-menu" :aria-label="isOpen ? '关闭菜单' : '打开菜单'" @click="isOpen = !isOpen">
+        <span class="site-nav__menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
         </span>
       </button>
-      <button v-if="!auth.isAuthenticated" @click="handleRegister(); isOpen = false"
-        class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
-        :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
-        :style="{ '--delay': `${(menuItems.length + 2) * 50 + 250}ms` }">
-        <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-          注册
-        </span>
-      </button>
-      <div v-if="auth.isAuthenticated" @click="handleJmpDash(); isOpen = false"
-        class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
-        :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
-        :style="{ '--delay': `${(menuItems.length + 1) * 50 + 250}ms` }">
-        <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-          {{ auth.currentUser?.username }}
-        </span>
-      </div>
-      <button v-if="auth.isAuthenticated" @click="handleLogout(); isOpen = false"
-        class="p-4 px-6 h-full w-full flex items-center group font-medium hover:bg-gray-400/10 transition-all duration-200 item"
-        :class="{ 'visible-anim': isOpen, 'opacity-0': !isOpen }"
-        :style="{ '--delay': `${(menuItems.length + 2) * 50 + 250}ms` }">
-        <span class="text-gray-300 group-hover:text-white transition-colors duration-200">
-          登出
-        </span>
-      </button>
-    -->
-    </ul>
-  </nav>
+    </nav>
+    <nav v-show="isOpen" id="site-mobile-menu" class="site-nav__mobile" aria-label="移动端导航">
+      <ul class="site-container">
+        <li v-for="item in menuItems" :key="item.link">
+          <a v-if="item.link.startsWith('http')" :href="item.link" target="_blank" rel="noopener noreferrer" class="site-nav__link" @click="closeMenu()">
+            {{ item.name }} <ArrowUpRightIcon aria-hidden="true" />
+          </a>
+          <router-link v-else :to="item.link" class="site-nav__link" @click="closeMenu()">{{ item.name }}</router-link>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
-<style scoped>
-.item.router-link-active span {
-  @apply text-white;
-}
-
-.item.router-link-active {
-  @apply bg-white/10;
-}
-
-.item.visible-anim {
-  opacity: 0;
-  animation: 200ms ease-in-out var(--delay) forwards visible-anim;
-}
-
-@keyframes visible-anim {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-</style>
+<style scoped src="../styles/navigation.css"></style>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useHead } from '@vueuse/head'
+import PageHero from '../components/PageHero.vue'
 
 useHead({
   title: 'Open Source | XINGJI Studio',
@@ -20,6 +21,40 @@ const projects = ref([
       {
         text: '仓库链接',
         url: 'https://github.com/xingji-studio/OpenXJ380'
+      },
+      {
+        text: 'OSDev 链接',
+        url: 'https://wiki.osdev.org/Projects#X'
+      }
+    ]
+  },
+  {
+    name: 'BridgeEngine',
+    description: `一个跨平台图形 & 2.5D 游戏引擎。`,
+    links: [
+      {
+        text: '仓库链接',
+        url: 'https://github.com/xingji-studio/StardustUI'
+      }
+    ]
+  },
+  {
+    name: 'Neutrino',
+    description: `新一代强兼容性 Agent。`,
+    links: [
+      {
+        text: '仓库链接',
+        url: 'https://github.com/xingji-studio/StardustUI'
+      }
+    ]
+  },
+  {
+    name: 'StardustUI',
+    description: `一个跨平台 GUI 框架。`,
+    links: [
+      {
+        text: '仓库链接',
+        url: 'https://github.com/xingji-studio/StardustUI'
       }
     ]
   },
@@ -40,6 +75,16 @@ OpenXSKernel现已被OSDev收录。`,
     ]
   },
   {
+    name: 'HE3D-Cpp',
+    description: `一个由 Bnear8273 开发的适用于 XJ380 的 3D 引擎。`,
+    links: [
+      {
+        text: '仓库链接',
+        url: 'https://github.com/xingji-studio/he3d-cpp'
+      }
+    ]
+  },
+  {
     name: '挖矿模拟器',
     description: `一个用 C++ 写的没啥用的小游戏`,
     links: [
@@ -53,59 +98,26 @@ OpenXSKernel现已被OSDev收录。`,
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-16">
-    <!-- Hero Section -->
-    <section class="relative py-20">
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/25 via-sky-500/25 to-blue-600/25 backdrop-blur-3xl"></div>
+  <div class="site-page">
+    <PageHero title="我们的开源软件" subtitle="世界因开源而美好，我们因开源而奉献。" image="/primage.png" eyebrow="OPEN SOURCE" />
+    <section id="open-projects" class="site-container site-section" aria-labelledby="projects-title">
+      <div class="site-section__heading">
+        <div><p class="site-eyebrow">BUILT TO SHARE</p><h2 id="projects-title">开放的代码，共同的探索</h2></div>
       </div>
-      
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-          我们的开源软件
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-          世界因<span class="font-bold italic text-blue-400">开源</span>而美好，
-          我们因<span class="font-bold italic text-blue-400">开源</span>而奉献。
-        </p>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="py-20 px-4 relative">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div v-for="project in projects" 
-               :key="project.name"
-               class="group relative">
-            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur"></div>
-            <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 hover:transform hover:scale-[1.02] transition-all duration-300">
-              <h2 class="text-2xl font-bold text-white mb-4">{{ project.name }}</h2>
-              <p class="text-gray-400 mb-6 whitespace-pre-line">{{ project.description }}</p>
-              <div class="flex flex-wrap gap-4">
-                <a v-for="link in project.links" 
-                   :key="link.url"
-                   :href="link.url"
-                   target="_blank"
-                   class="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors duration-200">
-                  {{ link.text }}
-                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
-            </div>
+      <div class="site-grid site-grid--three">
+        <article v-for="(project, index) in projects" :key="project.name" class="site-panel site-panel--stretch">
+          <p class="site-eyebrow">0{{ index + 1 }} / OPEN SOURCE</p>
+          <h3>{{ project.name }}</h3>
+          <p class="site-copy site-pre-line">{{ project.description }}</p>
+          <div class="site-actions">
+            <a v-for="link in project.links" :key="link.url" :href="link.url" target="_blank" rel="noopener noreferrer" class="site-button site-button--small">
+              {{ link.text }}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" /></svg>
+            </a>
           </div>
-        </div>
+        </article>
       </div>
     </section>
-
-    <footer class="py-8 text-center text-white bg-gray-800/50 backdrop-blur-md">
-      <p class="text-xl font-semibold">
-        开源无处不在，XINGJI工作室将持续推进开源软件的发展。
-      </p>
-    </footer>
+    <div class="site-endnote"><p class="site-container">开源无处不在，XINGJI 工作室将持续推进开源软件的发展。</p></div>
   </div>
-</template> 
+</template>
