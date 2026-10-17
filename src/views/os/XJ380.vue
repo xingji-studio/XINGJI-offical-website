@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
 import { useHead } from '@vueuse/head'
 
 useHead({
@@ -7,42 +6,41 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Defautl description',
+      content: 'XJ380 64位操作系统，低资源占用、高性能、生态兼容。了解系统特性，获取 XJ380。',
     },
   ],
 })
 
-const router = useRouter()
-
-const handleDownload = () => {
-  router.push('/os/xj380/download')
-}
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-16">
+  <div class="xj380-page min-h-screen pt-16">
     <!-- Hero Section -->
-    <section class="relative py-20">
-      <div class="absolute inset-0 overflow-hidden">
-        <div
-          class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]">
-        </div>
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-cyan-500/25 via-sky-500/25 to-blue-600/25 backdrop-blur-3xl">
-        </div>
+    <section class="xj380-hero" aria-labelledby="xj380-title">
+      <div class="xj380-hero__background" aria-hidden="true">
+        <img
+          src="/os/xj380_screenshot.png"
+          alt=""
+          class="xj380-hero__image"
+          fetchpriority="high"
+        />
       </div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-          XJ380 操作系统 — 64位操作系统
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-300 mb-8">
-          低资源占用、高性能、生态兼容
-        </p>
-        <button @click="handleDownload"
-          class="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25">
-          下载 XJ380 操作系统
-        </button>
+      <div class="xj380-hero__content">
+        <div class="xj380-hero__intro">
+          <p class="xj380-hero__eyebrow">XINGJI INTERACTIVE SOFTWARE</p>
+          <h1 id="xj380-title" class="xj380-hero__title">
+            新一代桌面操作系统
+            <span>XJ380 Operating System</span>
+          </h1>
+          <p class="xj380-hero__subtitle">低资源占用、高性能、生态兼容</p>
+          <div class="xj380-hero__actions">
+            <router-link to="/os/xj380/download" class="xj380-hero__button xj380-hero__button--primary">
+              下载 XJ380
+            </router-link>
+            <a href="#xj380-features" class="xj380-hero__button">了解更多</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -55,7 +53,7 @@ const handleDownload = () => {
     </section>
 
     <!-- Features Section -->
-    <section class="p-4">
+    <section id="xj380-features" class="xj380-features p-4" aria-label="XJ380 系统特性">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8">
@@ -99,3 +97,183 @@ const handleDownload = () => {
     </section>
   </div>
 </template>
+
+<style scoped>
+.xj380-page {
+  background: #080b12;
+}
+
+.xj380-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: calc(100vh - 4rem);
+  min-height: calc(100svh - 4rem);
+  overflow: hidden;
+  color: #fff;
+}
+
+.xj380-hero__background,
+.xj380-hero__background::after,
+.xj380-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.xj380-hero__background {
+  z-index: -1;
+}
+
+.xj380-hero__image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.xj380-hero__background::after {
+  content: '';
+  background:
+    linear-gradient(0deg, #080b12 0%, transparent 24%),
+    linear-gradient(90deg, rgba(8, 11, 18, 0.98) 0%, rgba(8, 11, 18, 0.92) 24%, rgba(8, 11, 18, 0.65) 45%, rgba(8, 11, 18, 0.18) 72%, rgba(8, 11, 18, 0.05) 100%);
+}
+
+.xj380-hero__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 88px clamp(24px, 6vw, 112px) 112px;
+}
+
+.xj380-hero__intro {
+  max-width: 680px;
+}
+
+.xj380-hero__eyebrow {
+  margin-bottom: 24px;
+  color: #c5cbd5;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.xj380-hero__title {
+  margin: 0;
+  font-size: clamp(44px, 4.5vw, 72px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.xj380-hero__title span {
+  display: block;
+  margin-top: 22px;
+  font-size: clamp(26px, 2.7vw, 40px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+.xj380-hero__subtitle {
+  margin-top: 26px;
+  color: #d4d9e2;
+  font-size: clamp(16px, 1.45vw, 20px);
+  line-height: 1.7;
+}
+
+.xj380-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.xj380-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 192px;
+  min-height: 60px;
+  padding: 16px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.xj380-hero__button--primary {
+  border-color: #fff;
+  background: #fff;
+  color: #080b12;
+}
+
+.xj380-hero__button:hover {
+  border-color: #fff;
+  background: #fff;
+  color: #080b12;
+}
+
+.xj380-hero__button--primary:hover {
+  border-color: #7dd3fc;
+  background: #7dd3fc;
+}
+
+.xj380-hero__button:focus-visible {
+  outline: 3px solid #7dd3fc;
+  outline-offset: 5px;
+}
+
+.xj380-features {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 640px) {
+  .xj380-hero__content {
+    align-items: flex-end;
+    padding: 160px 24px 64px;
+  }
+
+  .xj380-hero__background::after {
+    background:
+      linear-gradient(0deg, #080b12 0%, rgba(8, 11, 18, 0.82) 38%, rgba(8, 11, 18, 0.15) 100%),
+      linear-gradient(90deg, rgba(8, 11, 18, 0.7), transparent);
+  }
+
+  .xj380-hero__image {
+    object-position: 65% center;
+  }
+
+  .xj380-hero__eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .xj380-hero__title {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+
+  .xj380-hero__actions {
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .xj380-hero__button {
+    flex: 1 1 140px;
+    min-width: 0;
+    min-height: 56px;
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xj380-hero__button {
+    transition: none;
+  }
+}
+</style>
