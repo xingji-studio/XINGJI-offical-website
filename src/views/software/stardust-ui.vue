@@ -34,7 +34,7 @@ useHead({
 
       <section class="site-panel">
         <h2>开源协议</h2>
-        <p class="site-copy">使用MIT许可证。</p>
+        <p class="site-copy">使用 MIT 许可证。</p>
       </section>
 
       <section class="site-panel" id="product-downloads">

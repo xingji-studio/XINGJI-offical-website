@@ -26,6 +26,8 @@ const categories = ref([
     title: '实用工具',
     description: 'XINGJI工作室 开发了一系列实用工具，帮助用户解决日常工作中的各种问题。',
     items: [
+      { name: 'xPhoton（流光绘界）', link: '/software/xphoton' },
+      { name: 'xMuon（新览）', link: '/software/xmuon' },
       { name: 'SpaceTerminal', link: '/software/space-terminal' },
     ]
   },

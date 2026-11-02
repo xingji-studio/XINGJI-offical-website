@@ -35,7 +35,7 @@ useHead({
 
       <section class="site-panel">
         <h2>开源协议</h2>
-        <p class="site-copy">以XOSL协议开源。</p>
+        <p class="site-copy">以 XOSL 协议开源。</p>
       </section>
 
       <section class="site-panel" id="product-downloads">
