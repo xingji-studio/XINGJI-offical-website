@@ -57,6 +57,16 @@ const routes = [
     component: () => import("../views/software/space-terminal.vue"),
   },
   {
+    path: "/software/xmuon",
+    name: "xmuon",
+    component: () => import("../views/software/xmuon.vue"),
+  },
+  {
+    path: "/software/xphoton",
+    name: "xphoton",
+    component: () => import("../views/software/xphoton.vue"),
+  },
+  {
     path: "/software/games/bcms",
     name: "bcms",
     component: () => import("../views/software/games/BCMS.vue"),
