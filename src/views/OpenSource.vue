@@ -60,9 +60,8 @@ const projects = ref([
   },
   {
     name: 'OpenXSKernel',
-    description: `一个 UEFI 64 位引导程序。
-注意：该程序由XSK2.0改造而来，与 XJ380 目前的 XSK2.1 有一定区别。
-OpenXSKernel现已被OSDev收录。`,
+    description: `一个 UEFI 64 位操作系统纯内核。
+由 OpenXJ380 拆分，OpenXSKernel 现已被 OSDev 收录。`,
     links: [
       {
         text: '仓库链接',
@@ -71,6 +70,26 @@ OpenXSKernel现已被OSDev收录。`,
       {
         text: 'OSDev 链接',
         url: 'https://wiki.osdev.org/Projects#O'
+      }
+    ]
+  },
+  {
+    name: 'xPhoton',
+    description: `绘图软件。`,
+    links: [
+      {
+        text: '仓库链接',
+        url: 'https://github.com/xingji-studio/xPhoton'
+      }
+    ]
+  },
+  {
+    name: 'xMuon',
+    description: `使用半自研浏览器内核 xPion 制作的轻量级浏览器。`,
+    links: [
+      {
+        text: '仓库链接',
+        url: 'https://github.com/xingji-studio/xMuon'
       }
     ]
   },

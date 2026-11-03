@@ -18,7 +18,11 @@ withDefaults(defineProps<{
 <template>
   <section class="page-hero" :class="{ 'page-hero--compact': compact }" aria-labelledby="page-title">
     <div class="page-hero__background" aria-hidden="true">
-      <img :src="image" alt="" fetchpriority="high" />
+      <div class="page-hero__media">
+        <slot name="background">
+          <img :src="image" alt="" fetchpriority="high" />
+        </slot>
+      </div>
     </div>
     <div class="site-container page-hero__content">
       <div class="page-hero__intro">

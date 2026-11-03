@@ -4,8 +4,8 @@ const fastguides = [
     parentdex: '解决方案',
     eindexs: [
       { text: 'XJ380 操作系统', link: '/os/xj380' },
+      { text: '星际玄微 (Neutrino)', link: '/software/neutrino' },
       { text: '鹊桥引擎 (BridgeEngine)', link: '/software/bridge-engine' },
-      { text: 'XINGJI Space 系列软件', link: '/software' },
       { text: '浏览 XINGJI 的全部软件作品', link: '/software' },
     ],
   },
@@ -14,6 +14,7 @@ const fastguides = [
     eindexs: [
       { text: 'OpenXJ380', link: 'https://github.com/xingji-studio/OpenXJ380' },
       { text: 'OpenXSKernel', link: 'https://github.com/xingji-studio/OpenXSKernel' },
+      { text: '星际玄微 (Neutrino)', link: 'https://github.com/xingji-studio/neutrino' },
       { text: '鹊桥引擎 (BridgeEngine)', link: 'https://github.com/xingji-studio/BridgeEngine' },
       { text: 'SimpleML', link: 'https://github.com/xingji-studio/SimpleML' },
     ],
@@ -29,7 +30,7 @@ const fastguides = [
     eindexs: [
       { text: 'XDC2025', link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/' },
       { text: '适用于 XJ380 的应用程序开发', link: '/os/xj380/download' },
-      { text: '成员招募', link: '/join' },
+      { text: '招贤纳士', link: '/join' },
     ],
   },
 ]

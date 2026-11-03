@@ -18,6 +18,10 @@ useHead({
     eyebrow="XINGJI DEVELOPER TOOLS"
     title="星尘UI（StardustUI）"
     subtitle="更加现代、方便、高效、跨平台的UI框架">
+    <!-- 首屏背景：修改 src 可换图，也可以在此编写自定义 HTML/Vue；删除此插槽则使用默认背景。 -->
+    <template #background>
+      <img src="/bg1.png" alt="" fetchpriority="high" />
+    </template>
     <!-- 首屏按钮：在这里直接修改 href 和按钮文字 -->
     <template #actions>
       <a href="https://github.com/xingji-studio/StardustUI" class="site-button site-button--primary">前往仓库</a>

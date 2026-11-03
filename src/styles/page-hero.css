@@ -12,7 +12,7 @@
 
 .page-hero__background,
 .page-hero__background::after,
-.page-hero__background img {
+.page-hero__media {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -24,13 +24,30 @@
   overflow: hidden;
 }
 
-.page-hero__background img {
+.page-hero__media {
+  z-index: 0;
+}
+
+/* 插槽内容铺满背景区域，支持图片、视频以及自定义 Vue 模板。 */
+.page-hero__media > :deep(*) {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.page-hero__media :deep(img),
+.page-hero__media :deep(video),
+.page-hero__media :deep(canvas) {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
 .page-hero__background::after {
   content: '';
+  z-index: 1;
+  pointer-events: none;
   background:
     linear-gradient(0deg, var(--site-bg), transparent 32%),
     linear-gradient(90deg, rgba(8, 11, 18, 0.98), rgba(8, 11, 18, 0.86) 35%, rgba(8, 11, 18, 0.35) 72%, rgba(8, 11, 18, 0.16));

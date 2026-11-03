@@ -10,10 +10,10 @@ const menuButton = ref<HTMLButtonElement | null>(null)
 const menuItems = [
   { name: '首页', link: '/' },
   { name: '操作系统', link: '/os/xj380' },
-  { name: '软件相关', link: '/software' },
+  { name: '软件作品', link: '/software' },
   { name: 'XDC2025', link: 'https://www.bilibili.com/video/BV1y1HKzaEPJ/' },
   { name: '关于我们', link: '/about' },
-  { name: '成员招募', link: '/join' },
+  { name: '招贤纳士', link: '/join' },
   { name: '开源软件', link: '/open-source' },
   { name: '开发文档', link: 'https://docs.xingjisoft.com/' },
 ]

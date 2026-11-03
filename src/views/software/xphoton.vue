@@ -18,6 +18,10 @@ useHead({
     eyebrow="XINGJI DEVELOPER TOOLS"
     title="xPhoton（流光绘界）"
     subtitle="新一代绘图软件（“流光绘界”），由 XINGJI 工作室软件开发部和 XJ380 开发部共同研发">
+    <!-- 首屏背景：修改 src 可换图，也可以在此编写自定义 HTML/Vue；删除此插槽则使用默认背景。 -->
+    <template #background>
+      <img src="/bg1.png" alt="" fetchpriority="high" />
+    </template>
     <!-- 首屏按钮：在这里直接修改 href 和按钮文字 -->
     <template #actions>
       <a href="https://github.com/xingji-studio/xPhoton" class="site-button site-button--primary">前往仓库</a>

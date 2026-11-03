@@ -67,6 +67,11 @@ const routes = [
     component: () => import("../views/software/xphoton.vue"),
   },
   {
+    path: "/software/neutrino",
+    name: "neutrino",
+    component: () => import("../views/software/neutrino.vue"),
+  },
+  {
     path: "/software/games/bcms",
     name: "bcms",
     component: () => import("../views/software/games/BCMS.vue"),

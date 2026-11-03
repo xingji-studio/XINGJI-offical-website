@@ -18,8 +18,9 @@ const categories = ref([
     title: '开发人员',
     description: 'XINGJI工作室 为开发者提供高质量、多样、跨平台的解决方案，',
     items: [
-      { name: 'BridgeEngine', link: '/software/bridge-engine' },
-      { name: 'StardustUI', link: '/software/stardust-ui' },
+      { name: 'Neutrino（星际玄微）', link: '/software/neutrino' },
+      { name: 'BridgeEngine（鹊桥引擎）', link: '/software/bridge-engine' },
+      { name: 'StardustUI（星尘UI）', link: '/software/stardust-ui' },
     ]
   },
   {
@@ -36,14 +37,14 @@ const categories = ref([
     description: 'XINGJI工作室 开发了一系列娱乐游戏，以满足用户的娱乐需求。',
     items: [
       { name: '挖矿模拟器', link: '/software/games/bcms' },
-      { name: '挖矿模拟器Mobile', link: '/software/games/bcms-mobile' },
+      { name: '挖矿模拟器 Mobile', link: '/software/games/bcms-mobile' },
     ]
   },
   {
     title: '操作系统',
     description: 'XINGJI工作室 开发的一些操作系统，以满足用户的自定义操作系统需求。',
     items: [
-      { name: 'XJ380操作系统', link: '/os/xj380' },
+      { name: 'XJ380 操作系统', link: '/os/xj380' },
     ]
   }
 ])
