@@ -42,7 +42,7 @@ useHead({
 
       <section class="site-panel" id="product-downloads">
         <h2>下载</h2>
-        <p class="site-copy">最新版本：0.4.0</p>
+        <p class="site-copy">最新版本：0.4.1</p>
         <div class="site-actions">
           <a href="https://github.com/xingji-studio/neutrino"
              class="site-button site-button--small">
