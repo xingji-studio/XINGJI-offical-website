@@ -90,11 +90,11 @@ const partners = ref([
 ])
 
 const news = ref({
-  title: 'XJ380',
-  headline: '现在开源',
+  title: 'XJ380API',
+  headline: '标准发布',
   subtitle: 'XINGJI XJ380 Operating System',
-  description: '耗时四年，XJ380 正式开源。探索我们的操作系统，一起开启下一段「星际」之旅。',
-  link: 'https://github.com/xingji-studio/OpenXJ380',
+  description: 'XJ380API 1.4 版本正式发布！数百条新函数，携手开启原生软件新纪元！',
+  link: '/os/xj380/download#developer-tools',
   image: {
     src: '/primage.png',
   },
@@ -116,7 +116,7 @@ const news = ref({
           <p class="home-hero__description">{{ news.description }}</p>
           <div class="home-actions">
             <a :href="news.link" target="_blank" rel="noopener noreferrer" class="home-button home-button--primary">
-              前往开源仓库
+              立刻下载工具&文档
               <ArrowUpRightIcon aria-hidden="true" />
             </a>
             <router-link to="/os/xj380" class="home-button">探索 XJ380</router-link>
