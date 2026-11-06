@@ -118,7 +118,7 @@ const projects = ref([
 
 <template>
   <div class="site-page">
-    <PageHero title="我们的开源软件" subtitle="世界因开源而美好，我们因开源而奉献。" image="/primage.png" eyebrow="OPEN SOURCE" />
+    <PageHero title="我们的开源软件" subtitle="世界因开源而美好，我们因开源而奉献。" image="/files/openxj380.png" eyebrow="OPEN SOURCE" />
     <section id="open-projects" class="site-container site-section" aria-labelledby="projects-title">
       <div class="site-section__heading">
         <div><p class="site-eyebrow">BUILT TO SHARE</p><h2 id="projects-title">开放的代码，共同的探索</h2></div>

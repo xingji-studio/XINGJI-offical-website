@@ -44,6 +44,13 @@ const products = ref([
 
 const news_posts = ref([
   {
+    title: 'XJ380 API 1.4 版本现已公布',
+    image: '/LOGO带底.png',
+    description: '适用于 XJ380 操作系统的 XJ380 API 1.4 版本现已公布。欢迎各位开发者为 XJ380 的生态注入一份自己的力量！',
+    more_text: '立刻开始“星际”之旅',
+    link: '/os/xj380/download#developer-tools'
+  },
+  {
     title: 'XINGJI 工作室公布本年度经济报告',
     image: '/files/XBO.png',
     description: '今年工作室收入和亏损均创新高，亏损相比去年增长 14297.54%。',
@@ -52,17 +59,10 @@ const news_posts = ref([
   },
   {
     title: 'XJ380 开源',
-    image: '/primage.png',
+    image: '/files/openxj380.png',
     description: '耗时四年，XJ380 正式开源。',
     more_text: '立刻查看',
     link: '/open-source'
-  },
-  {
-    title: 'XJ380 API 编译套件现已公布',
-    image: '/LOGO带底.png',
-    description: '适用于 XJ380 操作系统的 XJ380 API 编译套件现已公布。欢迎各位开发者为 XJ380 的生态注入一份自己的力量！',
-    more_text: '立刻开始“星际”之旅',
-    link: '/os/xj380/download'
   },
 ]);
 
@@ -78,9 +78,9 @@ const partners = ref([
     link: 'https://furries.com.cn/'
   },
   {
-    name: 'PCC工作室',
-    logo: '/files/pcc.png',
-    link: 'https://pcc.xingjisoft.com/'
+    name: 'FPC 北斗星',
+    logo: '/files/fpc.png',
+    link: 'https://www.fpcstar.com/'
   },
   {
     name: 'HGSpace',
