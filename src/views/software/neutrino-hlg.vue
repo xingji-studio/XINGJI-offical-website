@@ -7,7 +7,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: '专为使用手机远控电脑而生的远控方案，由 Neutrino Oscillation 引擎强力驱动。',
+      content: '专为使用手机远控电脑而生的远控方案，由 Neutrino 强力驱动。',
     },
   ],
 })
@@ -31,7 +31,7 @@ useHead({
       <section class="site-panel">
         <h2>产品介绍</h2>
         <p class="site-copy">
-          Neutrino Hyper Link Gopher / Huilongguan 是专为使用手机远控电脑而生的远控方案，由 Neutrino Oscillation 引擎强力驱动，让你远在异地也可以只用手机便可链接电脑进行开发。
+          Neutrino Hyper Link Gopher / Huilongguan 是专为使用手机远控电脑而生的远控方案，由 Neutrino 强力驱动，让你远在异地也可以只用手机便可链接电脑进行开发。
         </p>
       </section>
 
