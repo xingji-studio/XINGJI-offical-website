@@ -31,7 +31,7 @@ useHead({
       <section class="site-panel">
         <h2>产品介绍</h2>
         <p class="site-copy">
-          全新跨生态跨平台 Agent，使用全新自研自规划架构，自动规划/压缩上下文，支持多种 Agent 对话格式，外加全新简洁 Web 控制台，支持接入任何模型和任何思考强度，全新自研“站中间串两边”架构，真正实现一句话一次通过时代，比 Opencode 更佳的新平替。
+          全新跨生态跨平台 Agent，使用全新自研自规划架构，自动规划/压缩上下文，支持多种 Agent 对话格式，外加全新简洁 Web 控制台，支持接入任何模型和任何思考强度，全新自研“站中间串两边”架构，真正实现一句话一次通过时代，极速模式最高提高 50% 的运行速度，比 Opencode 更佳的新平替。
         </p>
       </section>
 
@@ -42,7 +42,7 @@ useHead({
 
       <section class="site-panel" id="product-downloads">
         <h2>下载</h2>
-        <p class="site-copy">最新版本：0.5.2</p>
+        <p class="site-copy">最新版本：0.7.0</p>
         <div class="site-actions">
           <a href="https://github.com/xingji-studio/neutrino"
              class="site-button site-button--small">

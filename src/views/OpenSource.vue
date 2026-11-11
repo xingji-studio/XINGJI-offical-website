@@ -34,7 +34,7 @@ const projects = ref([
     links: [
       {
         text: '仓库链接',
-        url: 'https://github.com/xingji-studio/StardustUI'
+        url: 'https://github.com/xingji-studio/BridgeEngine'
       }
     ]
   },
@@ -44,7 +44,17 @@ const projects = ref([
     links: [
       {
         text: '仓库链接',
-        url: 'https://github.com/xingji-studio/StardustUI'
+        url: 'https://github.com/xingji-studio/neutrino'
+      }
+    ]
+  },
+  {
+    name: 'Neutrino-HLG',
+    description: `专为使用手机远控电脑而生的远控方案，由 Neutrino Oscillation 引擎强力驱动。`,
+    links: [
+      {
+        text: '仓库链接',
+        url: 'https://github.com/xingji-studio/neutrino-HLG'
       }
     ]
   },
