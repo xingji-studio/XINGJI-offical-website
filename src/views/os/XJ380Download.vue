@@ -61,7 +61,7 @@ const devTools = ref([
 
 const requirements = ref([
   { name: '处理器', spec: 'x86_64 架构的处理器，基准频率 1 GHz 或更高' },
-  { name: '内存', spec: '512 MiB' },
+  { name: '内存', spec: '512 MiB（安装程序需要 3 GiB 或更高才能运行）' },
   { name: '硬盘', spec: '5 GiB 或更多' },
   { name: '显示器', spec: '720P 或更高' }
 ])
