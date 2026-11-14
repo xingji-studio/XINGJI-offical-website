@@ -44,6 +44,13 @@ const products = ref([
 
 const news_posts = ref([
   {
+    title: 'XJ380 第一轮内测启动',
+    image: '/LOGO带底.png',
+    description: 'XJ380 开发工作已经结束。为提升兼容性与稳定性，XINGJI 工作室现招募内测志愿者共同参与 XJ380 最终的调试工作。',
+    more_text: '报名已截止',
+    link: '#'
+  },
+  {
     title: 'XJ380 API 1.4 版本现已公布',
     image: '/LOGO带底.png',
     description: '适用于 XJ380 操作系统的 XJ380 API 1.4 版本现已公布。欢迎各位开发者为 XJ380 的生态注入一份自己的力量！',
@@ -56,13 +63,6 @@ const news_posts = ref([
     description: '今年工作室收入和亏损均创新高，亏损相比去年增长 14297.54%。',
     more_text: '立刻查看',
     link: '/resources/XINGJI_Interactive_Software_2026_经济情况年报.pdf'
-  },
-  {
-    title: 'XJ380 开源',
-    image: '/files/openxj380.png',
-    description: '耗时四年，XJ380 正式开源。',
-    more_text: '立刻查看',
-    link: '/open-source'
   },
 ]);
 
