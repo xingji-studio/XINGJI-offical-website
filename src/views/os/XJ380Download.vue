@@ -52,10 +52,10 @@ const devTools = ref([
     githubUrl: 'https://github.com/xingji-studio/XXCC-suite/releases/download/2026v5/XJ380_API_Spec_CPP_1_4.pdf',
   },
   {
-    name: 'XJ380 API 静态链接库及头文件（C/C++）',
+    name: 'XJ380 API SDK（C/C++）',
     url: 'https://gitee.com/GuoqiFish/xingji-interactive-software-download-item-storage/releases/download/20261105-1/XJ380_CPP_API_Depend_1_4.zip',
     // backupUrl: 'https://1824119084.v.123pan.cn/1824119084/34237241',
-    githubUrl: 'https://github.com/xingji-studio/XXCC-suite/releases/download/2026v5/XJ380_CPP_API_Depend_1_4.zip',
+    githubUrl: 'https://github.com/xingji-studio/XJ380-SDK',
   }
 ])
 

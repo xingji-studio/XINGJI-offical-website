@@ -19,6 +19,7 @@ const categories = ref([
     description: 'XINGJI工作室 为开发者提供高质量、多样、跨平台的解决方案，',
     items: [
       { name: 'Neutrino（星际玄微）', link: '/software/neutrino' },
+      { name: 'AcPackage（星际聚核）', link: '/software/acpackage' },
       { name: 'Neutrino-HLG（星际玄微 HLG）', link: '/software/neutrino-hlg' },
       { name: 'BridgeEngine（鹊桥引擎）', link: '/software/bridge-engine' },
       { name: 'StardustUI（星尘UI）', link: '/software/stardust-ui' },
@@ -28,6 +29,7 @@ const categories = ref([
     title: '实用工具',
     description: 'XINGJI工作室 开发了一系列实用工具，帮助用户解决日常工作中的各种问题。',
     items: [
+      { name: 'xEtch（星际星蚀）', link: '/software/xetch' },
       { name: 'xPhoton（流光绘界）', link: '/software/xphoton' },
       { name: 'xMuon（新览）', link: '/software/xmuon' },
       { name: 'SpaceTerminal', link: '/software/space-terminal' },

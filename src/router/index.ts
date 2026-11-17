@@ -1,6 +1,7 @@
+import type { RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "home",
@@ -19,7 +20,7 @@ const routes = [
   {
     path: "/os/xj380/error",
     name: "xj380-error",
-    component: () => import("../views/os/XJ380Error.vue"),
+    component: () => import("../views/os/XJ380ErrorRedirect.vue"),
   },
   {
     path: "/software",
@@ -75,6 +76,16 @@ const routes = [
     path: "/software/neutrino-hlg",
     name: "neutrino-hlg",
     component: () => import("../views/software/neutrino-hlg.vue"),
+  },
+  {
+    path: "/software/xetch",
+    name: "xetch",
+    component: () => import("../views/software/xetch.vue"),
+  },
+  {
+    path: "/software/acpackage",
+    name: "acpackage",
+    component: () => import("../views/software/acpackage.vue"),
   },
   {
     path: "/software/games/bcms",

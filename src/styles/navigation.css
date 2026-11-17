@@ -1,4 +1,5 @@
 .site-nav {
+  --site-nav-content-inset: max(clamp(24px, 6vw, 112px), calc((100% - 1600px) / 2 + 112px));
   position: fixed;
   inset: 0 0 auto;
   z-index: 50;
@@ -36,7 +37,8 @@
 .site-nav__desktop {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: clamp(12px, 1.4vw, 22px);
+  margin-left: auto;
   height: 100%;
 }
 
@@ -66,6 +68,55 @@
 .site-nav__link svg {
   width: 12px;
   height: 12px;
+}
+
+.site-nav__actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.site-nav__account {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.site-nav__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  border: 1px solid rgba(125, 211, 252, 0.28);
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(125, 211, 252, 0.14), rgba(125, 211, 252, 0.02)), #131e2c;
+  color: #c5ddeb;
+  transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.site-nav__avatar svg {
+  width: 22px;
+  height: 22px;
+}
+
+.site-nav__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.site-nav__account:hover .site-nav__avatar,
+.site-nav__account:focus-visible .site-nav__avatar {
+  border-color: var(--site-accent);
+  background-color: #24364a;
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
 }
 
 .site-nav__toggle {
@@ -127,7 +178,29 @@
   outline-offset: 4px;
 }
 
+@media (min-width: 1200px) {
+  .site-nav__actions {
+    width: 44px;
+    height: 44px;
+  }
+
+  .site-nav__account--desktop {
+    position: absolute;
+    top: 10px;
+    /* 保持文字的位置，让头像两侧的留白约为 2:1。 */
+    right: calc((var(--site-nav-content-inset) + 28px) / 3);
+  }
+}
+
 @media (max-width: 1199px) {
+  .site-nav__inner {
+    padding-right: 8px;
+  }
+
+  .site-nav__account--desktop {
+    display: none;
+  }
+
   .site-nav__desktop {
     display: none;
   }
@@ -147,6 +220,39 @@
 
   .site-nav__mobile ul {
     padding-block: 12px 24px;
+  }
+
+  .site-nav__account--mobile {
+    justify-content: flex-start;
+    gap: 14px;
+    width: 100%;
+    height: auto;
+    min-height: 76px;
+    margin-bottom: 8px;
+    padding-block: 16px;
+    border-bottom: 1px solid var(--site-border);
+    border-radius: 0;
+  }
+
+  .site-nav__account--mobile .site-nav__avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .site-nav__username {
+    min-width: 0;
+    overflow: hidden;
+    color: #e0e5ed;
+    font-size: 15px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .site-nav__account--mobile:hover .site-nav__username,
+  .site-nav__account--mobile:focus-visible .site-nav__username {
+    color: var(--site-accent);
   }
 
   .site-nav__mobile .site-nav__link {

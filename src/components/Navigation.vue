@@ -2,11 +2,14 @@
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { ArrowUpRightIcon } from '@heroicons/vue/24/outline'
+import { UserIcon } from '@heroicons/vue/24/solid'
+import { useUserCenterProfile } from '../composables/useUserCenterProfile'
 
 defineProps({ navName: { type: String, default: '星际工作室' } })
 const route = useRoute()
 const isOpen = ref(false)
 const menuButton = ref<HTMLButtonElement | null>(null)
+const { userCenterUrl, userName, avatarUrl, accountTitle, refreshProfile, onAvatarError } = useUserCenterProfile()
 const menuItems = [
   { name: '首页', link: '/' },
   { name: '操作系统', link: '/os/xj380' },
@@ -24,6 +27,9 @@ function closeMenu(restoreFocus = false) {
 }
 
 watch(() => route.fullPath, () => closeMenu())
+watch(isOpen, (open) => {
+  if (open) void refreshProfile()
+})
 </script>
 
 <template>
@@ -41,16 +47,49 @@ watch(() => route.fullPath, () => closeMenu())
           <router-link v-else :to="item.link" class="site-nav__link">{{ item.name }}</router-link>
         </li>
       </ul>
-      <button ref="menuButton" class="site-nav__toggle" :class="{ 'site-nav__toggle--active': isOpen }" type="button" :aria-expanded="isOpen" aria-controls="site-mobile-menu" :aria-label="isOpen ? '关闭菜单' : '打开菜单'" @click="isOpen = !isOpen">
-        <span class="site-nav__menu-icon" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
+      <div class="site-nav__actions">
+        <button ref="menuButton" class="site-nav__toggle" :class="{ 'site-nav__toggle--active': isOpen }" type="button" :aria-expanded="isOpen" aria-controls="site-mobile-menu" :aria-label="isOpen ? '关闭菜单' : '打开菜单'" @click="isOpen = !isOpen">
+          <span class="site-nav__menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <a
+          :href="userCenterUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="site-nav__account site-nav__account--desktop"
+          :aria-label="accountTitle + '（在新标签页打开）'"
+          :title="accountTitle"
+          @click="closeMenu()"
+        >
+          <span class="site-nav__avatar" aria-hidden="true">
+            <img v-if="avatarUrl" :src="avatarUrl" alt="" width="36" height="36" decoding="async" referrerpolicy="no-referrer" @error="onAvatarError" />
+            <UserIcon v-else />
+          </span>
+        </a>
+      </div>
     </nav>
     <nav v-show="isOpen" id="site-mobile-menu" class="site-nav__mobile" aria-label="移动端导航">
       <ul class="site-container">
+        <li>
+          <a
+            :href="userCenterUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="site-nav__account site-nav__account--mobile"
+            :aria-label="userName + '，用户中心（在新标签页打开）'"
+            :title="accountTitle"
+            @click="closeMenu()"
+          >
+            <span class="site-nav__avatar" aria-hidden="true">
+              <img v-if="avatarUrl" :src="avatarUrl" alt="" width="40" height="40" decoding="async" referrerpolicy="no-referrer" @error="onAvatarError" />
+              <UserIcon v-else />
+            </span>
+            <span class="site-nav__username">{{ userName }}</span>
+          </a>
+        </li>
         <li v-for="item in menuItems" :key="item.link">
           <a v-if="item.link.startsWith('http')" :href="item.link" target="_blank" rel="noopener noreferrer" class="site-nav__link" @click="closeMenu()">
             {{ item.name }} <ArrowUpRightIcon aria-hidden="true" />
