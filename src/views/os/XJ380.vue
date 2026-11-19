@@ -54,27 +54,27 @@ useHead({
       <div>
         <div class="site-grid">
           <div class="site-panel">
-            <h2>XJ380有什么特别？</h2>
+            <h2>先进技术</h2>
             <p class="site-copy">
               XJ380 采用完全由我们自主开发的 XSK2.1 内核，技术先进。64位架构，符合主流设备需求。支持 GUI 原生操作，拥有友好的界面。
             </p>
           </div>
           <div class="site-panel">
-            <h2>XJ380与前两个测试版有什么区别？</h2>
+            <h2>手搓内核</h2>
             <p class="site-copy">
-              XJ380 最新版本采用 UEFI 进行引导，抛弃了以往使用的 Legacy Boot ；适用于x86_64架构，保障通用性；拥有FAT系列文件系统支持。
+              内存管理、APIC 驱动、部分 ACPI 驱动、GUI 及渲染算法 <strong>均为手搓</strong> ，开发组成员拥有三年操作系统手搓经验，坚持保留人工干预，拒绝纯 AIGC。
             </p>
           </div>
           <div class="site-panel">
-            <h2>XJ380有怎样的生态？</h2>
+            <h2>丰富生态</h2>
             <p class="site-copy">
               XJ380 提供了 XAPI 作为标准用户程序接口，同时支持 POSIX ，既拥有多方面兼容的同时又有我们自己的独创，为第三方软件开发者提供便利。
             </p>
           </div>
           <div class="site-panel">
-            <h2>XJ380的交互怎么样？</h2>
+            <h2>三重迭代</h2>
             <p class="site-copy">
-              XJ380 支持图形化桌面及命令行，为拥有不同需求的用户提供多样化的操作环境。桌面已实现 GlassUI ，尽可能地提供美妙的视觉体验。
+              XJ380 最新版本采用 UEFI 进行引导，抛弃了以往使用的 Legacy Boot ；适用于 x86_64 架构，保障通用性；拥有 FAT 系列及 NTFS、ext4 等文件系统支持。
             </p>
           </div>
         </div>
